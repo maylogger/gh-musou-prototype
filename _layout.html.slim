@@ -4,6 +4,11 @@ html lang="zh-TW"
     = render "/layout_head"
     = render "/layout_og"
   body
-    = yield
+  	.menu
+  		= render "partials/menu"
+  	.main
+  		= render "/partials/header"
+  		.content = yield
+  		= render "/partials/footer"
     = render "/layout_foot"
     = render "/layout_livereload"

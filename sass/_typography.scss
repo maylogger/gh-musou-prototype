@@ -10,24 +10,19 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.hide {
-  display: none;
-}
-
 #{headings()} {
   @include reset-box-model;
-  @include adjust-font-size-to(32px);
+  @include adjust-font-size-to($font-size-XXL);
   @extend %helvetica-light;
 }
 
 a {
-  @include link-colors(blue);
+  @include link-colors($link-color);
   @include hover-link;
 }
 
 p {
   @include reset-box-model;
-  @include adjust-font-size-to(13px);
   @include leader(1);
   @include trailer(1);
 }

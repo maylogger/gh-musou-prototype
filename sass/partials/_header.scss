@@ -1,0 +1,65 @@
+.header { 
+	background-color: $header-background; 
+}
+
+.logo {
+	text-align: center;
+	a {
+		color: $header-font-color;
+		&:hover {
+			color: $header-font-color-hover;
+			text-decoration: none;
+		}
+	}
+	@include at-breakpoint($desktop) {
+		text-align: left;
+	}
+}
+
+.menu-btn {
+	position: absolute;
+	left: 0;
+	width: $menu-btn-size;
+	height: $menu-btn-size;
+	background-color: transparent;
+	border: none;
+	&:focus { 
+		outline: none; 
+	}
+	@include at-breakpoint($desktop) {
+	  display: none;
+	}
+}
+
+.menu-btn-bar {
+	display: block;
+	width: $menu-btn-bar-width;
+	height: $menu-btn-bar-height;
+	margin: auto;
+	opacity: 1;
+	background-color: $menu-btn-bar-color;
+	@include transition(transform .5s, opacity .5s);
+	@include box-shadow(0 1px 0 $menu-btn-bar-shadow-color);
+	& + & {
+		margin-top: $menu-btn-bar-spacing;
+	}
+	@mixin first-and-last-bar-transform($degree) {
+		position: absolute;
+      	top: 50%;
+      	left: 50%;
+    	margin: -1px 0 0 (-$menu-btn-bar-width/2);
+    	@include transform( rotate($degree) );
+	}
+	.open-menu & {
+    	&:first-child {
+    		@include first-and-last-bar-transform(45deg);
+      		
+    	}
+    	&:last-child {
+    		@include first-and-last-bar-transform(-45deg);
+    	}
+    	&:nth-child(2n) {
+      		opacity: 0;
+    	}
+  	}
+}

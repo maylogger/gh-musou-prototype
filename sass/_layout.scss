@@ -1,17 +1,51 @@
-// basic for susy
-$total-columns  : 6;
-$column-width   : 5em;
-$gutter-width   : 1em;
-$grid-padding   : $gutter-width;
-
-// add media
-$phone          : $total-columns;
-$pad            : 8;
-$desktop        : 12;
-
-// debug
-@import "layout-debug";
-
 #{$page-container} {
-  @include container($phone, $pad, $desktop);
+  $container-style: fluid;
+  @include container($total-columns, $pad);
+}
+html { 
+	height: 100%; 
+}
+body {
+	height: 100%;
+	&.open-menu {
+		overflow: hidden;
+	}
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	width: $menu-off-canvas-width;
+}
+.main {
+	position: relative;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+	background-color: $main-background;
+	@include transition(left .3s);
+	.open-menu & {
+		left: $menu-off-canvas-width;
+	}
+}
+@include at-breakpoint($desktop) {
+	#{$page-container} {
+		$container-style: magic;
+		@include set-container-width;
+	}
+	.inner-container {
+		margin: 0 auto;
+		@include set-container-width;
+	}
+	.menu {
+		position: static;
+		width: auto;
+		margin: 0 auto;
+		@include set-container-width;
+	}
+	.main {
+		position: static;
+	}
 }

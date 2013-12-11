@@ -1,0 +1,113 @@
+// # SUSY basic setting
+$total-columns   				 : 6;
+$column-width    				 : 5em;
+$gutter-width    				 : 1em;
+$grid-padding    				 : $gutter-width;
+
+// # Media for responsive layout
+$pad-columns      				 : 8;                                        
+$pad-break        				 : 600px;                         
+$pad              				 : $pad-break $pad-columns;
+
+$desktop-columns 				 : 12;
+$desktop-break   				 : 900px;
+$desktop         				 : $desktop-break $desktop-columns;
+
+// # Vertical rhythm
+$base-font-size       			 : 16px;
+$base-line-height     			 : 24px;
+$relative-font-sizing 			 : false;
+
+// # Font setting
+$font-family-sans-serif 		 : "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+$font-size-XXL             		 : $base-font-size * 2;		// 32px
+$font-size-XL              		 : $base-font-size * 1.5;	// 24px
+$font-size-L               		 : $base-font-size * 1.25;	// 20px
+$font-size-M               		 : $base-font-size * 1;		// 16px
+$font-size-S               		 : $base-font-size * .875;	// 14px
+$font-size-XS              		 : $base-font-size * .75;	// 12px
+
+// # Compass setting
+$legacy-support-for-ie 			 : false;
+$grid-background-baseline-height : $base-line-height;
+
+// # Class variable
+$page-container 				 : ".container";
+
+// # Prototype color
+$pte-black             			 : #333333;
+$pte-black-light 				 : #424242;
+$pte-gray-dark   				 : #63635C;
+$pte-gray              			 : #757570;
+$pte-gray-light  				 : #92928A;
+$pte-lightgray-dark 			 : #CECCC3;
+$pte-lightgray 					 : #DEDCD3;
+$pte-red-dark    				 : #A70000;
+$pte-red               			 : #C70000;
+$pte-red-light   				 : #E70000;
+$pte-blue-dark   				 : #1934FF;
+$pte-blue              			 : #2874FF;
+$pte-blue-light  				 : #3C9AFF;
+
+// - PTE Transparent color
+$pte-black-15 					 : rgba(black, .15);
+$pte-black-25 					 : rgba(black, .25);
+$pte-black-50 					 : rgba(black, .5);
+
+// # Ci color
+
+// # Basic color
+$grid-background-column-color 	 : rgba(#f15a14, .2);
+$grid-background-baseline-color  : rgba(#009a8e, .3);
+
+// # Global color
+$global-divider 				 : $pte-lightgray;
+$global-title-color 			 : $pte-black-light;
+$global-content-color 			 : $pte-black;
+
+// # Partials color
+// - link 
+$link-color 					 : $pte-blue;
+// $link-color-hover
+// $link-color-active
+// $link-color-visited
+
+// - header
+$header-background       		 : $pte-black;
+$header-font-color       		 : white;
+$header-font-color-hover 		 : darken(white, .2);
+
+// - menu
+$menu-background 				 : $pte-black;
+$menu-btn-size        			 : 48px;
+$menu-btn-bar-width   			 : 24px;
+$menu-btn-bar-height  			 : 2px;
+$menu-btn-bar-spacing 			 : 6px;
+$menu-btn-bar-color 		 	 : white;
+$menu-btn-bar-shadow-color 		 : $pte-black-50;
+$menu-link-color 				 : white;
+$menu-off-canvas-width 			 : 260px;
+
+// - main in layout.scss
+$main-background 				 : white;
+
+// - title
+$title-font-size 				 : $font-size-XL - 2px;
+$title-sub-font-size 			 : $font-size-L - 2px;
+$title-color 					 : $pte-black;
+
+// - article
+$article-font-size 				 : $font-size-M;   
+
+// - list
+$list-label-color 				 : $pte-gray-light;
+$list-content-color 			 : $pte-black;
+$list-font-size 				 : $font-size-M;
+$list-font-size-mobile 			 : $font-size-S;
+$list-sub-font-size 			 : $font-size-S;
+$list-sub-font-size-mobile 	 	 : $font-size-XS;
+$list-no-border-offset-fix 		 : 1px;
+
+// - footer
+// - button
+// - input

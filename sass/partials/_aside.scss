@@ -1,0 +1,8 @@
+.aside {
+	@include leader(2);
+	@include trailer(1);
+	@include at-breakpoint($desktop) {
+		@include span-columns(3 omega);
+		@include leader(1);
+	}
+}

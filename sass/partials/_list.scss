@@ -1,0 +1,65 @@
+.list {
+	@include reset-box-model;
+	@include leader(.5);
+	list-style: none;
+	@include trailer(1);
+	li {
+		@include pie-clearfix;
+		@include adjust-font-size-to($list-font-size-mobile);
+		@include at-breakpoint($pad) {
+		  @include adjust-font-size-to($list-font-size);
+		}
+	}
+	li + li {
+		@include leader(.5);
+		@include padding-leader(.5);
+		border-top: 1px solid $global-divider;
+	}
+	.list-label {
+		font-weight: bold;
+		color: $list-label-color;
+		@include at-breakpoint($pad) {
+		  	float: left;
+		  	width: 7em;
+		}
+	}
+	.list-content {
+		color: $list-content-color;
+		a {
+			display: inline-block;
+			width: 100%;
+			@include ellipsis;
+		}
+		@include at-breakpoint($pad) {
+		  	overflow: hidden;
+		}
+	}
+	.list-content-row {
+		@include pie-clearfix;
+		@include at-breakpoint($pad) {
+			padding-bottom: rhythm(.25);
+		}
+	}
+	.list-sub {
+		border-top: none;
+		.list-label ,.list-content {
+			@include adjust-font-size-to($list-sub-font-size-mobile);
+		}
+		@include at-breakpoint($pad) {
+			padding-left: 7em;
+		  	.list-label ,.list-content {
+		  		margin-top: $list-no-border-offset-fix;
+				@include adjust-font-size-to($list-sub-font-size, 1);
+			}
+		}
+	}
+	@include at-breakpoint($desktop) {
+		.list-two-column {
+			float: left;
+			width: 50%;
+			&:nth-child(2n) {
+				float: right;
+			}
+		}
+	}
+}

@@ -24,6 +24,8 @@ fire_app_log.txt
 ehthumbs.db
 Thumbs.db
 
+# Other files #
+###############
 *.sw?
 .rvmrc
 tmp/restart.txt

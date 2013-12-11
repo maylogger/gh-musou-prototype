@@ -1,0 +1,35 @@
+.title {
+	@include leader(.5);
+	@include trailer(.5);
+	@include padding-trailer(.5);
+	@include adjust-font-size-to($title-font-size);
+	font-weight: bold;
+	border-bottom: 1px solid $global-divider;
+	color: $title-color;
+	.aside > & {
+		@include leader(1.5);
+	}
+	@include at-breakpoint($pad) {
+		@include adjust-font-size-to($title-font-size + 2px);
+	}
+}
+.sub-title {
+	@include leader(.5);
+	@include trailer(.5);
+	@include padding-trailer(.5);
+	@include adjust-font-size-to($title-sub-font-size);
+	border-bottom: 1px solid $global-divider;
+	color: $title-color;
+	.aside > & {
+		@include leader(2.5);
+		@include adjust-font-size-to($title-sub-font-size + 2px, 2);
+	}
+	@include at-breakpoint($pad) {
+		@include adjust-font-size-to($title-sub-font-size + 2px);
+		.aside > & {
+			@include leader(0);
+			@include padding-trailer(1);
+			@include adjust-font-size-to($title-sub-font-size + 2px);
+		}
+	}
+}
