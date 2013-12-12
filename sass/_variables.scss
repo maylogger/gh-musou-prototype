@@ -34,7 +34,7 @@ $grid-background-baseline-height : $base-line-height;
 // # Class variable
 $page-container 				 : ".container";
 
-// # Prototype color
+// # Prototyping color
 $pte-black             			 : #333333;
 $pte-black-light 				 : #424242;
 $pte-gray-dark   				 : #63635C;
@@ -49,16 +49,16 @@ $pte-blue-dark   				 : #1934FF;
 $pte-blue              			 : #2874FF;
 $pte-blue-light  				 : #3C9AFF;
 
-// - PTE Transparent color
+// - Prototyping Transparent color
 $pte-black-15 					 : rgba(black, .15);
 $pte-black-25 					 : rgba(black, .25);
 $pte-black-50 					 : rgba(black, .5);
 
-// # Ci color
-
-// # Basic color
+// # Layout debug color
 $grid-background-column-color 	 : rgba(#f15a14, .2);
 $grid-background-baseline-color  : rgba(#009a8e, .3);
+
+// # Ci color
 
 // # Global color
 $global-divider 				 : $pte-lightgray;
@@ -70,7 +70,6 @@ $global-content-color 			 : $pte-black;
 $link-color 					 : $pte-blue;
 // $link-color-hover
 // $link-color-active
-// $link-color-visited
 
 // - header
 $header-background       		 : $pte-black;
