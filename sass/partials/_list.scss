@@ -1,8 +1,8 @@
 .list {
 	@include reset-box-model;
 	@include leader(.5);
+	@include trailer(.5);
 	list-style: none;
-	@include trailer(1);
 	li {
 		@include pie-clearfix;
 		@include adjust-font-size-to($list-font-size-mobile);
@@ -53,13 +53,15 @@
 			}
 		}
 	}
-	@include at-breakpoint($desktop) {
-		.list-two-column {
-			float: left;
-			width: 50%;
-			&:nth-child(2n) {
-				float: right;
-			}
-		}
-	}
+	// temp css
+	// @include at-breakpoint($desktop) {
+	// 	.list-two-column {
+	// 		float: left;
+	// 		width: 50%;
+	// 		&:nth-child(2n) {
+	// 			float: right;
+	// 		}
+	// 	}
+	// }
 }
+
