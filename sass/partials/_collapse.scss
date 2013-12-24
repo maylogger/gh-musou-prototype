@@ -1,0 +1,39 @@
+.collapse {
+  height: 175px;
+  overflow-y: hidden;
+}
+.collapsing {
+  overflow-y: hidden;
+  @include transition(height .3s ease-in-out);
+}
+.collapse-toggle {
+	position: absolute;
+	bottom: -#{rhythm(.5)};
+	width: 100%;
+	height: rhythm(4);
+	margin-top: rhythm(1);
+	text-align: center;
+	border-bottom: 1px solid $collapse-toggle-divider;
+	background-image: $collapse-content-hider;
+	pointer-events: none;
+	.collapse-toggle-button {
+		position: absolute;
+		bottom: -#{rhythm(1.3)};
+		margin-left: -#{rhythm(.5)};
+		padding: rhythm(.15) rhythm(.5);
+		@include adjust-font-size-to($font-size-S);
+		text-decoration: none;
+		pointer-events: auto;
+		color: $collapse-btn-color;	
+		background-color: $collapse-btn-background;
+		@include border-radius(0 0 5px 5px);
+		&:hover {
+			color: $collapse-btn-color-hover;
+			background-color: $collapse-btn-background-hover;
+			@include transition(all ease-in .1s);
+		}
+	}
+	.in + & {
+		background-image: none;
+	}
+}
