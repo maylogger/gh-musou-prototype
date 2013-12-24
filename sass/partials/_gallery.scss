@@ -1,0 +1,172 @@
+.gallery {
+	position: relative;
+	@include leader(1);
+	@include pie-clearfix;
+}
+
+.gallery-item-info {
+	float: right;
+	@include padding-trailer(.5);
+	text-align: left;
+	.gallery-item-date {
+		color: $gallery-item-date-color;
+		font-weight: bold;
+		@include adjust-font-size-to($font-size-S, .5);
+	}
+	.gallery-item-title {
+		@include leader(0);
+		@include trailer(0);
+		padding: 0;
+		@include adjust-font-size-to($font-size-M);
+	}
+	@include at-breakpoint($desktop) {
+	  width: columns(4, $total-columns);
+	}
+}
+
+.gallery-item {
+	position: relative;
+	display: block;
+	margin: 0 -#{$grid-padding} 1px;
+	vertical-align: top;
+	&:hover {
+		text-decoration: none;
+	}
+	&:last-child {
+		@include trailer(1);
+	}
+	.gallery-photo {
+		position: relative;
+		padding-top: 75%;
+		height: 0;
+		background-color: $gallery-item-background;
+	}
+	img {
+		position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  // height: 100%;
+	}
+	.play-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: $gallery-play-icon-size;
+		height: $gallery-play-icon-size;
+		margin-top: -$gallery-play-icon-offset; 
+		margin-left: -$gallery-play-icon-offset;
+		background-color: rgba($gallery-play-icon-background, .75);
+		@include border-radius($gallery-play-icon-offset);
+		@include transition( background-color, ease-in, .2s );
+		.play-triangle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -8px;
+			margin-left: -5px;
+			width: 0px;
+			height: 0px;
+			@include hide-text;
+			border: 8px solid transparent;
+			border-right: 0px solid transparent;
+			border-left: 14px solid $gallery-play-icon-color;
+		}
+	}
+	&:hover .play-icon {
+		background-color: rgba($gallery-play-icon-background, 1);
+	}
+	.gallery-item-info {
+		float: none;
+		width: 100%;
+		@include padding-leader(.5);
+		color: $gallery-item-info-color;
+		.gallery-item-date {
+			padding: 0 rhythm(.5);
+			color: $gallery-item-date-color;
+		}
+		.gallery-item-title {
+			padding: 0 rhythm(.5);
+			@include ellipsis;
+		}
+	}
+	@include at-breakpoint($wide-mobile) {
+		float: left;
+		width: columns(3, $total-columns);
+		margin: 0 gutter($total-columns) gutter($total-columns) 0;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		&:last-child {
+			@include trailer(1);
+			margin-right: 0;
+		}
+	}
+	@include at-breakpoint($pad) {
+		width: columns(4, $total-columns);
+		margin: 0 gutter($total-columns) gutter($total-columns) 0;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		&:last-child {
+			@include trailer(1);
+			margin-right: 0;
+		}
+	}
+	@include at-breakpoint($desktop) {
+		width: columns(4, $total-columns);
+		margin: 0 gutter($total-columns) gutter($total-columns) 0;
+		&:nth-child(2n) {
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		&:last-child {
+			@include trailer(1);
+			margin-right: 0;
+		}
+	}
+	&.single-col {
+		@include at-breakpoint($wide-mobile) {
+	  	width: columns(6, $total-columns);
+	  	@include trailer(1);
+		}
+		@include at-breakpoint($pad) {
+		  width: columns(8, $total-columns);
+		}
+		@include at-breakpoint($desktop) {
+		  width: columns(8, $total-columns);
+		}
+	}
+	&.double-col {
+		@include at-breakpoint($desktop) {
+		  width: columns(6, $total-columns);
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.top-number {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	@include adjust-font-size-to($gallery-top-number-size);
+	font-weight: bold;
+	opacity: .1;
+	&.small {
+		@include adjust-font-size-to($gallery-top-number-size-small, 3);
+		color: black;
+	}
+}
+
+// for gallery in hero
+.hero .gallery-item-title {
+	color: white;
+}
