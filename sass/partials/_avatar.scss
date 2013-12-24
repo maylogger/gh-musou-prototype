@@ -1,0 +1,49 @@
+.avatar-wall {
+	@include clearfix;
+}
+
+.avatar {
+	float: left;
+	margin: 0 rhythm(1) rhythm(1) 0;
+	text-align: center;
+	&:hover {
+		text-decoration: none;
+	}
+	.avatar-photo {
+		position: relative;
+	  width: $avatar-photo-width-1x;
+	  height: 0;
+		padding-top: 133%;
+		background-color: $avatar-item-background;
+		&.x2 {
+			width: $avatar-photo-width-2x;
+		}
+		img {
+			position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	// height: 100%;
+		}
+	}
+	.avatar-info {
+		margin-top: rhythm(.25);
+		.avatar-party {
+			display: inline-block;
+			width: 30px;
+			height: 23px;
+			vertical-align: middle;
+		}
+		.avatar-name {
+			padding-left: rhythm(.25);
+			@include adjust-font-size-to($font-size-M);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.avatar-intro {
+	float: right;
+	width: 100% - (( 200 + 36 ) / 1136 ) * 100%; // calculate using 2x size
+}
