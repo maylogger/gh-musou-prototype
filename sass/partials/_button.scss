@@ -1,0 +1,20 @@
+.button-box {
+	@include leader(1.5);
+	@include trailer(1.5);
+	&.center {
+		text-align: center;
+	}
+}
+.button {
+	padding: rhythm(.5) rhythm(1.5);
+	@include adjust-font-size-to($font-size-L);
+	color: $button-color;	
+	background-color: $button-background;
+	border: 1px solid $button-color;
+	@include transition(all ease-in .1s);
+	&:hover {
+		color: $button-color-hover;
+		background-color: $button-background-hover;
+		border: 1px solid $button-color-hover;
+	}
+}
