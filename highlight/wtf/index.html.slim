@@ -1,0 +1,18 @@
+.hero style="background: black url(http://hhhhold.com/1920x800/#{rand(100)}) top center no-repeat;"
+	.hero-dark-bg
+	.container
+		h1.hero-title 每日戰犯
+		p.hero-content = zh_lorem_sentences 5
+.container
+	- 3.times do |i|
+		.block
+			h1.mega-title 14/12/2#{9-i} 戰犯
+			.avatar-wall
+				= render "/partials/avatar-2x"
+				.avatar-intro
+					.sub-title 黑暗事蹟
+					p = zh_lorem_paragraphs 5
+			h1.sub-title 精彩鏡頭
+			= render "/partials/gallery"
+	.block
+		= render "/partials/pagination"
