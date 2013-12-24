@@ -1,0 +1,47 @@
+.container
+	h1.title.video 立法院第8屆第4會期經濟委員會第13次全體委員會議
+.container
+	.article
+		.video-single
+			.video-wrapper
+				object type="application/x-shockwave-flash" data="http://www.justin.tv/swflibs/JustinPlayer.swf?channel=skyfire_trains_tv" id="live_embed_player_flash" bgcolor="#000000"
+					param name="allowFullScreen" value="true"
+					param name="allowScriptAccess" value="always" 
+					param name="allowNetworking" value="all" 
+					param name="movie" value="http://www.justin.tv/swflibs/JustinPlayer.swf" 
+					param name="flashvars" value="hostname=www.justin.tv&amp;channel=skyfire_trains_tv&amp;auto_play=false&amp;start_volume=25" 
+	.aside.video-chat
+		iframe allowtransparency="true" frameborder="0" scrolling="no" id="chat_embed" src="http://www.justin.tv/chat/embed?channel=skyfire_trains_tv&amp;default_chat=jtv&amp;#r=-rid-&amp;s=em"
+.container
+	.article#video-info
+		.block
+			h2.sub-title 主題
+			p#theme.collapse = zh_lorem_paragraphs 7
+			.collapse-toggle
+				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#theme" 看更多
+		.block
+			h2.sub-title 參與委員
+			#attend-legislators.avatar-wall.collapse
+				- ( rand(5) + 12 ).times do
+					= render "/partials/avatar"
+			.collapse-toggle
+				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#attend-legislators" 看更多
+		.block
+			h2.sub-title 相關議題
+			ul#issue.list.collapse
+				- ( rand(5) + 8 ).times do
+					li: a = zh_lorem_sentence
+			.collapse-toggle
+				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#issue" 看更多
+		.block
+			h2.sub-title 相關資料
+			ul#other-info.list.collapse
+				- ( rand(5) + 8 ).times do
+					li: a = zh_lorem_sentence
+			.collapse-toggle
+				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#other-info" 看更多
+	.aside
+		h2.sub-title 今日其他 LIVE
+		ul.list
+			- ( rand(5) + 8 ).times do
+				li: a = zh_lorem_sentence
