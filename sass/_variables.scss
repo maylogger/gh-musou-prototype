@@ -1,112 +1,180 @@
-// # SUSY basic setting
-$total-columns   				 : 6;
-$column-width    				 : 5em;
-$gutter-width    				 : 1em;
-$grid-padding    				 : $gutter-width;
+// ========================================================
+// Layout and typography
+// ========================================================
 
-// # Media for responsive layout
-$pad-columns      				 : 8;                                        
-$pad-break        				 : 600px;                         
-$pad              				 : $pad-break $pad-columns;
+// - SUSY basic setting
+$total-columns   								 : 4;
+$column-width    								 : 5em;
+$gutter-width    								 : 1em;
+$grid-padding    								 : $gutter-width;
 
-$desktop-columns 				 : 12;
-$desktop-break   				 : 900px;
-$desktop         				 : $desktop-break $desktop-columns;
+// - Media for responsive layout
+$wide-mobile-columns      			 : 6;                                        
+$wide-mobile-break        			 : 500px;                         
+$wide-mobile              		 	 : $wide-mobile-break $wide-mobile-columns;
 
-// # Vertical rhythm
-$base-font-size       			 : 16px;
-$base-line-height     			 : 24px;
-$relative-font-sizing 			 : false;
+$pad-columns      							 : 8;                                        
+$pad-break        							 : 650px;                         
+$pad              							 : $pad-break $pad-columns;
 
-// # Font setting
-$font-family-sans-serif 		 : "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
-$font-size-XXL             		 : $base-font-size * 2;		// 32px
-$font-size-XL              		 : $base-font-size * 1.5;	// 24px
-$font-size-L               		 : $base-font-size * 1.25;	// 20px
-$font-size-M               		 : $base-font-size * 1;		// 16px
-$font-size-S               		 : $base-font-size * .875;	// 14px
-$font-size-XS              		 : $base-font-size * .75;	// 12px
+$desktop-columns 								 : 12;
+$desktop-break   								 : 900px;
+$desktop         								 : $desktop-break $desktop-columns;
 
-// # Compass setting
-$legacy-support-for-ie 			 : false;
+// - Vertical rhythm
+$base-font-size       					 : 16px;
+$base-line-height     					 : 24px;
+$relative-font-sizing 					 : false;
+
+// - Font setting
+$font-family-sans-serif 				 : "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+$font-size-EL             			 : $base-font-size * 4;			// 64px
+$font-size-UL 									 : $base-font-size * 3;			// 48px
+$font-size-XXL             			 : $base-font-size * 2;			// 32px
+$font-size-XL              			 : $base-font-size * 1.5;		// 24px
+$font-size-L               			 : $base-font-size * 1.25;	// 20px
+$font-size-M               			 : $base-font-size * 1;			// 16px
+$font-size-S               			 : $base-font-size * .8125;	// 13px
+$font-size-XS              			 : $base-font-size * .75;		// 12px
+
+// - Compass setting
+$legacy-support-for-ie 					 : false;
 $grid-background-baseline-height : $base-line-height;
 
-// # Class variable
-$page-container 				 : ".container";
+// - Class variable
+$page-container 								 : ".container";
 
-// # Prototyping color
-$pte-black             			 : #333333;
-$pte-black-light 				 : #424242;
-$pte-gray-dark   				 : #63635C;
-$pte-gray              			 : #757570;
-$pte-gray-light  				 : #92928A;
-$pte-lightgray-dark 			 : #CECCC3;
-$pte-lightgray 					 : #DEDCD3;
-$pte-red-dark    				 : #A70000;
-$pte-red               			 : #C70000;
-$pte-red-light   				 : #E70000;
-$pte-blue-dark   				 : #1934FF;
-$pte-blue              			 : #2874FF;
-$pte-blue-light  				 : #3C9AFF;
+// ========================================================
+// Prototyping color
+// ========================================================
+$pte-black             					 : #333333;
+$pte-black-light 								 : #424242;
+$pte-gray-dark   								 : #63635C;
+$pte-gray              					 : #757570;
+$pte-gray-light  								 : #92928A;
+$pte-lightgray-dark 						 : #B7B5B0;
+$pte-lightgray 									 : #E7E5E2;
+$pte-red-dark    								 : #A70000;
+$pte-red               					 : #C70000;
+$pte-red-light   								 : #E70000;
+$pte-blue-dark   								 : #1934FF;
+$pte-blue              					 : #2874FF;
+$pte-blue-light  								 : #3C9AFF;
 
 // - Prototyping Transparent color
-$pte-black-15 					 : rgba(black, .15);
-$pte-black-25 					 : rgba(black, .25);
-$pte-black-50 					 : rgba(black, .5);
+$pte-black-15 									 : rgba(black, .15);
+$pte-black-25 									 : rgba(black, .25);
+$pte-black-50 									 : rgba(black, .5);
 
-// # Layout debug color
+// - Layout debug color
 $grid-background-column-color 	 : rgba(#f15a14, .2);
 $grid-background-baseline-color  : rgba(#009a8e, .3);
 
-// # Ci color
+// ========================================================
+// Ci color
+// ========================================================
 
-// # Global color
-$global-divider 				 : $pte-lightgray;
-$global-title-color 			 : $pte-black-light;
-$global-content-color 			 : $pte-black;
+// ========================================================
+// Global color
+// ========================================================
+$global-divider 								 : $pte-lightgray;
+$global-title-color 						 : $pte-black-light;
+$global-content-color 					 : $pte-black;
+$global-font-color 							 : $pte-black;
 
-// # Partials color
+// ========================================================
+// Partials 
+// ========================================================
 // - link 
-$link-color 					 : $pte-blue;
+$link-color 										 : $pte-blue;
 // $link-color-hover
 // $link-color-active
 
 // - header
-$header-background       		 : $pte-black;
-$header-font-color       		 : white;
-$header-font-color-hover 		 : darken(white, .2);
+$header-background       				 : $pte-black;
+$header-font-color       				 : white;
+$header-font-color-hover 				 : darken(white, .2);
 
 // - menu
-$menu-background 				 : $pte-black;
-$menu-btn-size        			 : 48px;
-$menu-btn-bar-width   			 : 24px;
-$menu-btn-bar-height  			 : 2px;
-$menu-btn-bar-spacing 			 : 6px;
-$menu-btn-bar-color 		 	 : white;
-$menu-btn-bar-shadow-color 		 : $pte-black-50;
-$menu-link-color 				 : white;
-$menu-off-canvas-width 			 : 260px;
+$menu-background 								 : $pte-black;
+$menu-btn-size        					 : 48px;
+$menu-btn-bar-width   					 : 24px;
+$menu-btn-bar-height  					 : 2px;
+$menu-btn-bar-spacing 					 : 6px;
+$menu-btn-bar-color 					 	 : white;
+$menu-btn-bar-shadow-color 			 : $pte-black-50;
+$menu-link-color 								 : white;
+$menu-off-canvas-width 					 : 260px;
 
 // - main in layout.scss
-$main-background 				 : white;
+$main-background 								 : white;
 
 // - title
-$title-font-size 				 : $font-size-XL - 2px;
-$title-sub-font-size 			 : $font-size-L - 2px;
-$title-color 					 : $pte-black;
+$title-font-size 								 : $font-size-XXL - 4px;
+$title-sub-font-size 						 : $font-size-XL - 4px;
+$title-mega-font-size 					 : $font-size-UL - 4px;
+$title-color 										 : $pte-black;
 
 // - article
-$article-font-size 				 : $font-size-M;   
+$article-font-size 							 : $font-size-M;
+
+// - hero
+$hero-content-color 						 : white;
+$hero-text-shadow 							 : $pte-black-light;
+$hero-top-divider 							 : $global-divider; 
+$hero-dark-background 					 : rgba(black, .15);
+$hero-dark-gradient-background 	 : linear-gradient(to top, rgba(black, .85) 0, rgba(black, 0) 100% );
 
 // - list
-$list-label-color 				 : $pte-gray-light;
-$list-content-color 			 : $pte-black;
-$list-font-size 				 : $font-size-M;
-$list-font-size-mobile 			 : $font-size-S;
-$list-sub-font-size 			 : $font-size-S;
-$list-sub-font-size-mobile 	 	 : $font-size-XS;
-$list-no-border-offset-fix 		 : 1px;
+$list-label-color 							 : $pte-gray-light;
+$list-content-color 						 : $pte-black;
+$list-font-size 								 : $font-size-M;
+$list-font-size-mobile 					 : $font-size-S;
+$list-sub-font-size 						 : $font-size-S;
+$list-sub-font-size-mobile 	 		 : $font-size-XS;
+$list-no-border-offset-fix 			 : 1px;
+
+// - pagination
+$pagination-switch-background 	 : $pte-black;
+$pagination-switch-color 	 			 : white;
+
+// - gallery
+$gallery-play-icon-size 				 : 50px;
+$gallery-play-icon-offset 			 : $gallery-play-icon-size / 2;
+$gallery-play-icon-background 	 : $pte-black;
+$gallery-play-icon-color 				 : white;
+$gallery-item-background 				 : black;
+// $gallery-item-info-background 	 : linear-gradient(to top, rgba(black, .85) 0, rgba(black, .5) 25%, rgba(black, 0) 100% );
+$gallery-item-info-color 				 : $pte-black;
+$gallery-item-date-color 				 : $pte-lightgray-dark;
+$gallery-top-number-size 				 : 120px;
+$gallery-top-number-size-small 	 : 72px;
+
+// - video
+$video-main-divider 						 : $global-divider;
+
+// - avatar
+$avatar-item-background 				 : black;
+$avatar-photo-width-1x 					 : 100px;
+$avatar-photo-width-2x 					 : 200px;
+
+// - collapse
+$collapse-toggle-divider 				 : $global-divider;
+$collapse-content-hider 				 : linear-gradient(to top, rgba(white, 1) 15%, rgba(white, .5) 50%, rgba(white, 0) 100% );
+$collapse-btn-color 						 : $pte-black;
+$collapse-btn-color-hover 			 : $pte-lightgray;
+$collapse-btn-background 			 	 : $pte-lightgray;
+$collapse-btn-background-hover 	 : rgba($pte-black, .85);
+
+// - button
+$button-background 							 : rgba($pte-black, .85);
+$button-background-hover 				 : $pte-lightgray;
+$button-color 									 : $pte-lightgray;
+$button-color-hover 						 : $pte-black;
+
+// - input
 
 // - footer
-// - button
-// - input
+
+// - other
+$no-content-msg-color 					 : $pte-gray;
