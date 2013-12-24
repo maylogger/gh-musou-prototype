@@ -1,13 +1,14 @@
 .article {
+	@include leader(1);
 	@include trailer(1);
 	@include adjust-font-size-to($article-font-size);
-	p {
-		padding: 0;	
-	}
 	@include at-breakpoint($desktop) {
-		@include span-columns(9);
-		p {
-			padding: 0 rhythm(.5);	
-		}
+		@include span-columns(8);
+	}
+}
+p {
+	padding: 0;	
+	@include at-breakpoint($desktop) {
+		padding: 0 rhythm(.5);	
 	}
 }
