@@ -45,15 +45,14 @@
 	}
 	@mixin first-and-last-bar-transform($degree) {
 		position: absolute;
-      	top: 50%;
-      	left: 50%;
-    	margin: -1px 0 0 (-$menu-btn-bar-width/2);
-    	@include transform( rotate($degree) );
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 (-$menu-btn-bar-width/2);
+    @include transform( rotate($degree) );
 	}
 	.open-menu & {
     	&:first-child {
-    		@include first-and-last-bar-transform(45deg);
-      		
+    		@include first-and-last-bar-transform(45deg); 		
     	}
     	&:last-child {
     		@include first-and-last-bar-transform(-45deg);
