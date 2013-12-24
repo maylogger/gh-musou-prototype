@@ -1,0 +1,31 @@
+$i: 100;
+@while $i > 0 {
+    .col-#{$i} { 
+    	width: $i * 1% - 1.5%;
+    	padding-right: 1.5%;
+    }
+    $i: $i - 5;
+}
+
+.table-head {
+	width: 100%;
+	display: table;
+}
+
+.table-row {
+	width: 100%;
+	@include leader(.5);
+	@include padding-leader(.5);
+	display: table;
+	border-top: 1px solid $global-divider;
+}
+
+.field {
+	display: table-cell;
+	letter-spacing: -1px;
+	@include adjust-font-size-to($list-font-size-mobile);
+	@include at-breakpoint($pad) {
+		@include adjust-font-size-to($list-font-size);
+		letter-spacing: -0px;
+	}
+}
