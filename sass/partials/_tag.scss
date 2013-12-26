@@ -1,0 +1,17 @@
+%tag-style {
+	display: inline-block;
+	padding: 0 rhythm(.5);
+	-webkit-font-smoothing: subpixel-antialiased;
+	@include adjust-font-size-to($font-size-S);
+	@include box-shadow(0 1px 1px rgba(black, .25));
+	@include border-radius(5px);
+}
+.tag-broadcast {
+	@extend %tag-style;
+	background: $tag-broadcast-background;
+}
+.tag-now {
+	@extend %tag-style;
+	color: $tag-now-color;
+	background: $tag-now-background;
+}

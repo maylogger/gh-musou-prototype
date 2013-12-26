@@ -8,24 +8,32 @@ $i: 100;
 }
 
 .table-head {
-	width: 100%;
 	display: table;
+	width: 100%;
+	@include padding-trailer(.5);
 }
 
 .table-row {
 	width: 100%;
-	@include leader(.5);
 	@include padding-leader(.5);
+	@include padding-trailer(.5);
 	display: table;
 	border-top: 1px solid $global-divider;
+	&.broadcast {
+		background: $list-broadcast-background;
+	}
 }
 
 .field {
 	display: table-cell;
 	letter-spacing: -1px;
+	vertical-align: middle;
 	@include adjust-font-size-to($list-font-size-mobile);
+	&.center {
+		text-align: center;
+	}
 	@include at-breakpoint($pad) {
 		@include adjust-font-size-to($list-font-size);
-		letter-spacing: -0px;
+		letter-spacing: 0;
 	}
 }
