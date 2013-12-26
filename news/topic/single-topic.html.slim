@@ -1,15 +1,15 @@
-.hero style="background: black url(http://hhhhold.com/1920x800/d/#{rand(100)}) top center no-repeat;"
-	.hero-dark-bg
+.page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
+	.page-header-dark-bg
 	.container
-		h1.hero-title 兩岸服貿協議
-		p.hero-content = zh_lorem_sentences 5
+		h1.page-header-title 兩岸服貿協議
+		p.page-header-content = zh_lorem_sentences 5
 .container
 	.block
 		h1.title 主題
 		p = zh_lorem_paragraphs 5
 	.block
 		h1.title 戰報
-		= render "/partials/gallery"
+		= render "/partials/gallery/gallery"
 		.button-box.center
 			input.button type="button" value="觀看更多戰報..."
 	.block

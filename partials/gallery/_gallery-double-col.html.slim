@@ -1,11 +1,11 @@
 .gallery
-	- 1.upto(2) do |i|
+	- 2.upto(3) do |i|
 		a.gallery-item.double-col href="#"
-			h1.top-number.small #{i+1}
+			h1.top-number.small #{i}
 			.gallery-photo
 				img src="http://hhhhold.com/800x600/#{rand(50)}"
 				.play-icon
 					.play-triangle Play
 			.gallery-item-info
-				span.gallery-item-date = lorem_date.to_date
+				span.gallery-item-sub = lorem_date.to_date
 				p.gallery-item-title = zh_lorem_sentence
