@@ -1,9 +1,10 @@
-.header { 
-	background-color: $header-background; 
+.header {
+	background-color: $header-background;
 }
 
 .logo {
 	text-align: center;
+	@include text-shadow(0px 1px 2px $menu-text-shadow);
 	a {
 		color: $header-font-color;
 		&:hover {
@@ -23,8 +24,8 @@
 	height: $menu-btn-size;
 	background-color: transparent;
 	border: none;
-	&:focus { 
-		outline: none; 
+	&:focus {
+		outline: none;
 	}
 	@include at-breakpoint($desktop) {
 	  display: none;
@@ -52,7 +53,7 @@
 	}
 	.open-menu & {
     	&:first-child {
-    		@include first-and-last-bar-transform(45deg); 		
+    		@include first-and-last-bar-transform(45deg);
     	}
     	&:last-child {
     		@include first-and-last-bar-transform(-45deg);
