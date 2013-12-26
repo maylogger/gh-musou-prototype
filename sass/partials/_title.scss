@@ -32,6 +32,9 @@
 	@include leader(1);
 	@include adjust-font-size-to($title-mega-font-size);
 	font-weight: bold;
+	&.center {
+		text-align: center;
+	}
 	@include at-breakpoint($wide-mobile) {
 	  border-bottom: 1px solid $global-divider;
 	}
