@@ -1,0 +1,35 @@
+.live-background {
+	padding: rhythm(1) 0;
+	background: image-url("background/light_wool.png") repeat;
+	@include box-shadow( inset 0px 3px 10px rgba($pte-black, .5) ); // need arrange
+}
+
+.live-title {
+	margin: 0 auto;
+	@include hide-text;
+	@include replace-text-with-dimensions("fire-livenow.png");
+  background-image: none, image-url("fire-livenow.svg");
+}
+
+.gallery.live {
+	.gallery-item {
+		@include at-breakpoint($wide-mobile) {
+			float: left;
+			width: columns(2, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+	}
+	.gallery-photo {
+		position: relative;
+		padding-top: 56.25%;
+		height: 0;
+		background-color: $gallery-item-background;
+	}
+}
