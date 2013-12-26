@@ -398,10 +398,9 @@ p { padding: 0; }
 .live-group .live-item:hover img { -webkit-transform: scale(1) rotate(3deg); -moz-transform: scale(1) rotate(3deg); -ms-transform: scale(1) rotate(3deg); -o-transform: scale(1) rotate(3deg); transform: scale(1) rotate(3deg); }
 .live-group .live-item-title { margin-top: 12px; color: white; text-align: center; }
 
-.live-title { text-align: center; font-size: 13px; line-height: 24px; background-color: black; color: #ff3; font-weight: bold; font-style: italic; letter-spacing: 1px; }
+.live-title { text-align: center; font-size: 13px; line-height: 24px; background-color: black; color: #ffe229; font-weight: bold; font-style: italic; letter-spacing: 1px; }
 
-.header { position: relative; z-index: 1; background: rgba(55, 55, 55, 0.7); }
-
-.nav { position: relative; z-index: 2; }
+.home.header { position: relative; z-index: 1; background: rgba(55, 55, 55, 0.7); }
+.home.nav { position: relative; z-index: 2; }
 
 .no-content { font-size: 24px; line-height: 48px; text-align: center; color: #757570; }
