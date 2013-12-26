@@ -1,12 +1,12 @@
 .container
 	h1.title 最新戰報
   	.table-head
-  		.span.field.col-60 戰報標題
-  		.span.field.col-20 作者
-  		.span.field.col-20 發表時間
+  		span.field.col-60 戰報標題
+  		span.field.col-20 作者
+  		span.field.col-20 發表時間
   	- 10.times do
 	  	.table-row
-	  		.span.field.col-60 = zh_lorem_sentence
-	  		.span.field.col-20 = zh_lorem_name
-	  		.span.field.col-20 = lorem_date.to_date
+	  		span.field.col-60 = zh_lorem_sentence
+	  		span.field.col-20 = zh_lorem_name
+	  		span.field.col-20 = lorem_date.to_date
 	= render "/partials/pagination"
