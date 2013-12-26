@@ -1,0 +1,57 @@
+.page-header {
+	position: relative;
+	text-align: center;
+	border-top: 1px solid $hero-top-divider;
+	background-color: black;
+	background-position: top center;
+	background-repeat: no-repeat;
+	@include background-size(cover);
+	.page-header-title {
+		position: relative;
+		display: inline-block;
+		@include leader(2);
+		@include trailer(2);
+		@include padding-trailer(.25);
+		@include adjust-font-size-to($font-size-EL, 3.5);
+		color: $hero-content-color;
+		font-weight: bold;
+		@include text-shadow(0px 1px 2px $hero-text-shadow);
+		@mixin pseudo-title-line($position) {
+			display: block;
+			position: absolute;
+			$position: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			content: "";
+			background: $hero-content-color;
+			@include box-shadow(0px 1px 1px lighten($hero-text-shadow, 25%));
+		}
+		&:before {
+			@include pseudo-title-line(top);
+		}
+		&:after {
+			@include pseudo-title-line(bottom);
+		}
+	}
+	.page-header-content {
+		position: relative;
+		display: block;
+		@include leader(1);
+		@include trailer(1.5);
+		padding: 0 rhythm(1);
+		color: $hero-content-color;
+		@include text-shadow(0px 1px 2px $hero-text-shadow);
+	}
+	.page-header-title + .page-header-content {
+		@include leader(0);
+	}
+}
+
+.page-header-dark-bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: $hero-dark-gradient-background;
+}
