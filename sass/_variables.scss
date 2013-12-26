@@ -9,12 +9,12 @@ $gutter-width    								 : 1em;
 $grid-padding    								 : $gutter-width;
 
 // - Media for responsive layout
-$wide-mobile-columns      			 : 6;                                        
-$wide-mobile-break        			 : 500px;                         
+$wide-mobile-columns      			 : 6;
+$wide-mobile-break        			 : 500px;
 $wide-mobile              		 	 : $wide-mobile-break $wide-mobile-columns;
 
-$pad-columns      							 : 8;                                        
-$pad-break        							 : 650px;                         
+$pad-columns      							 : 12;
+$pad-break        							 : 650px;
 $pad              							 : $pad-break $pad-columns;
 
 $desktop-columns 								 : 12;
@@ -60,6 +60,8 @@ $pte-red-light   								 : #E70000;
 $pte-blue-dark   								 : #1934FF;
 $pte-blue              					 : #2874FF;
 $pte-blue-light  								 : #3C9AFF;
+$pte-green 			 								 : #DFED48;
+$pte-green-light 								 : #FAFFE3;
 
 // - Prototyping Transparent color
 $pte-black-15 									 : rgba(black, .15);
@@ -83,9 +85,9 @@ $global-content-color 					 : $pte-black;
 $global-font-color 							 : $pte-black;
 
 // ========================================================
-// Partials 
+// Partials
 // ========================================================
-// - link 
+// - link
 $link-color 										 : $pte-blue;
 // $link-color-hover
 // $link-color-active
@@ -105,6 +107,7 @@ $menu-btn-bar-color 					 	 : white;
 $menu-btn-bar-shadow-color 			 : $pte-black-50;
 $menu-link-color 								 : white;
 $menu-off-canvas-width 					 : 260px;
+$menu-text-shadow 							 : $pte-black-light;
 
 // - main in layout.scss
 $main-background 								 : white;
@@ -121,9 +124,9 @@ $article-font-size 							 : $font-size-M;
 // - hero
 $hero-content-color 						 : white;
 $hero-text-shadow 							 : $pte-black-light;
-$hero-top-divider 							 : $global-divider; 
+$hero-top-divider 							 : $global-divider;
 $hero-dark-background 					 : rgba(black, .15);
-$hero-dark-gradient-background 	 : linear-gradient(to top, rgba(black, .85) 0, rgba(black, 0) 100% );
+$hero-dark-gradient-background 	 : linear-gradient(to top, rgba(black, .5) 0, rgba(black, 0) 100% );
 
 // - list
 $list-label-color 							 : $pte-gray-light;
@@ -133,6 +136,7 @@ $list-font-size-mobile 					 : $font-size-S;
 $list-sub-font-size 						 : $font-size-S;
 $list-sub-font-size-mobile 	 		 : $font-size-XS;
 $list-no-border-offset-fix 			 : 1px;
+$list-broadcast-background 			 : $pte-green-light;
 
 // - pagination
 $pagination-switch-background 	 : $pte-black;
@@ -171,6 +175,11 @@ $button-background 							 : rgba($pte-black, .85);
 $button-background-hover 				 : $pte-lightgray;
 $button-color 									 : $pte-lightgray;
 $button-color-hover 						 : $pte-black;
+
+// - tag
+$tag-broadcast-background 			 : $pte-green;
+$tag-now-background 						 : $pte-red;
+$tag-now-color 									 : white;
 
 // - input
 
