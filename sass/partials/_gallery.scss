@@ -8,7 +8,7 @@
 	float: right;
 	@include padding-trailer(.5);
 	text-align: left;
-	.gallery-item-date {
+	.gallery-item-sub {
 		color: $gallery-item-date-color;
 		font-weight: bold;
 		@include adjust-font-size-to($font-size-S, .5);
@@ -27,7 +27,7 @@
 .gallery-item {
 	position: relative;
 	display: block;
-	margin: 0 -#{$grid-padding} 1px;
+	margin: 0 -#{$grid-padding};
 	vertical-align: top;
 	&:hover {
 		text-decoration: none;
@@ -54,7 +54,7 @@
 		left: 50%;
 		width: $gallery-play-icon-size;
 		height: $gallery-play-icon-size;
-		margin-top: -$gallery-play-icon-offset; 
+		margin-top: -$gallery-play-icon-offset;
 		margin-left: -$gallery-play-icon-offset;
 		background-color: rgba($gallery-play-icon-background, .75);
 		@include border-radius($gallery-play-icon-offset);
@@ -81,7 +81,7 @@
 		width: 100%;
 		@include padding-leader(.5);
 		color: $gallery-item-info-color;
-		.gallery-item-date {
+		.gallery-item-sub {
 			padding: 0 rhythm(.5);
 			color: $gallery-item-date-color;
 		}
@@ -106,6 +106,9 @@
 		width: columns(4, $total-columns);
 		margin: 0 gutter($total-columns) gutter($total-columns) 0;
 		&:nth-child(2n) {
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+		}
+		&:nth-child(3n) {
 			margin-right: 0;
 		}
 		&:last-child {
@@ -116,12 +119,6 @@
 	@include at-breakpoint($desktop) {
 		width: columns(4, $total-columns);
 		margin: 0 gutter($total-columns) gutter($total-columns) 0;
-		&:nth-child(2n) {
-			margin: 0 gutter($total-columns) gutter($total-columns) 0;
-		}
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
 		&:last-child {
 			@include trailer(1);
 			margin-right: 0;
