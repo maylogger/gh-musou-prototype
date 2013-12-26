@@ -125,14 +125,16 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 body, h1, h2, h3, h4, h5, h6 { font-family: "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif; font-weight: 300; }
 
+.hero .hero-title, .hero .hero-content { font-family: "songti TC", "Hiragino Mincho Pro", serif; font-weight: bold; }
+
 body { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-size: 32px; line-height: 48px; }
 
-a { color: #2874ff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: #2874ff; color: inherit; text-decoration: inherit; cursor: inherit; }
+a:active, a:focus { outline: none; }
 
-p { margin: 0; padding: 0; border: 0; margin-top: 24px; margin-bottom: 24px; }
+p { margin: 0; padding: 0; border: 0; margin-bottom: 24px; }
 
 .legislator-name { display: inline-block; }
 
@@ -148,7 +150,7 @@ html, body { height: 100%; color: #333333; }
 
 .menu { position: absolute; top: 0; bottom: 0; z-index: 1; width: 260px; }
 
-.main { position: relative; left: 0; z-index: 2; min-height: 100%; background: url('/images/background/carbon_fibre_big.png?1339701544') repeat; -webkit-transition: left 0.3s; -moz-transition: left 0.3s; -o-transition: left 0.3s; transition: left 0.3s; }
+.main { position: relative; left: 0; z-index: 2; min-height: 100%; background: url('/images/background/light_wool.png?1339701544') repeat; -webkit-transition: left 0.3s; -moz-transition: left 0.3s; -o-transition: left 0.3s; transition: left 0.3s; }
 .open-menu .main { left: 260px; }
 
 @media (min-width: 900px) { .container { max-width: 71em; }
@@ -158,7 +160,7 @@ html, body { height: 100%; color: #333333; }
   .main { position: static; } }
 .header { background-color: #333333; }
 
-.logo { text-align: center; text-shadow: 0px 1px 2px #424242; }
+.logo { text-align: center; }
 .logo a { color: white; }
 .logo a:hover { color: #fefefe; text-decoration: none; }
 @media (min-width: 900px) { .logo { text-align: left; } }
@@ -174,7 +176,7 @@ html, body { height: 100%; color: #333333; }
 .open-menu .menu-btn-bar:nth-child(2n) { opacity: 0; }
 
 .menu { background-color: #333333; }
-.menu .nav { list-style: none; margin: 0; padding: 0; border: 0; text-shadow: 0px 1px 2px #424242; }
+.menu .nav { list-style: none; margin: 0; padding: 0; border: 0; }
 @media (min-width: 900px) { .menu .nav { float: right; } }
 @media (min-width: 900px) { .menu .nav li { float: left; } }
 .menu .nav li + li { border-top: 1px solid #4d4d4d; }
@@ -232,11 +234,11 @@ p { padding: 0; }
 @media (min-width: 900px) { .aside { width: 32.39437%; float: right; margin-right: 0; margin-top: 24px; } }
 
 .hero { text-align: center; color: white; margin-top: -48px; padding-top: 48px; background: black url(/images/index-hero.jpg) top center no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.hero .hero-title { position: relative; display: inline-block; margin-top: 72px; margin-bottom: 24px; font-family: "songti TC", "Hiragino Mincho Pro", serif; font-size: 64px; line-height: 84px; font-weight: bold; text-shadow: 0px 1px 2px #424242; }
-.hero .hero-content { position: relative; display: block; margin-top: 24px; margin-bottom: 72px; font-size: 24px; line-height: 48px; text-shadow: 0px 1px 2px #424242; }
+.hero .hero-title { position: relative; display: inline-block; margin-top: 120px; padding-bottom: 7px; font-size: 72px; line-height: 72px; font-weight: bold; text-shadow: 0px 1px 10px rgba(152, 113, 77, 0.7); letter-spacing: .2em; left: .15em; }
+.hero .hero-content { max-width: 20em; margin: 0 auto; border-top: 2px solid rgba(255, 255, 255, 0.3); position: relative; display: block; margin-top: 12px; padding-top: 7px; margin-bottom: 96px; font-size: 24px; line-height: 48px; text-shadow: 0px 1px 10px rgba(152, 113, 77, 0.7); }
 
 .page-header { position: relative; text-align: center; border-top: 1px solid #e7e5e2; background-color: black; background-position: top center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.page-header .page-header-title { position: relative; display: inline-block; margin-top: 48px; margin-bottom: 48px; padding-bottom: 6px; font-size: 64px; line-height: 84px; color: white; font-weight: bold; text-shadow: 0px 1px 2px #424242; }
+.page-header .page-header-title { position: relative; display: inline-block; margin-top: 48px; margin-bottom: 48px; padding-bottom: 6px; font-size: 72px; line-height: 84px; color: white; font-weight: bold; text-shadow: 0px 1px 2px #424242; }
 .page-header .page-header-title:before { display: block; position: absolute; left: 0; width: 100%; height: 3px; content: ""; background: white; -webkit-box-shadow: 0px 1px 1px #828282; -moz-box-shadow: 0px 1px 1px #828282; box-shadow: 0px 1px 1px #828282; }
 .page-header .page-header-title:after { display: block; position: absolute; left: 0; width: 100%; height: 3px; content: ""; background: white; -webkit-box-shadow: 0px 1px 1px #828282; -moz-box-shadow: 0px 1px 1px #828282; box-shadow: 0px 1px 1px #828282; }
 .page-header .page-header-content { position: relative; display: block; margin-top: 24px; margin-bottom: 36px; padding: 0 24px; color: white; text-shadow: 0px 1px 2px #424242; }
@@ -384,13 +386,22 @@ p { padding: 0; }
 @media (min-width: 650px) { .pagination a { margin: 0 3px; padding: 8px 13px; font-size: 16px; line-height: 24px; }
   .pagination a.more { padding: 8px 12px; } }
 
-.live-background { padding: 24px 0; background: url('/images/background/light_wool.png?1339701544') repeat; -webkit-box-shadow: inset 0px 3px 10px rgba(51, 51, 51, 0.5); -moz-box-shadow: inset 0px 3px 10px rgba(51, 51, 51, 0.5); box-shadow: inset 0px 3px 10px rgba(51, 51, 51, 0.5); }
+.block-live { background: #900; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #aa0000), color-stop(100%, #000000)); background: -webkit-radial-gradient(#aa0000, #000000); background: -moz-radial-gradient(#aa0000, #000000); background: -o-radial-gradient(#aa0000, #000000); background: radial-gradient(#aa0000, #000000); -webkit-box-shadow: inset 0px 3px 50px rgba(51, 51, 51, 0.75); -moz-box-shadow: inset 0px 3px 50px rgba(51, 51, 51, 0.75); box-shadow: inset 0px 3px 50px rgba(51, 51, 51, 0.75); }
 
-.live-title { margin: 0 auto; text-indent: -119988px; overflow: hidden; text-align: left; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/fire-livenow.png?1388046023'); background-repeat: no-repeat; background-position: 50% 50%; width: 160px; height: 70px; background-image: none, url('/images/fire-livenow.svg?1388046031'); }
+.live-group { padding: 36px 0; }
+.live-group:after { content: ""; display: table; clear: both; }
+@media (min-width: 650px) { .live-group { width: 74.64789%; margin: 0 auto; } }
+.live-group .live-item { display: block; }
+@media (min-width: 650px) { .live-group .live-item { width: 32.07547%; float: left; margin-right: 1.88679%; }
+  .live-group .live-item:last-child { float: right; margin-right: 0; } }
+.live-group .live-item img { display: block; width: 100%; border: 2px solid white; background: white; -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3); box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3); -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -webkit-transform: scale(0.9); -moz-transform: scale(0.9); -ms-transform: scale(0.9); -o-transform: scale(0.9); transform: scale(0.9); }
+.live-group .live-item:hover img { -webkit-transform: scale(1) rotate(3deg); -moz-transform: scale(1) rotate(3deg); -ms-transform: scale(1) rotate(3deg); -o-transform: scale(1) rotate(3deg); transform: scale(1) rotate(3deg); }
+.live-group .live-item-title { margin-top: 12px; color: white; text-align: center; }
 
-@media (min-width: 500px) { .gallery.live .gallery-item { float: left; width: 31.42857%; margin: 0 2.85714% 2.85714% 0; }
-  .gallery.live .gallery-item:nth-child(3n) { margin-right: 0; }
-  .gallery.live .gallery-item:last-child { margin-bottom: 24px; margin-right: 0; } }
-.gallery.live .gallery-photo { position: relative; padding-top: 56.25%; height: 0; background-color: black; }
+.live-title { text-align: center; font-size: 13px; line-height: 24px; background-color: black; color: #ff3; font-weight: bold; font-style: italic; letter-spacing: 1px; }
+
+.header { position: relative; z-index: 1; background: rgba(55, 55, 55, 0.7); }
+
+.nav { position: relative; z-index: 2; }
 
 .no-content { font-size: 24px; line-height: 48px; text-align: center; color: #757570; }

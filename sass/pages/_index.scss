@@ -1,35 +1,61 @@
-.live-background {
-	padding: rhythm(1) 0;
-	background: image-url("background/light_wool.png") repeat;
-	@include box-shadow( inset 0px 3px 10px rgba($pte-black, .5) ); // need arrange
+.block-live {
+	background: #900;
+	@include background(
+		radial-gradient(#a00, black)
+	);
+	@include box-shadow( inset 0px 3px 50px rgba($pte-black, .75) );
+}
+
+.live-group {
+	padding: 36px 0;
+	@include pie-clearfix;
+	@include at-breakpoint($pad) {
+	  width: columns(9);
+	  margin: 0 auto;
+	}
+	.live-item {
+		display: block;
+		@include at-breakpoint($pad) {
+		  @include span-columns(3,9);
+		  @include nth-omega;
+		}
+		img {
+			display: block;
+			width: 100%;
+			border: 2px solid white;
+			background: white;
+			@include box-shadow(0px 5px 5px rgba(black,.3));
+			@include transition(.3s);
+			@include transform(scale(.9));
+		}
+		&:hover img {
+			@include transform(scale(1) rotate(3deg));
+		}
+	}
+	.live-item-title {
+		@include leader(.5);
+		@include link-colors(white);
+		text-align: center;
+	}
 }
 
 .live-title {
-	margin: 0 auto;
-	@include hide-text;
-	@include replace-text-with-dimensions("fire-livenow.png");
-  background-image: none, image-url("fire-livenow.svg");
+  text-align: center;
+  @include adjust-font-size-to(13px);
+  background-color: black;
+  color: #ff3;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: 1px;
 }
 
-.gallery.live {
-	.gallery-item {
-		@include at-breakpoint($wide-mobile) {
-			float: left;
-			width: columns(2, $total-columns);
-			margin: 0 gutter($total-columns) gutter($total-columns) 0;
-			&:nth-child(3n) {
-				margin-right: 0;
-			}
-			&:last-child {
-				@include trailer(1);
-				margin-right: 0;
-			}
-		}
-	}
-	.gallery-photo {
+
+	.header {
 		position: relative;
-		padding-top: 56.25%;
-		height: 0;
-		background-color: $gallery-item-background;
+		z-index: 1;
+		background: rgba(55,55,55,.7);
 	}
-}
+	.nav {
+		position: relative;
+		z-index: 2;
+	}

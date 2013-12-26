@@ -1,34 +1,14 @@
 .hero
-	.hero-dark-bg
 	.container
 		h1.hero-title 國會無雙
 		p.hero-content 一天一分鐘，看國會大小事
-.live-background
+.block-live
+	.live-title Live Now!
 	.container
-			h1.live-title Live Now!
-			= render "partials/gallery/gallery-live"
+		.live-group
+			- 3.times do
+				a.live-item href="#"
+					img.live-photo src="http://hhhhold.com/800x450/#{rand(50)}"
+					.live-item-title= zh_lorem_words rand(40)+10
 .container
 	.block
-		h1.mega-title.center 戰報
-	.block
-		h1.mega-title.center 精華片段
-		= render "partials/gallery/gallery"
-	.block
-		h1.mega-title.center 賽程
-		.table-head
-			span.field.col-10 日期
-			span.field.col-40 會議名稱
-			span.field.col-15 時間
-			span.field.col-10 主席
-			span.field.col-15 議題
-			span.field.col-10
-		= render "partials/schedule-row/schedule-now"
-		- 3.times do
-			= render "partials/schedule-row/schedule"
-		= render "partials/schedule-row/schedule-broadcast"
-		- 2.times do
-			= render "partials/schedule-row/schedule"
-	.block
-		h1.mega-title.center 歷史數據
-	.block
-		h1.mega-title.center 立院規則

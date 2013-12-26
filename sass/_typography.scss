@@ -3,6 +3,11 @@
   font-weight: 300;
 }
 
+%songti {
+  font-family: "songti TC", "Hiragino Mincho Pro", serif;
+  font-weight: bold;
+}
+
 body {
   @extend %helvetica-light;
   -webkit-text-size-adjust: 100%;
@@ -18,11 +23,10 @@ body {
 
 a {
   @include link-colors($link-color);
-  @include hover-link;
+  @include unstyled-link;
 }
 
 p {
   @include reset-box-model;
-  @include leader(1);
   @include trailer(1);
 }

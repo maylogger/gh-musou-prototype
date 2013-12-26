@@ -28,7 +28,7 @@ $relative-font-sizing 					 : false;
 
 // - Font setting
 $font-family-sans-serif 				 : "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
-$font-size-EL             			 : $base-font-size * 4;			// 64px
+$font-size-EL             			 : $base-font-size * 4.5;		// 64px
 $font-size-UL 									 : $base-font-size * 3;			// 48px
 $font-size-XXL             			 : $base-font-size * 2;			// 32px
 $font-size-XL              			 : $base-font-size * 1.5;		// 24px
@@ -107,7 +107,6 @@ $menu-btn-bar-color 					 	 : white;
 $menu-btn-bar-shadow-color 			 : $pte-black-50;
 $menu-link-color 								 : white;
 $menu-off-canvas-width 					 : 260px;
-$menu-text-shadow 							 : $pte-black-light;
 
 // - main in layout.scss
 $main-background 								 : white;

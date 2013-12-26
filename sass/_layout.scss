@@ -29,7 +29,7 @@ html, body {
 	z-index: 2;
 	min-height: 100%;
 	// background-color: $main-background;
-	background: image-url("background/carbon_fibre_big.png") repeat;
+	background: image-url("background/light_wool.png") repeat;
 	@include transition(left .3s);
 	.open-menu & {
 		left: $menu-off-canvas-width;

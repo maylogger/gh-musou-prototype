@@ -8,19 +8,26 @@
 	.hero-title {
 		position: relative;
 		display: inline-block;
-		@include leader(3);
-		@include trailer(1);
-		font-family: "songti TC", "Hiragino Mincho Pro", serif;
-		@include adjust-font-size-to($font-size-EL, 3.5);
+		@include leader(5);
+		@include padding-trailer(.3);
+		@extend %songti;
+		@include adjust-font-size-to($font-size-EL, 3);
 		font-weight: bold;
-		@include text-shadow(0px 1px 2px $hero-text-shadow);
+		@include text-shadow(0px 1px 10px rgba(#98714d,.7));
+		letter-spacing: .2em;
+		left: .15em;
 	}
 	.hero-content {
+		max-width: 20em;
+		margin: 0 auto;
+		border-top: 2px solid rgba(white,.3);
+		@extend %songti;
 		position: relative;
 		display: block;
-		@include leader(1);
-		@include trailer(3);
+		@include leader(.5);
+		@include padding-leader(.3);
+		@include trailer(4);
 		@include adjust-font-size-to($font-size-XL);
-		@include text-shadow(0px 1px 2px $hero-text-shadow);
+		@include text-shadow(0px 1px 10px rgba(#98714d,.7));
 	}
 }

@@ -4,7 +4,6 @@
 
 .logo {
 	text-align: center;
-	@include text-shadow(0px 1px 2px $menu-text-shadow);
 	a {
 		color: $header-font-color;
 		&:hover {
