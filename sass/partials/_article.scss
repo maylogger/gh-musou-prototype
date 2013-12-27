@@ -6,9 +6,3 @@
 		@include span-columns(8);
 	}
 }
-p {
-	padding: 0;	
-	@include at-breakpoint($desktop) {
-		padding: 0 rhythm(.5);	
-	}
-}

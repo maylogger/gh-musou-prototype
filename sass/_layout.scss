@@ -28,12 +28,16 @@ html, body {
 	left: 0;
 	z-index: 2;
 	min-height: 100%;
-	// background-color: $main-background;
-	background: image-url("background/light_wool.png") repeat;
+	background: image-url("light_wool.png") repeat;
 	@include transition(left .3s);
 	.open-menu & {
 		left: $menu-off-canvas-width;
 	}
+}
+
+.content, .container {
+	margin-top: -1px;
+	padding-top: 1px;
 }
 
 @include at-breakpoint($desktop) {
