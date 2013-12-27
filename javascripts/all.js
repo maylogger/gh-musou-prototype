@@ -6,7 +6,7 @@ $(".menu-btn").click(function(){
 //collapse button switch content
 $(".collapse-toggle-button").click(function(){
 	if($(this).text() == '看更多'){
-           $(this).text('看三小');
+           $(this).text('收回去');
        } else {
            $(this).text('看更多');
        }
