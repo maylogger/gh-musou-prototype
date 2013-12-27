@@ -1,7 +1,4 @@
-// ========================================================
-// Layout and typography
-// ========================================================
-
+// Layout and typography ==================================
 // - SUSY basic setting
 $total-columns   								 : 4;
 $column-width    								 : 5em;
@@ -44,9 +41,8 @@ $grid-background-baseline-height : $base-line-height;
 // - Class variable
 $page-container 								 : ".container";
 
-// ========================================================
-// Prototyping color
-// ========================================================
+
+// Prototyping color ======================================
 $pte-black             					 : #333333;
 $pte-black-light 								 : #424242;
 $pte-gray-dark   								 : #63635C;
@@ -72,21 +68,15 @@ $pte-black-50 									 : rgba(black, .5);
 $grid-background-column-color 	 : rgba(#f15a14, .2);
 $grid-background-baseline-color  : rgba(#009a8e, .3);
 
-// ========================================================
-// Ci color
-// ========================================================
+// Ci color ===============================================
 
-// ========================================================
-// Global color
-// ========================================================
+// Global color ===========================================
 $global-divider 								 : $pte-lightgray;
 $global-title-color 						 : $pte-black-light;
 $global-content-color 					 : $pte-black;
 $global-font-color 							 : $pte-black;
 
-// ========================================================
-// Partials
-// ========================================================
+// Partials ===============================================
 // - link
 $link-color 										 : $pte-blue;
 // $link-color-hover
@@ -108,7 +98,7 @@ $menu-btn-bar-shadow-color 			 : $pte-black-50;
 $menu-link-color 								 : white;
 $menu-off-canvas-width 					 : 260px;
 
-// - main in layout.scss
+// -main
 $main-background 								 : white;
 
 // - title
@@ -122,10 +112,12 @@ $article-font-size 							 : $font-size-M;
 
 // - hero
 $hero-content-color 						 : white;
-$hero-text-shadow 							 : $pte-black-light;
-$hero-top-divider 							 : $global-divider;
-$hero-dark-background 					 : rgba(black, .15);
-$hero-dark-gradient-background 	 : linear-gradient(to top, rgba(black, .5) 0, rgba(black, 0) 100% );
+
+// - page-header
+$page-header-content-color 			 : white;
+$page-header-text-shadow 				 : $pte-black-light;
+$page-header-top-divider 				 : $global-divider;
+$page-header-mask-background 		 : linear-gradient(to top, rgba(black, .5) 0, rgba(black, 0) 100% );
 
 // - list
 $list-label-color 							 : $pte-gray-light;
@@ -150,7 +142,7 @@ $gallery-item-background 				 : black;
 // $gallery-item-info-background 	 : linear-gradient(to top, rgba(black, .85) 0, rgba(black, .5) 25%, rgba(black, 0) 100% );
 $gallery-item-info-color 				 : $pte-black;
 $gallery-item-date-color 				 : $pte-lightgray-dark;
-$gallery-top-number-size 				 : 120px;
+$gallery-top-number-size 				 : 144px;
 $gallery-top-number-size-small 	 : 72px;
 
 // - video

@@ -2,6 +2,41 @@
 	position: relative;
 	@include leader(1);
 	@include pie-clearfix;
+	&.single-col .gallery-item {
+		@include at-breakpoint($wide-mobile) {
+	  	width: columns(6, $total-columns);
+	  	@include trailer(1);
+		}
+		@include at-breakpoint($pad) {
+		  width: columns(12, $total-columns);
+		}
+		@include at-breakpoint($desktop) {
+		  width: columns(8, $total-columns);
+		}
+	}
+	&.double-col .gallery-item {
+		@include at-breakpoint($pad) {
+			width: columns(6, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+		@include at-breakpoint($desktop) {
+		  width: columns(6, $total-columns);
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 .gallery-item-info {
@@ -124,30 +159,6 @@
 			margin-right: 0;
 		}
 	}
-	&.single-col {
-		@include at-breakpoint($wide-mobile) {
-	  	width: columns(6, $total-columns);
-	  	@include trailer(1);
-		}
-		@include at-breakpoint($pad) {
-		  width: columns(8, $total-columns);
-		}
-		@include at-breakpoint($desktop) {
-		  width: columns(8, $total-columns);
-		}
-	}
-	&.double-col {
-		@include at-breakpoint($desktop) {
-		  width: columns(6, $total-columns);
-			&:nth-child(2n) {
-				margin-right: 0;
-			}
-			&:last-child {
-				@include trailer(1);
-				margin-right: 0;
-			}
-		}
-	}
 }
 
 .top-number {
@@ -156,8 +167,9 @@
 	right: 0;
 	@include adjust-font-size-to($gallery-top-number-size);
 	font-weight: bold;
-	opacity: .1;
+	opacity: .15;
 	&.small {
+		padding: 0 rhythm(.5);
 		@include adjust-font-size-to($gallery-top-number-size-small, 3);
 		color: black;
 	}

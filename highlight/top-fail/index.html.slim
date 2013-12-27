@@ -1,16 +1,13 @@
 .page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
-	.page-header-dark-bg
+	.page-header-mask
 	.container
-		h1.page-header-title TOP FAIL
+		h1.page-header-title 本日烏龍球
 		p.page-header-content = zh_lorem_sentences 5
 .container
 	.block
 		= render "/partials/gallery/gallery-single-col"
 	.block
 		= render "/partials/gallery/gallery-double-col"
-	.block
-		h1.mega-title 14/12/26
-		p.no-content - 今日無爛招 -
 	.block
 		- ( rand(3) + 3 ).times do |i|
 			h1.mega-title 14/12/2#{5-i}
