@@ -1,10 +1,10 @@
 $i: 100;
 @while $i > 0 {
-    .col-#{$i} { 
-    	width: $i * 1% - 1.5%;
-    	padding-right: 1.5%;
-    }
-    $i: $i - 5;
+  .col-#{$i} {
+  	width: $i * 1% - 1.5%;
+  	padding-right: 1.5%;
+  }
+  $i: $i - 5;
 }
 
 .table-head {
