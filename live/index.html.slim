@@ -1,28 +1,28 @@
-.container
-	h1.title.video 立法院第8屆第4會期經濟委員會第13次全體委員會議
-.container
-	.article
-		.video-single
-			.video-wrapper
-				object type="application/x-shockwave-flash" data="http://www.justin.tv/swflibs/JustinPlayer.swf?channel=skyfire_trains_tv" id="live_embed_player_flash" bgcolor="#000000"
-					param name="allowFullScreen" value="true"
-					param name="allowScriptAccess" value="always" 
-					param name="allowNetworking" value="all" 
-					param name="movie" value="http://www.justin.tv/swflibs/JustinPlayer.swf" 
-					param name="flashvars" value="hostname=www.justin.tv&amp;channel=skyfire_trains_tv&amp;auto_play=false&amp;start_volume=25" 
-	.aside.video-chat
-		iframe allowtransparency="true" frameborder="0" scrolling="no" id="chat_embed" src="http://www.justin.tv/chat/embed?channel=skyfire_trains_tv&amp;default_chat=jtv&amp;#r=-rid-&amp;s=em"
-.container
+.video
+	.container
+		h1.title.video-title 劉櫂豪炮火超猛烈，精彩質詢中！
+		.article
+			.video-single
+				.video-wrapper
+					object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=phantoml0rd" bgcolor="#000000"
+						param name="allowFullScreen" value="true"
+						param name="allowScriptAccess" value="always"
+						param name="allowNetworking" value="all"
+						param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf"
+						param name="flashvars" value="hostname=www.twitch.tv&amp;channel=phantoml0rd&amp;auto_play=true&amp;start_volume=25"
+		.aside.video-chat
+			iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=phantoml0rd&amp;popout_chat=true"
+.container.video-info
 	.article#video-info
 		.block
-			h2.sub-title 主題
-			p#theme.collapse = zh_lorem_paragraphs 7
+			h2.sub-title 關於本直播
+			p#theme.collapse = zh_lorem_paragraphs 5
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#theme" 看更多
 		.block
 			h2.sub-title 參與委員
-			#attend-legislators.avatar-wall.collapse
-				- ( rand(5) + 12 ).times do
+			#attend-legislators.avatar-group.collapse
+				- ( rand(5) + 8 ).times do
 					= render "/partials/avatar/avatar"
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#attend-legislators" 看更多
