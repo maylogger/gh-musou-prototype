@@ -1,4 +1,6 @@
 .block {
 	position: relative;
+	@include leader(1);
 	@include trailer(2);
+	@include pie-clearfix;
 }
