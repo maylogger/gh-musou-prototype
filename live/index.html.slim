@@ -41,7 +41,8 @@
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#other-info" 看更多
 	.aside
-		h2.sub-title 今日其他 LIVE
-		ul.list
-			- ( rand(5) + 8 ).times do
-				li: a = zh_lorem_sentence
+		.block
+			h2.sub-title 今日其他 LIVE
+			ul.list
+				- ( rand(5) + 8 ).times do
+					li: a = zh_lorem_sentence
