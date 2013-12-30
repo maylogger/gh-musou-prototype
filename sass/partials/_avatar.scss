@@ -1,5 +1,5 @@
 .avatar-group {
-	@include clearfix;
+	@include pie-clearfix;
 }
 
 .avatar {
@@ -10,19 +10,8 @@
 		text-decoration: none;
 	}
 	.avatar-photo {
-		position: relative;
-	  width: $avatar-photo-width-1x;
-	  height: 0;
-		padding-top: 133%;
-		background-color: $avatar-item-background;
-		&.x2 {
-			width: $avatar-photo-width-2x;
-		}
 		img {
-			position: absolute;
-	  	top: 0;
-	  	left: 0;
-	  	// height: 100%;
+			width: 100%;
 		}
 	}
 	.avatar-info {
@@ -43,7 +32,53 @@
 	}
 }
 
+.avatar-single {
+	width: 100%;
+	@include pie-clearfix;
+	text-align: center;
+	@include at-breakpoint($pad) {
+		@include leader(1);
+		@include span-columns(3, $total_columns);
+	  text-align: left;
+	}
+	.avatar {
+		float: none;
+		margin: 0 0 rhythm(2) 0;
+		display: inline-block;
+		@include at-breakpoint($pad) {
+		  float: left;
+		  margin: 0 rhythm(1) rhythm(1) 0;
+		}
+	}
+
+	.avatar-info {
+		margin-top: rhythm(.25);
+		.avatar-party {
+			display: inline-block;
+			width: 30px;
+			height: 23px;
+			vertical-align: middle;
+		}
+		.avatar-name {
+			padding-left: rhythm(.25);
+			@include adjust-font-size-to($font-size-M);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
 .avatar-intro {
-	float: right;
-	width: 100% - (( 200 + 36 ) / 1136 ) * 100%; // calculate using 2x size
+	@include at-breakpoint($pad) {
+		@include span-columns(9 omega);
+	}
+}
+.avatar-highlight {
+	@include at-breakpoint($pad) {
+		@include span-columns(12 omega);
+	}
+	@include at-breakpoint($desktop) {
+		@include span-columns(9 omega);
+	}
 }
