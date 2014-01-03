@@ -10,8 +10,7 @@
 	}
 }
 .video-single {
-	max-width: 640px;
-	margin: 0 auto;
+	max-width: 750px;
 	padding: 5px;
 	background: black;
 }
@@ -28,6 +27,7 @@
 	}
 }
 .video-chat {
+	overflow: hidden;
 	text-align: center;
 	padding: 3px 0;
 	background: white;
@@ -36,7 +36,10 @@
 		min-width: 300px;
 		max-width: 640px;
 		width: 100%;
-		min-height: 480px;
+		min-height: 335px;
 		height: auto;
+		@include at-breakpoint($pad) {
+		  min-height: 555px;
+		}
 	}
 }

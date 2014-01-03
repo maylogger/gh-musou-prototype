@@ -99,7 +99,7 @@ $menu-link-color 								 : white;
 $menu-off-canvas-width 					 : 260px;
 
 // -main
-$main-background 								 : white;
+$main-background 								 : #FCFAF9;
 
 // - title
 $title-font-size 								 : $font-size-XXL;
@@ -121,6 +121,14 @@ $page-header-text-shadow 				 : $pte-black-light;
 $page-header-top-divider 				 : $global-divider;
 $page-header-mask-background 		 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
 
+// - video-header
+$video-header-font-size 					 : $font-size-XL;
+$video-header-font-size-large 		 : $font-size-XXL;
+$video-header-content-color 			 : white;
+$video-header-text-shadow 				 : $pte-black-light;
+$video-header-top-divider 				 : $global-divider;
+$video-header-mask-background 		 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
+
 // - list
 $list-label-color 							 : $pte-gray-light;
 $list-content-color 						 : $pte-black;
@@ -141,7 +149,6 @@ $gallery-play-icon-offset 			 : $gallery-play-icon-size / 2;
 $gallery-play-icon-background 	 : $pte-black;
 $gallery-play-icon-color 				 : white;
 $gallery-item-background 				 : black;
-// $gallery-item-info-background 	 : linear-gradient(to top, rgba(black, .85) 0, rgba(black, .5) 25%, rgba(black, 0) 100% );
 $gallery-item-info-color 				 : $pte-black;
 $gallery-item-date-color 				 : $pte-lightgray-dark;
 $gallery-top-number-size 				 : 144px;
@@ -157,7 +164,7 @@ $avatar-photo-width-large				 : 250px;
 
 // - collapse
 $collapse-toggle-divider 				 : $global-divider;
-$collapse-content-hider 				 : linear-gradient(to top, rgba(white, 1) 15%, rgba(white, .5) 50%, rgba(white, 0) 100% );
+$collapse-content-hider 				 : linear-gradient(to top, rgba($main-background, 1) 15%, rgba($main-background, .5) 50%, rgba($main-background, 0) 100% );
 $collapse-btn-color 						 : $pte-black;
 $collapse-btn-color-hover 			 : $pte-lightgray;
 $collapse-btn-background 			 	 : $pte-lightgray;

@@ -1,0 +1,90 @@
+// style testing...
+.versus {
+	position: relative;
+	@include trailer(2);
+	padding: rhythm(1) rhythm(7.5);
+	@include pie-clearfix;
+	@include perspective(500px);
+	@include perspective-origin(center);
+	&.animate .vs-badge {
+		@include transform(translateZ(0px));
+	}
+	&.animate .vs-avatar.left {
+		@include transform(rotateY(5deg) translateX(0px) translateZ(0px));
+	}
+	&.animate .vs-avatar.right {
+		@include transform(rotateY(-5deg) translateX(0px) translateZ(0px));
+	}
+}
+
+.vs-badge {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin: -100px;
+	background-image: image-url("word-versus.png");
+	@include transform(translateZ(450px));
+	@include transition(1.5s);
+}
+
+.vs-avatar {
+	position: relative;
+	&.left {
+		float: left;
+		@include transform(rotateY(5deg) translateX(-100px) translateZ(500px));
+		@include transition(1.5s);
+	}
+	&.right {
+		float: right;
+		@include transform(rotateY(-5deg) translateX(100px) translateZ(500px));
+		@include transition(1.5s);
+	}
+	&.right .avatar-photo {
+		@include transform( scaleX(-1) );
+	}
+	.avatar-info {
+		position: absolute;
+		left: -#{rhythm(1)};
+		bottom: -24px;
+		width: 100%;
+		height: 72px;
+		padding: 0 rhythm(1);
+		background-color: $pte-red;
+		@include border-radius(5px);
+		@include box-shadow(0px 3px 7px darken($pte-red, 25%));
+		.party {
+			position: relative;
+			top: -14px;
+			width: 100px;
+			height: 100px;
+			&.DPP {
+				background-image: image-url("badge-DPP.png");
+			}
+			&.KMT {
+				background-image: image-url("badge-KMT.png");
+			}
+			&.PFP {
+				background-image: image-url("badge-PFP.png");
+			}
+			&.TW {
+				background-image: image-url("badge-TW.png") ;
+			}
+		}
+		.name {
+			color: white;
+			@include adjust-font-size-to($font-size-UL);
+		}
+	}
+}
+
+.left .party {
+	right: -12px;
+	float: right;
+}
+
+.right .party {
+	left: -12px;
+	float: left;
+}

@@ -18,7 +18,7 @@
 	pointer-events: none;
 	.collapse-toggle-button {
 		position: absolute;
-		bottom: -#{rhythm(1.3)};
+		bottom: 0;
 		margin-left: -#{rhythm(1)};
 		padding: rhythm(.15) rhythm(.5);
 		@include adjust-font-size-to($font-size-S);
@@ -26,7 +26,7 @@
 		pointer-events: auto;
 		color: $collapse-btn-color;
 		background-color: $collapse-btn-background;
-		@include border-radius(0 0 5px 5px);
+		@include border-radius(5px 5px 0 0);
 		&:hover {
 			color: $collapse-btn-color-hover;
 			background-color: $collapse-btn-background-hover;
