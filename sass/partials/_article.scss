@@ -5,13 +5,10 @@
 	@include at-breakpoint($desktop) {
 		@include span-columns(8);
 	}
-	iframe {
-		min-width: 300px;
-		max-width: 640px;
-		width: 100%;
-		min-height: 480px;
-		height: auto;
-		@include leader(1);
-		@include trailer(1);
+}
+
+.layout-invert .article {
+	@include at-breakpoint($desktop) {
+		@include span-columns(9 omega);
 	}
 }

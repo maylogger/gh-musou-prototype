@@ -1,20 +1,17 @@
 $(function(){
-	$(".versus").addClass("animate");
-});
-// off canvas menu switch
-$(".menu-btn").click(function(){
-  $("body").toggleClass("open-menu");
-});
+	//$(".versus").addClass("animate");
 
-//collapse button switch content
-// $(".collapse-toggle-button").click(function(){
-// 	if($(this).text() == '看更多'){
-//            $(this).text('收回去');
-//        } else {
-//            $(this).text('看更多');
-//        }
-// });
+	// off canvas menu switch
+	$(".menu-btn").on("click", function(){
+		$("body").toggleClass("open-menu");
+	});
 
-$(".collapse-toggle-button").click(function(){
-	$(this).remove();
+	$(".collapse-toggle-button").on("click", function(){
+		$(this).remove();
+	});
+
+	return $("[data-affix-item]").stick_in_parent({
+    parent: "[data-affix-parent]"
+  });
+
 });

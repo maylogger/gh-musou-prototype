@@ -5,11 +5,12 @@
 .logo {
 	text-align: center;
 	a {
-		color: $header-font-color;
-		&:hover {
-			color: $header-font-color-hover;
-			text-decoration: none;
-		}
+		display: inline-block;
+		width: 146px;
+		height: 36px;
+		vertical-align: text-top;
+		@include hide-text;
+		background: image-url("logo.png") center no-repeat;
 	}
 	@include at-breakpoint($desktop) {
 		text-align: left;

@@ -58,6 +58,7 @@ $pte-blue              					 : #2874FF;
 $pte-blue-light  								 : #3C9AFF;
 $pte-green 			 								 : #DFED48;
 $pte-green-light 								 : #FAFFE3;
+$pte-yellow-light 							 : #FFFBE1;
 
 // - Prototyping Transparent color
 $pte-black-15 									 : rgba(black, .15);
@@ -75,6 +76,10 @@ $global-divider 								 : $pte-lightgray;
 $global-title-color 						 : $pte-black-light;
 $global-content-color 					 : $pte-black;
 $global-font-color 							 : $pte-black;
+
+// Layouts ================================================
+// - news
+$news-post-note-background 			 : $pte-yellow-light;
 
 // Partials ===============================================
 // - link
@@ -102,9 +107,11 @@ $menu-off-canvas-width 					 : 260px;
 $main-background 								 : #FCFAF9;
 
 // - title
-$title-font-size 								 : $font-size-XXL;
-$title-sub-font-size 						 : $font-size-XL - 4px;
+$title-block-background 				 : #EFEDEB;
 $title-mega-font-size 					 : $font-size-UL - 4px;
+$title-font-size 								 : $font-size-XXL - 4px;
+$title-sub-font-size 						 : $font-size-L;
+$title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
 
 // - article

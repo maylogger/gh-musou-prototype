@@ -1,15 +1,19 @@
+.title-block
+	.container
+		h1.title 賽程
 .container
 	.block
-		h1.title 賽程
-	  	.table-head
-	  		span.field.col-10 日期
-	  		span.field.col-40 會議名稱
-	  		span.field.col-15 時間
-	  		span.field.col-10 主席
-	  		span.field.col-15 議題
-	  		span.field.col-10
-	  	= render "/partials/schedule-row/schedule-now"
-	  	- 6.times do
-		  	- 3.times do
-			  	= render "/partials/schedule-row/schedule"
-		  	= render "/partials/schedule-row/schedule-broadcast"
+		.table-head
+			span.field.col-10 日期
+			span.field.col-40 會議名稱
+			span.field.col-15 時間
+			span.field.col-10 主席
+			span.field.col-15 議題
+			span.field.col-10
+		= render "/partials/schedule-row/schedule-now"
+		- 6.times do
+			- 3.times do
+				= render "/partials/schedule-row/schedule"
+		= render "/partials/schedule-row/schedule-broadcast"
+	.block
+		= render "/partials/pagination"
