@@ -4,9 +4,19 @@
 	color: $title-color;
 }
 .title-block {
+	position: relative;
 	background: $title-block-background;
+	@include background-size(cover);
+}
+.title-mask {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: $title-mask-background;
 }
 .title {
+	position: relative;
 	@extend %title-style;
 	@include adjust-font-size-to($title-font-size);
 	@include at-breakpoint($pad) {
@@ -46,4 +56,10 @@
 	  @include leader(1);
 		@include trailer(1);
 	}
+}
+
+.title-label {
+	display: block;
+	@include adjust-font-size-to($font-size-L);
+	color: $pte-gray-light;
 }
