@@ -164,7 +164,7 @@ html, body { height: 100%; color: #333333; }
 .header { background-color: #333333; }
 
 .logo { text-align: center; }
-.logo a { display: inline-block; width: 146px; height: 36px; vertical-align: text-top; text-indent: -119988px; overflow: hidden; text-align: left; background: url('/images/logo.png?1388753412') center no-repeat; }
+.logo a { display: inline-block; width: 146px; height: 36px; vertical-align: text-top; text-indent: -119988px; overflow: hidden; text-align: left; background: url('/images/logo.png?1388994750') center no-repeat; }
 @media (min-width: 900px) { .logo { text-align: left; } }
 
 .menu-btn { position: absolute; left: 0; width: 48px; height: 48px; background-color: transparent; border: none; }

@@ -1,19 +1,39 @@
-.page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
-	.page-header-mask
-	.container.page-header-container
-		h1.page-header-title 兩岸服貿協議
-		p.page-header-content = zh_lorem_sentences 5
+/ .page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
+/ 	.page-header-mask
+/ 	.container.page-header-container
+/ 		h1.page-header-title 兩岸服貿協議
+/ 		p.page-header-content = zh_lorem_sentences 5
+.title-block style="background-image: url(http://hhhhold.com/1080x300/#{rand(100)})"
+	.title-mask
+	.container
+		h1.title
+			span.title-label 重大議題
+			| 兩岸服貿協議
 .container
 	.block
 		h1.title 主題
 		p = zh_lorem_paragraphs 5
 	.block
 		h1.title 戰報
-		= render "/partials/gallery/gallery"
-		.button-box.center
-			input.button type="button" value="觀看更多戰報..."
+		.post-group
+			- 2.times do
+				a.post-item href="/news/post.html"
+					.post-photo
+						img src="http://hhhhold.com/400x225/#{rand(100)}"
+					.post-date 2013年12月17日
+					.post-title 王金平表示：不要偷按別人的表決器
+				a.post-item href="/news/post.html"
+					.post-photo
+						img src="http://hhhhold.com/400x225/#{rand(100)}"
+					.post-date 2013年11月6日
+					.post-title 吳育昇鄭重表達：張懸是中華民國的寶貝
+				a.post-item href="/news/post.html"
+					.post-photo
+						img src="http://hhhhold.com/400x225/#{rand(100)}"
+					.post-date 2013年9月25日
+					.post-title 劉櫂豪炮火猛烈，黃世銘啞口無言
 	.block
 		h1.title 相關連結
 		ul.list
 			- ( rand(5) + 5 ).times do
-				li: a = zh_lorem_sentence
+				li: a href="#" = zh_lorem_sentence
