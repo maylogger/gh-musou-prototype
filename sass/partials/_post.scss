@@ -10,6 +10,7 @@
 	overflow: hidden;
 	margin: gutter($total-columns);
 	margin-left: 0;
+	text-align: left;
 	background: rgb(242, 242, 238);
 	border-bottom: 3px solid $pte-red;
 	@include box-shadow( inset 0 0 10px rgba( black, .1) );

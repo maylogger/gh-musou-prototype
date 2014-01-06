@@ -10,8 +10,14 @@ $(function(){
 		$(this).remove();
 	});
 
-	return $("[data-affix-item]").stick_in_parent({
-    parent: "[data-affix-parent]"
-  });
+	var affixTrigger = function() {
+		var pageWidth = $(document).width();
+		$("[data-affix-item]").trigger("sticky_kit:detach");
+		if ( pageWidth >= 900) {
+			$("[data-affix-item]").stick_in_parent({parent: "[data-affix-parent]"}).trigger("sticky_kit:recalc");
+		}
+	};
+	$(document).ready(affixTrigger);
+	$(window).resize(affixTrigger);
 
 });
