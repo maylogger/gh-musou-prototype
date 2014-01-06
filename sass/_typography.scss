@@ -22,8 +22,8 @@ body {
 }
 
 a {
-  @include link-colors($link-color);
   @include unstyled-link;
+  @include link-colors($link-color, $link-color-hover);
 }
 
 p {
