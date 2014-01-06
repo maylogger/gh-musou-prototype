@@ -1,6 +1,44 @@
 .title-block
 	.container
-		h1.title 精華排名
+		h1.title 精彩排名
 .container
 	.block
-		p = zh_lorem_paragraphs 30
+		h1.title 本日好球
+		= render "/partials/gallery/gallery"
+		.button-box.center
+			form action="/highlight/top-play/"
+				input.button type="submit" value="觀看更多好球..."
+	.block
+		h1.title 本日烏龍球
+		= render "/partials/gallery/gallery"
+		.button-box.center
+			form action="/highlight/top-fail/"
+				input.button type="submit" value="觀看更多烏龍球..."
+	.block
+		h1.title 本日 MVP
+		.avatar-info-group
+			.avatar-single
+				= render "/partials/avatar/avatar"
+			.avatar-intro
+				h2.sub-title 精彩事蹟
+				p = zh_lorem_paragraphs 3
+			.avatar-highlight
+				h2.sub-title 精彩鏡頭
+				= render "/partials/gallery/gallery-quad-col"
+		.button-box.center
+			form action="/highlight/mvp/"
+				input.button type="submit" value="觀看更多MVP..."
+	.block
+		h1.title 本日 MUP
+		.avatar-info-group
+			.avatar-single
+				= render "/partials/avatar/avatar"
+			.avatar-intro
+				h2.sub-title 黑暗事蹟
+				p = zh_lorem_paragraphs 3
+			.avatar-highlight
+				h2.sub-title 黑暗鏡頭
+				= render "/partials/gallery/gallery-quad-col"
+		.button-box.center
+			form action="/highlight/mup/"
+				input.button type="submit" value="觀看更多MUP..."

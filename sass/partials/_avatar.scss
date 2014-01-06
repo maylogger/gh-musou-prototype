@@ -1,5 +1,16 @@
 .avatar-group {
 	@include pie-clearfix;
+	.avatar-photo {
+		width: 100px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.avatar-info-group {
+	@include pie-clearfix;
 }
 
 .avatar {
@@ -8,11 +19,6 @@
 	text-align: center;
 	&:hover {
 		text-decoration: none;
-	}
-	.avatar-photo {
-		img {
-			width: 100%;
-		}
 	}
 	.avatar-info {
 		margin-top: rhythm(.25);
@@ -43,6 +49,7 @@
 	}
 	.avatar {
 		float: none;
+		width: 100%;
 		margin: 0 0 rhythm(2) 0;
 		display: inline-block;
 		@include at-breakpoint($pad) {
@@ -50,20 +57,12 @@
 		  margin: 0 rhythm(1) rhythm(1) 0;
 		}
 	}
-
-	.avatar-info {
-		margin-top: rhythm(.25);
-		.avatar-party {
-			display: inline-block;
-			width: 30px;
-			height: 23px;
-			vertical-align: middle;
-		}
-		.avatar-name {
-			padding-left: rhythm(.25);
-			@include adjust-font-size-to($font-size-M);
-			&:hover {
-				text-decoration: underline;
+	.avatar-photo {
+		img {
+			width: 250px;
+			height: auto;
+			@include at-breakpoint($pad) {
+			  width: 100%;
 			}
 		}
 	}

@@ -1,8 +1,5 @@
 .post-group {
 	@include clearfix;
-	@include at-breakpoint($pad) {
-	  padding: rhythm(1) 0;
-	}
 }
 .post-item {
 	float: left;

@@ -32,7 +32,6 @@ tmp/restart.txt
 .sass-cache/**/*
 *.scssc
 psd/**/*
-images/temp/*
 
 stylesheets/pages/index.css
 

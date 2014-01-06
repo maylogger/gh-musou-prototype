@@ -1,19 +1,26 @@
-.page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
-	.page-header-mask
-	.container.page-header-container
-		h1.page-header-title 本日 MUP
-		p.page-header-content = zh_lorem_sentences 5
+/ .page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
+/ 	.page-header-mask
+/ 	.container.page-header-container
+/ 		h1.page-header-title 本日 MUP
+/ 		p.page-header-content = zh_lorem_sentences 5
+.title-block style="background-image: url(http://hhhhold.com/1080x300/#{rand(100)})"
+	.title-mask
+	.container
+		h1.title
+			span.title-label 精彩排名
+			| 本日 MUP
 .container
 	- 3.times do |i|
 		.block
 			h1.title 14/12/2#{9-i} MUP
-			.avatar-single
-				= render "/partials/avatar/avatar-single"
-			.avatar-intro
-				h2.sub-title 黑暗事蹟
-				p = zh_lorem_paragraphs 5
-			.avatar-highlight
-				h2.sub-title 黑暗鏡頭
-				= render "/partials/gallery/gallery-quad-col"
+			.avatar-info-group
+				.avatar-single
+					= render "/partials/avatar/avatar-large"
+				.avatar-intro
+					h2.sub-title 黑暗事蹟
+					p = zh_lorem_paragraphs 3
+				.avatar-highlight
+					h2.sub-title 黑暗鏡頭
+					= render "/partials/gallery/gallery-quad-col"
 	.block
 		= render "/partials/pagination"
