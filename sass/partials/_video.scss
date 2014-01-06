@@ -11,6 +11,7 @@
 }
 .video-single {
 	max-width: 750px;
+	@include trailer(1);
 	padding: 5px;
 	background: black;
 }
@@ -29,6 +30,7 @@
 .video-chat {
 	overflow: hidden;
 	text-align: center;
+	@include trailer(1);
 	padding: 3px 0;
 	background: white;
 	@include border-radius(3px);
@@ -37,6 +39,7 @@
 		max-width: 640px;
 		width: 100%;
 		min-height: 335px;
+		max-height: 550px;
 		height: auto;
 		@include at-breakpoint($pad) {
 		  min-height: 555px;

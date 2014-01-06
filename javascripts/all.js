@@ -1,20 +1,23 @@
 $(function(){
-	$(".versus").addClass("animate");
-});
-// off canvas menu switch
-$(".menu-btn").click(function(){
-  $("body").toggleClass("open-menu");
-});
+	//$(".versus").addClass("animate");
 
-//collapse button switch content
-// $(".collapse-toggle-button").click(function(){
-// 	if($(this).text() == '看更多'){
-//            $(this).text('收回去');
-//        } else {
-//            $(this).text('看更多');
-//        }
-// });
+	// off canvas menu switch
+	$(".menu-btn").on("click", function(){
+		$("body").toggleClass("open-menu");
+	});
 
-$(".collapse-toggle-button").click(function(){
-	$(this).remove();
+	$(".collapse-toggle-button").on("click", function(){
+		$(this).remove();
+	});
+
+	var affixTrigger = function() {
+		var pageWidth = $(document).width();
+		$("[data-affix-item]").trigger("sticky_kit:detach");
+		if ( pageWidth >= 900) {
+			$("[data-affix-item]").stick_in_parent({parent: "[data-affix-parent]"}).trigger("sticky_kit:recalc");
+		}
+	};
+	$(document).ready(affixTrigger);
+	$(window).resize(affixTrigger);
+
 });

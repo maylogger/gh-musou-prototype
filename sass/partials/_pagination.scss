@@ -1,5 +1,5 @@
 .pagination {
-	@include leader(2);
+	@include trailer(2);
 	padding: 0;
 	text-align: center;
 	list-style: none;
@@ -50,7 +50,7 @@
 			position: relative;
 			top: 3px;
 			@include box-shadow(none);
-			background: lighten($pagination-switch-background, 15%);	
+			background: lighten($pagination-switch-background, 15%);
 		}
 		@include at-breakpoint($pad) {
 			margin: 0 rhythm(.15);

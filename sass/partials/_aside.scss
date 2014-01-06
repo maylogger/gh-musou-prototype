@@ -6,3 +6,9 @@
 		@include leader(1);
 	}
 }
+
+.layout-invert .aside {
+	@include at-breakpoint($desktop) {
+		@include span-columns(3);
+	}
+}

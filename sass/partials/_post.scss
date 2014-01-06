@@ -1,15 +1,16 @@
 .post-group {
 	@include clearfix;
 	@include at-breakpoint($pad) {
-	  padding: rhythm(2) 0;
+	  padding: rhythm(1) 0;
 	}
 }
 .post-item {
 	float: left;
-	width: columns(2, $total-columns);
+	width: columns(4, $total-columns);
 	overflow: hidden;
 	margin: gutter($total-columns);
 	margin-left: 0;
+	text-align: left;
 	background: rgb(242, 242, 238);
 	border-bottom: 3px solid $pte-red;
 	@include box-shadow( inset 0 0 10px rgba( black, .1) );
@@ -18,8 +19,12 @@
 	&:hover {
 		@include transform(scale(1));
 	}
-	&:nth-child(2n) {
-	  margin-right: 0;
+	@include at-breakpoint($wide-mobile) {
+	  width: columns(3, $total-columns);
+	  margin: 0 gutter($total-columns) gutter($total-columns) 0;
+	  &:nth-child(2n) {
+	  	margin-right: 0;
+	  }
 	}
 	@include at-breakpoint($pad) {
 	  width: columns(4, $total-columns);
