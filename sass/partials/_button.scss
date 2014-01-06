@@ -1,6 +1,6 @@
 .button-box {
 	@include leader(0);
-	@include trailer(3);
+	@include trailer(2);
 	&.center {
 		text-align: center;
 	}

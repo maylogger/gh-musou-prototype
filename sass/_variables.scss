@@ -83,8 +83,8 @@ $news-post-note-background 			 : $pte-yellow-light;
 
 // Partials ===============================================
 // - link
-$link-color 										 : $pte-blue;
-// $link-color-hover
+$link-color 										 : $global-content-color;
+$link-color-hover 							 : $pte-blue;
 // $link-color-active
 
 // - header
@@ -113,6 +113,7 @@ $title-font-size 								 : $font-size-XXL - 4px;
 $title-sub-font-size 						 : $font-size-L;
 $title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
+$title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .95) 15%, rgba(#EFEDEB, 0) 65% );
 
 // - article
 $article-font-size 							 : $font-size-M;
@@ -129,12 +130,12 @@ $page-header-top-divider 				 : $global-divider;
 $page-header-mask-background 		 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
 
 // - video-header
-$video-header-font-size 					 : $font-size-XL;
-$video-header-font-size-large 		 : $font-size-XXL;
-$video-header-content-color 			 : white;
-$video-header-text-shadow 				 : $pte-black-light;
-$video-header-top-divider 				 : $global-divider;
-$video-header-mask-background 		 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
+$video-header-font-size 				 : $font-size-XL;
+$video-header-font-size-large 	 : $font-size-XXL;
+$video-header-content-color 		 : white;
+$video-header-text-shadow 			 : $pte-black-light;
+$video-header-top-divider 			 : $global-divider;
+$video-header-mask-background 	 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
 
 // - list
 $list-label-color 							 : $pte-gray-light;
