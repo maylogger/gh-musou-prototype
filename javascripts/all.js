@@ -6,18 +6,22 @@ $(function(){
 		$("body").toggleClass("open-menu");
 	});
 
+	// collapse remove after click
 	$(".collapse-toggle-button").on("click", function(){
 		$(this).remove();
 	});
 
-	var affixTrigger = function() {
-		var pageWidth = $(document).width();
-		$("[data-affix-item]").trigger("sticky_kit:detach");
-		if ( pageWidth >= 900) {
-			$("[data-affix-item]").stick_in_parent({parent: "[data-affix-parent]"}).trigger("sticky_kit:recalc");
+	// collapse switch accord dom height
+	$('.collapse-content').each(function(){
+		if ( $(this).height() < 175 ) {
+			$(this).parent().next('.collapse-toggle').remove();
 		}
-	};
-	$(document).ready(affixTrigger);
-	$(window).resize(affixTrigger);
+	});
+	// affix
+	$('.post-note').affix({
+		offset: {
+			top: $('.post-note').offset().top - 24
+		}
+	});
 
 });
