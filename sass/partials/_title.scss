@@ -1,10 +1,12 @@
 %title-style {
-	@include leader(1);
-	@include trailer(1);
+	@include leader(.5);
+	@include trailer(.5);
 	color: $title-color;
 }
 .title-block {
 	position: relative;
+	@include trailer(1);
+	padding: rhythm(.5) 0;
 	background: $title-block-background;
 	@include background-size(cover);
 }
@@ -33,9 +35,7 @@
 }
 
 .small-title {
-	@include leader(1);
-	@include trailer(1);
-	color: $title-color;
+	@extend %title-style;
 	@include adjust-font-size-to($title-small-font-size);
 	@include at-breakpoint($pad) {
 		@include adjust-font-size-to($title-small-font-size + 4px);
@@ -44,17 +44,12 @@
 
 .mega-title {
 	@extend %title-style;
-	@include leader(1);
 	@include adjust-font-size-to($title-mega-font-size);
 	&.center {
 		text-align: center;
 	}
 	@include at-breakpoint($pad) {
 		@include adjust-font-size-to($title-mega-font-size + 4px);
-	}
-	@include at-breakpoint($desktop) {
-	  @include leader(1);
-		@include trailer(1);
 	}
 }
 

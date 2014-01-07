@@ -1,5 +1,4 @@
 .article {
-	@include leader(1);
 	@include trailer(1);
 	@include adjust-font-size-to($article-font-size);
 	@include at-breakpoint($desktop) {
