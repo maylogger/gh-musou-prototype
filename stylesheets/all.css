@@ -135,7 +135,7 @@ a { color: inherit; text-decoration: inherit; cursor: inherit; color: #333333; }
 a:active, a:focus { outline: none; }
 a:hover { color: #2874ff; }
 
-p { margin: 0; padding: 0; border: 0; }
+p { margin: 0; padding: 0; border: 0; margin-bottom: 24px; }
 
 .legislator-name { display: inline-block; }
 
@@ -236,13 +236,13 @@ html, body { height: 100%; color: #333333; }
 
 .page-header .gallery-item-title { color: white; }
 
-.article { margin-top: 24px; margin-bottom: 24px; font-size: 16px; line-height: 24px; }
+.article { margin-bottom: 24px; font-size: 16px; line-height: 24px; }
 @media (min-width: 900px) { .article { width: 66.19718%; float: left; margin-right: 1.40845%; } }
 
 @media (min-width: 900px) { .layout-invert .article { width: 74.64789%; float: right; margin-right: 0; } }
 
-.aside { margin-top: 48px; margin-bottom: 24px; }
-@media (min-width: 900px) { .aside { width: 32.39437%; float: right; margin-right: 0; margin-top: 24px; } }
+.aside { margin-bottom: 24px; }
+@media (min-width: 900px) { .aside { width: 32.39437%; float: right; margin-right: 0; } }
 
 @media (min-width: 900px) { .layout-invert .aside { width: 23.94366%; float: left; margin-right: 1.40845%; } }
 
@@ -272,9 +272,9 @@ html, body { height: 100%; color: #333333; }
 
 .video-header-mask { position: absolute; top: 0; bottom: 0; width: 100%; background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%); }
 
-.title, .sub-title, .mega-title { margin-top: 24px; margin-bottom: 24px; color: #333333; }
+.title, .sub-title, .small-title, .mega-title { margin-top: 12px; margin-bottom: 12px; color: #333333; }
 
-.title-block { position: relative; background: #efedeb; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.title-block { position: relative; margin-bottom: 24px; padding: 12px 0; background: #efedeb; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 .title-mask { position: absolute; top: 0; bottom: 0; width: 100%; background: linear-gradient(to right, rgba(239, 237, 235, 0.95) 15%, rgba(239, 237, 235, 0) 65%); }
 
@@ -284,17 +284,16 @@ html, body { height: 100%; color: #333333; }
 .sub-title { font-size: 20px; line-height: 24px; }
 @media (min-width: 650px) { .sub-title { font-size: 24px; line-height: 48px; } }
 
-.small-title { margin-top: 24px; margin-bottom: 24px; color: #333333; font-size: 16px; line-height: 24px; }
+.small-title { font-size: 16px; line-height: 24px; }
 @media (min-width: 650px) { .small-title { font-size: 20px; line-height: 24px; } }
 
-.mega-title { margin-top: 24px; font-size: 44px; line-height: 48px; }
+.mega-title { font-size: 44px; line-height: 48px; }
 .mega-title.center { text-align: center; }
 @media (min-width: 650px) { .mega-title { font-size: 48px; line-height: 72px; } }
-@media (min-width: 900px) { .mega-title { margin-top: 24px; margin-bottom: 24px; } }
 
 .title-label { display: block; font-size: 20px; line-height: 24px; color: #92928a; }
 
-.block { position: relative; margin-top: 24px; margin-bottom: 48px; }
+.block { position: relative; margin-bottom: 48px; }
 .block:after { content: ""; display: table; clear: both; }
 
 .list { margin: 0; padding: 0; border: 0; margin-top: 12px; margin-bottom: 12px; list-style: none; }
@@ -337,7 +336,8 @@ html, body { height: 100%; color: #333333; }
 
 .tag-now { color: white; background: #c70000; }
 
-@media (min-width: 500px) { .video { background: black url('/images/live-background.jpg?1388676484') top center no-repeat; padding-bottom: 48px; } }
+.video { margin-bottom: 12px; }
+@media (min-width: 500px) { .video { background: black url('/images/live-background.jpg?1389006596') top center no-repeat; padding-bottom: 48px; } }
 
 @media (min-width: 500px) { .video-title { color: white; } }
 
@@ -351,8 +351,8 @@ html, body { height: 100%; color: #333333; }
 @media (min-width: 650px) { .video-chat iframe { min-height: 555px; } }
 
 .avatar-group:after { content: ""; display: table; clear: both; }
-.avatar-group .avatar-photo { width: 100px; }
-.avatar-group .avatar-photo img { width: 100%; height: auto; }
+.avatar-group .avatar-photo { position: relative; width: 100px; height: 0; padding-top: 133%; background-color: #333333; }
+.avatar-group .avatar-photo img { position: absolute; top: 0; left: 0; width: 100%; height: auto; }
 
 .avatar-info-group:after { content: ""; display: table; clear: both; }
 
@@ -384,6 +384,14 @@ html, body { height: 100%; color: #333333; }
 .collapse-toggle .collapse-toggle-button { position: absolute; bottom: 0; margin-left: -24px; padding: 3px 12px; font-size: 13px; line-height: 24px; text-decoration: none; pointer-events: auto; color: #333333; background-color: #e7e5e2; -webkit-border-radius: 5px 5px 0 0; -moz-border-radius: 5px 5px 0 0; -ms-border-radius: 5px 5px 0 0; -o-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; }
 .collapse-toggle .collapse-toggle-button:hover { color: #e7e5e2; background-color: rgba(51, 51, 51, 0.85); -webkit-transition: all ease-in; -webkit-transition-delay: 0.1s; -moz-transition: all ease-in 0.1s; -o-transition: all ease-in 0.1s; transition: all ease-in 0.1s; }
 .in + .collapse-toggle { background-image: none; }
+
+.collapse-content { padding-top: 1px; margin-top: -1px; }
+.collapse-content:after { content: ""; display: table; clear: both; }
+
+.affix { position: relative; }
+@media (min-width: 900px) { .affix { position: fixed; top: 0; } }
+
+.affix-bottom { position: absolute; }
 
 .button-box.center { text-align: center; }
 
@@ -496,8 +504,8 @@ html, body { height: 100%; color: #333333; }
 
 .right .party { left: -12px; float: left; }
 
-.post-content { width: 70%; margin: 0 auto; margin-bottom: 24px; }
+.post-note { margin-top: 24px; background: #fffbe1; -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); }
+.post-note .post-note-content { padding: 12px 24px; }
+@media (min-width: 900px) { .post-note.affix { max-width: 272px; width: 23.3%; } }
 
-.post-note { margin-top: 24px; padding: 12px 24px; background: #fffbe1; -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); }
-
-.no-content { font-size: 24px; line-height: 48px; text-align: center; color: #757570; }
+.video-info p { margin-bottom: 0px; }

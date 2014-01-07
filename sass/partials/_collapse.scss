@@ -2,10 +2,12 @@
   height: 175px;
   overflow-y: hidden;
 }
+
 .collapsing {
   overflow-y: hidden;
   @include transition(height .3s ease-in-out);
 }
+
 .collapse-toggle {
 	position: absolute;
 	bottom: -#{rhythm(.5)};
@@ -36,4 +38,10 @@
 	.in + & {
 		background-image: none;
 	}
+}
+
+.collapse-content {
+	padding-top: 1px;
+	margin-top: -1px;
+	@include pie-clearfix;
 }

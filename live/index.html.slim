@@ -13,33 +13,37 @@
 		.aside.video-chat
 			iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=phantoml0rd&amp;popout_chat=true"
 .container.video-info
-	.article#video-info
+	.article
 		.block
 			h2.sub-title 關於本直播
-			p#theme.collapse = zh_lorem_paragraphs 5
+			#theme.collapse
+				.collapse-content = zh_lorem_paragraphs 6
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#theme" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#theme" 看更多
 		.block
 			h2.sub-title 參與委員
-			#attend-legislators.avatar-group.collapse
-				- ( rand(5) + 8 ).times do
-					= render "/partials/avatar/avatar"
+			#attend-legislators.collapse
+				.avatar-group.collapse-content
+					- ( rand(5) + 8 ).times do
+						= render "/partials/avatar/avatar"
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#attend-legislators" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#attend-legislators" 看更多
 		.block
 			h2.sub-title 相關議題
-			ul#issue.list.collapse
-				- ( rand(5) + 8 ).times do
-					li: a = zh_lorem_sentence
+			#issue.collapse
+				ul.list.collapse-content
+					- ( rand(5) + 8 ).times do
+						li: a = zh_lorem_sentence
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#issue" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#issue" 看更多
 		.block
 			h2.sub-title 相關資料
-			ul#other-info.list.collapse
-				- ( rand(5) + 8 ).times do
-					li: a = zh_lorem_sentence
+			#other-info.collapse
+				ul.list.collapse-content
+					- ( rand(5) + 8 ).times do
+						li: a = zh_lorem_sentence
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#other-info" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#other-info" 看更多
 	.aside
 		.block
 			h2.sub-title 今日其他 LIVE
