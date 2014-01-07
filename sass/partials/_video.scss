@@ -1,4 +1,5 @@
 .video {
+	@include trailer(.5);
 	@include at-breakpoint($wide-mobile) {
 	  background: black image-url("live-background.jpg") top center no-repeat;
 	  padding-bottom: rhythm(2);
