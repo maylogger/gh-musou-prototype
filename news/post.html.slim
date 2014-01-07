@@ -28,28 +28,30 @@
 		p = zh_lorem_paragraphs 3
 	.aside
 		.post-note data-affix-item=""
-			h2.small-title 附屬資料
-			ul.list
-				li
-					.list-label 作者
-					.list-content = zh_lorem_name
-				li
-					.list-label 發表時間
-					.list-content = lorem_date.to_date
-				li
-					.list-label 會議主席
-					.list-content 尤美女
-				li
-					.list-label 會議日期
-					.list-content = lorem_date.to_date
-				li
-					.list-label 會議時間
-					.list-content 10:00 - 18:00
-				li
-					.list-label 議題
-					.list-content = zh_lorem_words 5 + rand(2)
+			.post-note-content
+				h2.small-title 附屬資料
+				ul.list
+					li
+						.list-label 作者
+						.list-content = zh_lorem_name
+					li
+						.list-label 發表時間
+						.list-content = lorem_date.to_date
+					li
+						.list-label 會議主席
+						.list-content 尤美女
+					li
+						.list-label 會議日期
+						.list-content = lorem_date.to_date
+					li
+						.list-label 會議時間
+						.list-content 10:00 - 18:00
+					li
+						.list-label 議題
+						.list-content = zh_lorem_words 5 + rand(2)
 	.article
 		.video-single
 			.video-wrapper
 				iframe src="//www.youtube.com/embed/XGK42oYK2h0" frameborder="0" allowfullscreen=""
-		p = zh_lorem_paragraphs 30
+		- 3.times do
+			p = zh_lorem_paragraphs 10

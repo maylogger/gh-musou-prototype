@@ -1,0 +1,10 @@
+.affix {
+	position: relative;
+	@include at-breakpoint($desktop) {
+	  position: fixed;
+		top: 0;
+	}
+}
+.affix-bottom {
+	position: absolute;
+}
