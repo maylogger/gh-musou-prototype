@@ -1,5 +1,4 @@
 .gallery {
-	@include leader(1);
 	@include pie-clearfix;
 	&.single-col .gallery-item {
 		@include at-breakpoint($wide-mobile) {
@@ -10,7 +9,7 @@
 		  width: columns(12, $total-columns);
 		}
 		@include at-breakpoint($desktop) {
-		  width: columns(8, $total-columns);
+		  width: columns(12, $total-columns);
 		}
 	}
 	&.double-col .gallery-item {
@@ -61,26 +60,6 @@
 	}
 }
 
-.gallery-item-info {
-	float: right;
-	@include padding-trailer(.5);
-	text-align: left;
-	.gallery-item-sub {
-		color: $gallery-item-date-color;
-		font-weight: bold;
-		@include adjust-font-size-to($font-size-S, .5);
-	}
-	.gallery-item-title {
-		@include leader(0);
-		@include trailer(0);
-		padding: 0;
-		@include adjust-font-size-to($font-size-M);
-	}
-	@include at-breakpoint($desktop) {
-	  width: columns(4, $total-columns);
-	}
-}
-
 .gallery-item {
 	position: relative;
 	display: block;
@@ -120,10 +99,10 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			margin-top: -8px;
-			margin-left: -5px;
 			width: 0px;
 			height: 0px;
+			margin-top: -8px;
+			margin-left: -5px;
 			@include hide-text;
 			border: 8px solid transparent;
 			border-right: 0px solid transparent;
@@ -135,18 +114,28 @@
 	}
 	.gallery-item-info {
 		float: none;
-		width: 100%;
-		padding-left: rhythm(.5);
+		padding: 0 rhythm(1.5);
 		@include padding-leader(.5);
 		color: $gallery-item-info-color;
 		@include at-breakpoint($wide-mobile) {
-		  padding-left: 0;
+		  padding: 0;
 		};
 		.gallery-item-sub {
 			color: $gallery-item-date-color;
+			@include adjust-font-size-to($font-size-S);
+			font-weight: bold;
+			&.position {
+				color: $pte-red;
+				@include adjust-font-size-to($font-size-XL, 2);
+				font-weight: normal;
+			}
 		}
 		.gallery-item-title {
+			margin-bottom: rhythm(1);
 			@include ellipsis;
+			@include at-breakpoint($wide-mobile) {
+			  margin-bottom: rhythm(0);
+			}
 		}
 	}
 	@include at-breakpoint($wide-mobile) {
@@ -196,6 +185,26 @@
 		padding: 0 rhythm(.5);
 		@include adjust-font-size-to($gallery-top-number-size-small, 3);
 		color: black;
+	}
+}
+
+.gallery.single-col {
+	.gallery-photo {
+		@include at-breakpoint($desktop) {
+		  width: columns(8);
+		  padding-top: 37.25%
+		}
+	}
+	.gallery-item-info {
+		@include at-breakpoint($desktop) {
+			width: columns(4);
+		  position: absolute;
+			top: 0;
+			right: 0;
+			.gallery-item-title {
+				white-space: normal;
+			}
+		}
 	}
 }
 
