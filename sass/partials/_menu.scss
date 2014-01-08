@@ -12,14 +12,14 @@
 			}
 		}
 		li + li {
-			border-top: 1px solid lighten($menu-background, 10%);
+			border-top: 1px solid darken($menu-background, 7%);
 			@include at-breakpoint($desktop) {
 			  	border-top: none;
 			}
 		}
 		a {
 			display: block;
-			padding: 12px;
+			padding: 18px 12px;
 			color: $menu-link-color;
 			&:hover {
 				text-decoration: none;
