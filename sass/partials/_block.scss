@@ -2,4 +2,33 @@
 	position: relative;
 	@include trailer(2);
 	@include pie-clearfix;
+	&.divider {
+		@include padding-trailer(.5);
+		border-bottom: 1px solid $global-divider;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.half-block {
+	position: relative;
+	@include trailer(1);
+	@include pie-clearfix;
+	@include at-breakpoint($desktop) {
+	  @include span-columns(6);
+	  &:nth-child(2n) {
+	  	@include span-columns(6 omega);
+	  }
+	}
+}
+
+.half-block-center-only {
+	position: relative;
+	@include trailer(1);
+	@include pie-clearfix;
+	@include at-breakpoint($desktop) {
+	  @include span-columns(8);
+	  @include squish(2,2);
+	}
 }
