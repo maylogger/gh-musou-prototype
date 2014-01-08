@@ -5,6 +5,7 @@
 html, body {
 	height: 100%;
 	color: $global-font-color;
+	background-color: $body-background;
 }
 
 .wrap {
@@ -29,16 +30,21 @@ html, body {
 	left: 0;
 	z-index: 2;
 	min-height: 100%;
-	background: $main-background;
+	background: inherit;
 	@include transition(left .3s);
 	.open-menu & {
 		left: $menu-off-canvas-width;
 	}
 }
 
-.content, .container {
+.container {
 	margin-top: -1px;
 	padding-top: 1px;
+}
+.content {
+	position: relative;
+	background-color: $content-background;
+	@include box-shadow( 0px 3px 7px rgba(black, .1) );
 }
 
 @include at-breakpoint($desktop) {
