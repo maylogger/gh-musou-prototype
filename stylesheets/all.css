@@ -533,3 +533,8 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 .live-page .wrap { max-width: 100%; }
 
 .video-info p { margin-bottom: 0px; }
+
+@media (min-width: 900px) { .post-group.topic-news .post-item { width: 48.57143%; margin: 0 2.85714% 2.85714% 0; }
+  .post-group.topic-news .post-item:nth-child(2n) { margin-right: 0; } }
+
+.topic-intro { margin-bottom: 24px; }
