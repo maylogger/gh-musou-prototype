@@ -1,10 +1,12 @@
 .button-box {
-	&.center {
-		text-align: center;
+	text-align: center;
+	@include at-breakpoint($pad) {
+	  text-align: left;
 	}
 }
 
 .button {
+	position: relative;
 	padding: rhythm(.5) rhythm(1.5);
 	@include adjust-font-size-to($font-size-L);
 	color: $button-color;

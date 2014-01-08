@@ -1,44 +1,63 @@
 .title-block
 	.container
-		h1.title 精彩排名
+		h1.title
+			a href="/highlight/" 精彩排名
 .container
-	.block
-		h1.title 本日好球
-		= render "/partials/gallery/gallery"
-		.button-box.center
-			form action="/highlight/top-play/"
-				input.button type="submit" value="觀看更多好球..."
-	.block
-		h1.title 本日烏龍球
-		= render "/partials/gallery/gallery"
-		.button-box.center
-			form action="/highlight/top-fail/"
-				input.button type="submit" value="觀看更多烏龍球..."
-	.block
-		h1.title 本日 MVP
+	.block.divider
+		h2.title
+			| 本日好球
+			a.title-extra-link href="/highlight/top-play" 查看更多好球...
+		.gallery
+			- 3.times do |i|
+				a.gallery-item href="#"
+					.gallery-photo
+						img src="http://hhhhold.com/800x450/#{rand(50)}"
+						.play-icon
+							.play-triangle Play
+					.gallery-item-info
+						span.gallery-item-sub.position 第#{i+1}名
+						p.gallery-item-title = zh_lorem_sentence
+	.block.divider
+		h2.title
+			| 本日烏龍球
+			a.title-extra-link href="/highlight/top-fail" 查看更多烏龍球...
+		.gallery
+			- 3.times do |i|
+				a.gallery-item href="#"
+					.gallery-photo
+						img src="http://hhhhold.com/800x450/#{rand(50)}"
+						.play-icon
+							.play-triangle Play
+					.gallery-item-info
+						span.gallery-item-sub.position 第#{i+1}名
+						p.gallery-item-title = zh_lorem_sentence
+	.block.divider
+		h2.title
+			| 本日 MVP
+			a.title-extra-link href="/highlight/mvp" 查看更多 MVP ...
 		.avatar-info-group
 			.avatar-single
-				= render "/partials/avatar/avatar"
+				= render "/partials/avatar"
 			.avatar-intro
 				h2.sub-title 精彩事蹟
 				p = zh_lorem_paragraphs 3
 			.avatar-highlight
 				h2.sub-title 精彩鏡頭
-				= render "/partials/gallery/gallery-quad-col"
-		.button-box.center
-			form action="/highlight/mvp/"
-				input.button type="submit" value="觀看更多MVP..."
-	.block
-		h1.title 本日 MUP
+				.gallery.double-col
+					- 4.times do
+						= render "/partials/gallery"
+	.block.divider
+		h2.title
+			| 本日 MUP
+			a.title-extra-link href="/highlight/mup" 查看更多 MUP ...
 		.avatar-info-group
 			.avatar-single
-				= render "/partials/avatar/avatar"
+				= render "/partials/avatar"
 			.avatar-intro
 				h2.sub-title 黑暗事蹟
 				p = zh_lorem_paragraphs 3
 			.avatar-highlight
 				h2.sub-title 黑暗鏡頭
-				= render "/partials/gallery/gallery-quad-col"
-		.button-box.center
-			form action="/highlight/mup/"
-				input.button type="submit" value="觀看更多MUP..."
+				.gallery.double-col
+					- 4.times do
+						= render "/partials/gallery"

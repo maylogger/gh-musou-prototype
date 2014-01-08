@@ -23,19 +23,5 @@
 .container
 	.block
 		.post-group
-			- 2.times do
-				a.post-item href="/news/post.html"
-					.post-photo
-						img src="http://hhhhold.com/450x225/#{rand(100)}"
-					.post-date 2013年12月17日
-					.post-title 王金平表示：不要偷按別人的表決器
-				a.post-item href="/news/post.html"
-					.post-photo
-						img src="http://hhhhold.com/450x225/#{rand(100)}"
-					.post-date 2013年11月6日
-					.post-title 吳育昇鄭重表達：張懸是中華民國的寶貝
-				a.post-item href="/news/post.html"
-					.post-photo
-						img src="http://hhhhold.com/450x225/#{rand(100)}"
-					.post-date 2013年9月25日
-					.post-title 劉櫂豪炮火猛烈，黃世銘啞口無言
+			- 6.times do
+				= render "/partials/post-item"

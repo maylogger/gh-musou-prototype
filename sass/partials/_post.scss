@@ -1,7 +1,9 @@
 .post-group {
 	@include clearfix;
 }
+
 .post-item {
+	position: relative;
 	float: left;
 	width: columns(4, $total-columns);
 	overflow: hidden;
@@ -9,12 +11,27 @@
 	margin-left: 0;
 	text-align: left;
 	background: rgb(242, 242, 238);
-	border-bottom: 3px solid $pte-red;
+	border-bottom: 5px solid $pte-black;
 	@include box-shadow( inset 0 0 10px rgba( black, .1) );
-	@include transition(.2s);
-	@include transform(scale(.95));
+	@include transition(border, .2s);
+	&:after {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		content: "";
+		border: 8px solid transparent;
+		border-right: 8px solid $pte-black;
+		border-bottom: 8px solid $pte-black;
+		@include transition(border, .2s);
+	}
 	&:hover {
-		@include transform(scale(1));
+		color: $pte-red;
+		border-bottom-color: $pte-red;
+		&:after {
+			border: 12px solid transparent;
+			border-right: 12px solid $pte-red;
+			border-bottom: 12px solid $pte-red;
+		}
 	}
 	@include at-breakpoint($wide-mobile) {
 	  width: columns(3, $total-columns);
@@ -43,14 +60,16 @@
 	  	margin-right: 0;
 	  }
 	}
-	.post-date {
+	.post-sub {
 		padding: 0 2.5%;
 		color: $pte-gray;
 		@include adjust-font-size-to($font-size-S);
+		font-weight: bold;
 	}
 	.post-title {
 		padding: 0 2.5% 2.5%;
 		@include adjust-font-size-to($font-size-M);
+		@include ellipsis;
 	}
 	.post-photo {
 		text-align: center;

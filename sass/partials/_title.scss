@@ -1,14 +1,18 @@
 %title-style {
-	@include leader(.5);
 	@include trailer(.5);
 	color: $title-color;
 }
 .title-block {
 	position: relative;
-	@include trailer(1);
 	padding: rhythm(.5) 0;
 	background: $title-block-background;
 	@include background-size(cover);
+	& .title {
+		@include leader(.5);
+	}
+}
+.title-block + .container {
+	@include leader(1);
 }
 .title-mask {
 	position: absolute;
@@ -36,7 +40,7 @@
 
 .small-title {
 	@extend %title-style;
-	@include adjust-font-size-to($title-small-font-size);
+	@include adjust-font-size-to($title-small-font-size + 2px);
 	@include at-breakpoint($pad) {
 		@include adjust-font-size-to($title-small-font-size + 4px);
 	}
@@ -53,8 +57,23 @@
 	}
 }
 
+.title-extra-link {
+	display: inline-block;
+	margin-left: rhythm(.25);
+	@include adjust-font-size-to($font-size-M);
+	&:before {
+		content: "/";
+		margin-right: rhythm(.25);
+	}
+}
+
 .title-label {
 	display: block;
 	@include adjust-font-size-to($font-size-L);
-	color: $pte-gray-light;
+	a {
+		color: $pte-gray-light;
+		&:hover {
+			color: lighten($global-content-color, 20%);
+		}
+	}
 }

@@ -1,9 +1,9 @@
 // Layout and typography ==================================
 // - SUSY basic setting
 $total-columns   								 : 4;
-$column-width    								 : 5em;
-$gutter-width    								 : 1em;
-$grid-padding    								 : $gutter-width;
+$column-width    								 : 4em;
+$gutter-width    								 : 2em;
+$grid-padding    								 : 1em;
 
 // - Media for responsive layout
 $wide-mobile-columns      			 : 6;
@@ -49,9 +49,9 @@ $pte-gray-dark   								 : #63635C;
 $pte-gray              					 : #757570;
 $pte-gray-light  								 : #92928A;
 $pte-lightgray-dark 						 : #B7B5B0;
-$pte-lightgray 									 : #E7E5E2;
+$pte-lightgray 									 : #E7E7E5;
 $pte-red-dark    								 : #A70000;
-$pte-red               					 : #C70000;
+$pte-red               					 : #880013;
 $pte-red-light   								 : #E70000;
 $pte-blue-dark   								 : #1934FF;
 $pte-blue              					 : #2874FF;
@@ -83,19 +83,22 @@ $global-image-holder-color 			 : $pte-black;
 $news-post-note-background 			 : $pte-yellow-light;
 
 // Partials ===============================================
+// - body
+$body-background 								 : $pte-lightgray;
+
 // - link
 $link-color 										 : $global-content-color;
-$link-color-hover 							 : $pte-blue;
+$link-color-hover 							 : lighten($global-content-color, 20%);
 // $link-color-active
 
 // - header
-$header-background       				 : $pte-black;
+$header-background       				 : $pte-red;
 $header-font-color       				 : white;
 $header-font-color-hover 				 : darken(white, .2);
 
 // - menu
-$menu-background 								 : $pte-black;
-$menu-btn-size        					 : 48px;
+$menu-background 								 : $pte-red;
+$menu-btn-size        					 : 60px;
 $menu-btn-bar-width   					 : 24px;
 $menu-btn-bar-height  					 : 2px;
 $menu-btn-bar-spacing 					 : 6px;
@@ -104,8 +107,8 @@ $menu-btn-bar-shadow-color 			 : $pte-black-50;
 $menu-link-color 								 : white;
 $menu-off-canvas-width 					 : 260px;
 
-// - main
-$main-background 								 : #FCFAF9;
+// - content
+$content-background 						 : #FCFAF9;
 
 // - title
 $title-block-background 				 : #EFEDEB;
@@ -114,7 +117,7 @@ $title-font-size 								 : $font-size-XXL - 4px;
 $title-sub-font-size 						 : $font-size-L;
 $title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
-$title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .95) 15%, rgba(#EFEDEB, 0) 65% );
+$title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .9) 25%, rgba(#EFEDEB, 0) 65% );
 
 // - article
 $article-font-size 							 : $font-size-M;
@@ -153,13 +156,13 @@ $pagination-switch-background 	 : $pte-black;
 $pagination-switch-color 	 			 : white;
 
 // - gallery
-$gallery-play-icon-size 				 : 50px;
+$gallery-play-icon-size 				 : 48px;
 $gallery-play-icon-offset 			 : $gallery-play-icon-size / 2;
 $gallery-play-icon-background 	 : $pte-black;
 $gallery-play-icon-color 				 : white;
 $gallery-item-background 				 : black;
 $gallery-item-info-color 				 : $pte-black;
-$gallery-item-date-color 				 : $pte-lightgray-dark;
+$gallery-item-date-color 				 : $pte-gray-light;
 $gallery-top-number-size 				 : 144px;
 $gallery-top-number-size-small 	 : 72px;
 
@@ -172,17 +175,17 @@ $avatar-photo-width-large				 : 250px;
 
 // - collapse
 $collapse-toggle-divider 				 : $global-divider;
-$collapse-content-hider 				 : linear-gradient(to top, rgba($main-background, 1) 15%, rgba($main-background, .5) 50%, rgba($main-background, 0) 100% );
+$collapse-content-hider 				 : linear-gradient(to top, rgba($content-background, 1) 15%, rgba($content-background, .5) 50%, rgba($content-background, 0) 100% );
 $collapse-btn-color 						 : $pte-black;
 $collapse-btn-color-hover 			 : $pte-lightgray;
 $collapse-btn-background 			 	 : $pte-lightgray;
 $collapse-btn-background-hover 	 : rgba($pte-black, .85);
 
 // - button
-$button-background 							 : $pte-black;
-$button-background-hover 				 : white;
-$button-color 									 : white;
-$button-color-hover 						 : $pte-black;
+$button-background 							 : $content-background;
+$button-background-hover 				 : $pte-black;
+$button-color 									 : $pte-black;
+$button-color-hover 						 : $content-background;
 
 // - tag
 $tag-broadcast-background 			 : $pte-green;
@@ -192,6 +195,8 @@ $tag-now-color 									 : white;
 // - input
 
 // - footer
+$footer-background-color 				 : $pte-lightgray;
+$footer-color 									 : $pte-gray;
 
 // - other
 $no-content-msg-color 					 : $pte-gray;

@@ -7,16 +7,42 @@
 	.title-mask
 	.container
 		h1.title
-			span.title-label 精彩排名
-			| 本日好球
+			span.title-label: a href="/highlight" 精彩排名
+			a href="/highlight/top-play" 本日好球
 .container
 	.block
-		= render "/partials/gallery/gallery-single-col"
-	.block
-		= render "/partials/gallery/gallery-double-col"
-	.block
-		- ( rand(3) + 3 ).times do |i|
+		.gallery.single-col
+			a.gallery-item href="#"
+				.gallery-photo
+					img src="http://hhhhold.com/800x450/#{rand(50)}"
+					.play-icon
+						.play-triangle Play
+				.gallery-item-info
+					span.gallery-item-sub.position 第1名
+					p.gallery-item-title = zh_lorem_sentence
+	.block.divider
+		.gallery.double-col
+			- 2.times do |i|
+				a.gallery-item href="#"
+					.gallery-photo
+						img src="http://hhhhold.com/800x450/#{rand(50)}"
+						.play-icon
+							.play-triangle Play
+					.gallery-item-info
+						span.gallery-item-sub.position 第#{i+2}名
+						p.gallery-item-title = zh_lorem_sentence
+	- ( rand(3) + 3 ).times do |i|
+		.block.divider
 			h1.title 14/12/2#{5-i}
-			= render "/partials/gallery/gallery"
+			.gallery
+				- 3.times do |i|
+					a.gallery-item href="#"
+						.gallery-photo
+							img src="http://hhhhold.com/800x450/#{rand(50)}"
+							.play-icon
+								.play-triangle Play
+						.gallery-item-info
+							span.gallery-item-sub.position 第#{i+1}名
+							p.gallery-item-title = zh_lorem_sentence
 	.block
 		= render "/partials/pagination"

@@ -1,33 +1,25 @@
-/ .video-header
-/ 	video.video-wrap autoplay="" loop=""
-/ 		source src="/images/flame-demo.mp4" type="video/mp4"
-/ 	.container.video-header-container
-/ 		h1.video-header-title 立法院第8屆第4會期經濟委員會第13次全體委員會議
-/ 		.versus
-/ 			.vs-badge
-/ 			.vs-avatar.left
-/ 				.avatar-photo
-/ 					img src="/images/big-avatar2.png"
-/ 				.avatar-info
-/ 					.party.KMT
-/ 					.name 王金平
-/ 			.vs-avatar.right
-/ 				.avatar-photo
-/ 					img src="/images/big-avatar.png"
-/ 				.avatar-info
-/ 					.party.DPP
-/ 					.name 段宜康
 .title-block
 	.container
 		h1.title
-			span.title-label 戰報
-			| 立法院第8屆第4會期經濟委員會第13次全體委員會議
-.container.layout-invert data-affix-parent=""
+			span.title-label: a href="/news" 戰報
+			a href="#" 立法院第8屆第4會期經濟委員會第13次全體委員會議
+.versus
+	.container
+		.vs-word VS
+		.character-left
+			.character-image
+				img src="http://hhhhold.com/400x150/#{rand(100)}"
+			.character-name = zh_lorem_words 5 + rand(5)
+		.character-right
+			.character-image
+				img src="http://hhhhold.com/400x150/#{rand(100)}"
+			.character-name = zh_lorem_words 5 + rand(5)
+.container.layout-post
 	.article
 		h2.sub-title = zh_lorem_sentence
 		p = zh_lorem_paragraphs 3
 	.aside
-		.post-note data-affix-item=""
+		.post-note
 			.post-note-content
 				h2.small-title 附屬資料
 				ul.list

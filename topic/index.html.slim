@@ -1,32 +1,18 @@
-- 3.times do
-	/ .page-header style="background-image: url(http://hhhhold.com/1920x800/#{rand(100)});"
-	/ 	.page-header-mask
-	/ 	.container.page-header-container
-	/ 		h1.page-header-title = zh_lorem_words 4 + rand(5)
-	/ 		p.page-header-content = zh_lorem_paragraphs 2
-	.title-block style="background-image: url(http://hhhhold.com/1080x300/#{rand(100)})"
-		.title-mask
-		.container
-			h1.title 兩岸服貿協議
+.title-block
 	.container
-		.block
-			p = zh_lorem_paragraphs 2
-			.post-group
-				a.post-item href="/news/post.html"
-					.post-photo
-						img src="http://hhhhold.com/400x225/b/#{rand(100)}"
-					.post-date 2013年12月17日
-					.post-title 王金平表示：不要偷按別人的表決器
-				a.post-item href="/news/post.html"
-					.post-photo
-						img src="http://hhhhold.com/400x225/#{rand(100)}"
-					.post-date 2013年11月6日
-					.post-title 吳育昇鄭重表達：張懸是中華民國的寶貝
-				a.post-item href="/news/post.html"
-					.post-photo
-						img src="http://hhhhold.com/400x225/#{rand(100)}"
-					.post-date 2013年9月25日
-					.post-title 劉櫂豪炮火猛烈，黃世銘啞口無言
-			.button-box.center
-				form action="/topic/single-topic.html"
-					input.button type="submit" value="觀看議題內容..."
+		h1.title 重大議題
+.container
+	- 3.times do
+		.block.divider
+			.half-block
+				.topic-intro
+					h2.title
+						a href="/topic/single-topic.html" = zh_lorem_sentence
+					p = zh_lorem_paragraphs 5
+					.button-box
+						form action="/topic/single-topic.html"
+							input.button.direction type="submit" value="觀看議題內容"
+			.half-block
+				.post-group.topic-news
+					- 4.times do
+						= render "/partials/post-item"

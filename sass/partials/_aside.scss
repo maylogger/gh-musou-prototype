@@ -4,9 +4,3 @@
 		@include span-columns(4 omega);
 	}
 }
-
-.layout-invert .aside {
-	@include at-breakpoint($desktop) {
-		@include span-columns(3);
-	}
-}
