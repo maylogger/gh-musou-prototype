@@ -1,0 +1,17 @@
+.post-group {
+	&.topic-news {
+	  .post-item {
+	  	@include at-breakpoint($desktop) {
+	  	  width: columns(6, $total-columns);
+				margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			  &:nth-child(2n) {
+			  	margin-right: 0;
+		  	}
+		  }
+		}
+	}
+}
+
+.topic-intro {
+	@include trailer(1);
+}
