@@ -7,20 +7,22 @@
 	.title-mask
 	.container
 		h1.title
-			span.title-label 精彩排名
-			| 本日 MUP
+			span.title-label: a href="/highlight" 精彩排名
+			a href="/highlight/mup" 本日 MUP
 .container
 	- 3.times do |i|
 		.block
 			h1.title 14/12/2#{9-i} MUP
 			.avatar-info-group
 				.avatar-single
-					= render "/partials/avatar/avatar-large"
+					= render "/partials/avatar"
 				.avatar-intro
 					h2.sub-title 黑暗事蹟
 					p = zh_lorem_paragraphs 3
 				.avatar-highlight
 					h2.sub-title 黑暗鏡頭
-					= render "/partials/gallery/gallery-quad-col"
+					.gallery.double-col
+					- 4.times do
+						= render "/partials/gallery"
 	.block
 		= render "/partials/pagination"

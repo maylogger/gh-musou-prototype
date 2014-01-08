@@ -22,7 +22,7 @@
 
 .avatar {
 	float: left;
-	margin: 0 rhythm(1) rhythm(1) 0;
+	margin: 0 rhythm(.9) rhythm(.9) 0;
 	text-align: center;
 	&:hover {
 		text-decoration: none;
@@ -50,7 +50,6 @@
 	@include pie-clearfix;
 	text-align: center;
 	@include at-breakpoint($pad) {
-		@include leader(1);
 		@include span-columns(3, $total_columns);
 	  text-align: left;
 	}
@@ -79,12 +78,15 @@
 	@include at-breakpoint($pad) {
 		@include span-columns(9 omega);
 	}
+	@include at-breakpoint($desktop) {
+		@include span-columns(5);
+	}
 }
 .avatar-highlight {
 	@include at-breakpoint($pad) {
 		@include span-columns(12 omega);
 	}
 	@include at-breakpoint($desktop) {
-		@include span-columns(9 omega);
+		@include span-columns(4 omega);
 	}
 }
