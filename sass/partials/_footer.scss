@@ -1,0 +1,9 @@
+.footer {
+	padding: rhythm(2) 0;
+	background-color: $footer-background-color;
+	.credit {
+		color: $footer-color;
+		text-align: right;
+		@include text-shadow( 1px 1px 1px white );
+	}
+}
