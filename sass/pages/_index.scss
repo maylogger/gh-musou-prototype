@@ -1,8 +1,7 @@
 .block-live {
+	@include trailer(1);
 	background: #900;
-	@include background(
-		radial-gradient(#a00, black)
-	);
+	@include background( radial-gradient(#a00, black) );
 	@include box-shadow( inset 0px 3px 50px rgba($pte-black, .75) );
 }
 
@@ -42,7 +41,7 @@
 			@include adjust-font-size-to($font-size-L);
 			font-weight: bold;
 			color: white;
-			@include border-radius(3px);
+			@include text-shadow( 0 3px 7px rgba(black, .75) );
 			&:before {
 				display: inline-block;
 				width: 14px;
@@ -50,6 +49,7 @@
 				content: "";
 				background-color: red;
 				@include border-radius(7px);
+				@include box-shadow( 0 3px 7px rgba(black, .75) );
 			}
 		}
 	}
