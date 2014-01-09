@@ -21,7 +21,7 @@
 	.collapse-toggle-button {
 		position: absolute;
 		bottom: 0;
-		margin-left: -#{rhythm(1)};
+		margin-left: -#{rhythm(1.25)};
 		padding: rhythm(.15) rhythm(.5);
 		@include adjust-font-size-to($font-size-S);
 		text-decoration: none;

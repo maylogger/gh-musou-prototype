@@ -57,7 +57,7 @@ $pte-blue-dark   								 : #1934FF;
 $pte-blue              					 : #2874FF;
 $pte-blue-light  								 : #3C9AFF;
 $pte-green 			 								 : #DFED48;
-$pte-green-light 								 : #FAFFE3;
+$pte-green-light 								 : #FFF9E4;
 $pte-yellow-light 							 : #FFFBE1;
 
 // - Prototyping Transparent color
@@ -88,7 +88,7 @@ $body-background 								 : $pte-lightgray;
 
 // - link
 $link-color 										 : $global-content-color;
-$link-color-hover 							 : lighten($global-content-color, 20%);
+$link-color-hover 							 : $pte-red;
 // $link-color-active
 
 // - header
@@ -119,6 +119,7 @@ $title-sub-font-size 						 : $font-size-L;
 $title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
 $title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .9) 25%, rgba(#EFEDEB, 0) 65% );
+$title-label-color 							 : $pte-gray-light;
 
 // - article
 $article-font-size 							 : $font-size-M;
@@ -157,9 +158,9 @@ $pagination-switch-background 	 : $pte-black;
 $pagination-switch-color 	 			 : white;
 
 // - gallery
-$gallery-play-icon-size 				 : 48px;
+$gallery-play-icon-size 				 : 42px;
 $gallery-play-icon-offset 			 : $gallery-play-icon-size / 2;
-$gallery-play-icon-background 	 : $pte-black;
+$gallery-play-icon-background 	 : $pte-red;
 $gallery-play-icon-color 				 : white;
 $gallery-item-background 				 : black;
 $gallery-item-info-color 				 : $pte-black;
@@ -193,7 +194,8 @@ $tag-broadcast-background 			 : $pte-green;
 $tag-now-background 						 : $pte-red;
 $tag-now-color 									 : white;
 
-// - input
+// - post-item
+$post-item-background 					 : #F2F2EE;
 
 // - footer
 $footer-background-color 				 : $pte-lightgray;
