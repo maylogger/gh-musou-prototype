@@ -13,7 +13,7 @@ $(function(){
 
 	// collapse switch accord dom height
 	$('.collapse-content').each(function(){
-		if ( $(this).height() < 175 ) {
+		if ( $(this).height() < 190 ) {
 			$(this).parent().next('.collapse-toggle').remove();
 		}
 	});
