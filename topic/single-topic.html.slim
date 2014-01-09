@@ -15,5 +15,5 @@
 	.half-block
 		h2.title 相關戰報
 		.post-group.topic-news
-			- 8.times do
+			- ( rand(5) + 8 ).times do
 				= render "/partials/post-item"
