@@ -3,7 +3,8 @@
 		h1.title
 			a href="/topic" 重大議題
 .container
-	- 3.times do
+	// 一頁為 5 筆重大議題
+	- 5.times do
 		.block.divider
 			h2.title
 				a href="/topic/single-topic.html" = zh_lorem_sentence
@@ -18,3 +19,5 @@
 					.post-group.topic-news
 						- ( rand(3) + 4 ).times do
 							= render "/partials/post-item"
+	.block
+		= render "/partials/pagination"

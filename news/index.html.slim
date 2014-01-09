@@ -5,7 +5,8 @@
 .container
 	.block
 		.post-group
-			- 20.times do
+			// 一頁為 15 篇戰報
+			- 15.times do
 				= render "/partials/post-item"
 	.block
 		= render "/partials/pagination"
