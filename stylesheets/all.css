@@ -144,10 +144,16 @@ p { margin: 0; padding: 0; border: 0; margin-bottom: 24px; }
 .container { padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; }
 .container:after { content: ""; display: table; clear: both; }
 
-html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
+html { height: 100%; }
 
-.wrap { max-width: 1500px; height: 100%; margin: 0 auto; }
+body { color: #333333; background-color: #e7e7e5; }
+
+body.open-menu { height: 100%; }
+
+.wrap { position: relative; max-width: 100%; margin: 0 auto; -webkit-transition: 1s; -moz-transition: 1s; -o-transition: 1s; transition: 1s; }
 .open-menu .wrap { overflow: hidden; }
+
+.open-menu .wrap { height: 100%; }
 
 .menu { position: absolute; top: 0; bottom: 0; z-index: 1; width: 260px; }
 
@@ -161,8 +167,7 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
   .open-menu .wrap { overflow: visible; }
   .menu { position: static; width: auto; margin: 0 auto; max-width: 70em; }
   .main { position: static; } }
-@media (min-width: 1200px) { .header, .content { margin: 0 -100px; -webkit-transition: margin 1s; -moz-transition: margin 1s; -o-transition: margin 1s; transition: margin 1s; } }
-@media (min-width: 1680px) { .header, .content { margin: 0; } }
+@media (min-width: 1680px) { .wrap { max-width: 1500px; } }
 .header { background-color: #880013; }
 
 .logo { padding: 11px 0 13px; text-align: center; }
@@ -281,6 +286,8 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 .title-block .title { margin-top: 12px; }
 
 .title-block + .container { margin-top: 24px; }
+
+.title-block .title { text-shadow: 0 0 10px #efedeb; }
 
 .title-mask { position: absolute; top: 0; bottom: 0; width: 100%; background: linear-gradient(to right, rgba(239, 237, 235, 0.9) 25%, rgba(239, 237, 235, 0) 65%); }
 
@@ -484,9 +491,11 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 .pagination a .previous, .pagination a .next { display: inline-block; width: 0px; height: 0px; text-indent: -119988px; overflow: hidden; text-align: left; border: 5px solid transparent; }
 .pagination a .previous { margin-right: 3px; border-left: 2px solid transparent; border-right: 5px solid white; }
 .pagination a .next { margin-left: 3px; border-right: 2px solid transparent; border-left: 5px solid white; }
-.pagination a.disabled { pointer-events: none; cursor: default; background: #e6e6e6; }
+.pagination a.disabled { pointer-events: none; cursor: default; -webkit-box-shadow: 0 3px 0px #f2f2f2; -moz-box-shadow: 0 3px 0px #f2f2f2; box-shadow: 0 3px 0px #f2f2f2; background: #e6e6e6; }
+.pagination a.active { -webkit-box-shadow: 0 3px 0px #ffbbc5; -moz-box-shadow: 0 3px 0px #ffbbc5; box-shadow: 0 3px 0px #ffbbc5; background: #bb001a; }
+.pagination a.active:hover { background: #ee0021; }
 .pagination a:hover { background: #595959; }
-.pagination a:active { position: relative; top: 3px; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; background: #595959; }
+.pagination a:active { position: relative; top: 3px; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 @media (min-width: 650px) { .pagination a { margin: 0 3px; padding: 8px 13px; font-size: 16px; line-height: 24px; }
   .pagination a.more { padding: 8px 12px; } }
 
