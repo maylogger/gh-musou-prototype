@@ -275,7 +275,7 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 
 .video-header-mask { position: absolute; top: 0; bottom: 0; width: 100%; background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%); }
 
-.title, .sub-title, .small-title, .mega-title { margin-bottom: 12px; color: #333333; }
+.title, .sub-title, .small-title, .list-title, .mega-title { margin-bottom: 12px; color: #333333; }
 
 .title-block { position: relative; padding: 12px 0; background: #efedeb; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .title-block .title { margin-top: 12px; }
@@ -292,6 +292,9 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 
 .small-title { font-size: 18px; line-height: 24px; }
 @media (min-width: 650px) { .small-title { font-size: 20px; line-height: 24px; } }
+
+.list-title { margin-top: 12px; padding-bottom: 12px; font-size: 18px; line-height: 24px; border-bottom: 1px solid #e7e7e5; }
+@media (min-width: 650px) { .list-title { font-size: 20px; line-height: 24px; } }
 
 .mega-title { font-size: 44px; line-height: 48px; }
 .mega-title.center { text-align: center; }
@@ -364,7 +367,7 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 @media (min-width: 500px) { .video { background: black url('/images/live-background.jpg?1389077365') top center no-repeat; padding-bottom: 48px; } }
 
 .video-title { padding: 12px 0; }
-@media (min-width: 500px) { .video-title { color: white; } }
+@media (min-width: 500px) { .video-title a { color: white; } }
 
 .video-single { max-width: 750px; margin-bottom: 24px; padding: 5px; background: black; }
 

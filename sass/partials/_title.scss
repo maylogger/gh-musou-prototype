@@ -45,6 +45,16 @@
 		@include adjust-font-size-to($title-small-font-size + 4px);
 	}
 }
+.list-title {
+	@include leader(.5);
+	@include padding-trailer(.5);
+	@extend %title-style;
+	@include adjust-font-size-to($title-small-font-size + 2px);
+	border-bottom: 1px solid $global-divider;
+	@include at-breakpoint($pad) {
+		@include adjust-font-size-to($title-small-font-size + 4px);
+	}
+}
 
 .mega-title {
 	@extend %title-style;

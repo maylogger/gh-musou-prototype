@@ -1,0 +1,43 @@
+.title-block style="background-image: url(http://hhhhold.com/1080x300/#{rand(100)})"
+	.title-mask
+	.container
+		h1.title
+			span.title-label: a href="/schedule" 賽程
+			a href="/schedule/game.html" 立法院第8屆第4會期經濟委員會第13次全體委員會議
+.container
+	.article
+	  	ul.list
+		  	li.committee
+		  		.list-label 院會
+		  		.list-content = zh_lorem_words 5 + rand(10)
+		  	li.class
+		  		.list-label 第幾屆
+		  		.list-content 8
+		  	li.phase
+		  		.list-label 第幾會期
+		  		.list-content 1
+		  	li.session
+		  		.list-label 底幾次會議
+		  		.list-content 4
+		  	li.chair
+		  		.list-label 主席
+		  		.list-content = zh_lorem_name
+		  	li.date
+		  		.list-label 開會日期
+		  		.list-content = lorem_date.to_date
+		  	li.time
+		  		.list-label 開會時間
+		  		.list-content 09:00 - 17:30
+		  	li.summary
+		  		.list-label 議程
+		  		.list-content = zh_lorem_paragraph
+		  	li.issue
+		  		.list-label 議題
+		  		.list-content = zh_lorem_words 2 + rand(5)
+	.aside
+		h2.list-title 查看今日其他賽事...
+		ul.list
+			- ( rand(5) + 5 ).times do
+				li
+					.list-label 09:00 - 17:30
+					.list-content = zh_lorem_sentence
