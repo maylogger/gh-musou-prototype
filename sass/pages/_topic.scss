@@ -2,10 +2,22 @@
 	&.topic-news {
 	  .post-item {
 	  	@include at-breakpoint($desktop) {
-	  	  width: columns(6, $total-columns);
+	  	  width: columns(4, $total-columns);
 				margin: 0 gutter($total-columns) gutter($total-columns) 0;
-			  &:nth-child(2n) {
+			  &:nth-child(3n) {
 			  	margin-right: 0;
+		  	}
+		  }
+		  &:after {
+		  	border: 5px solid transparent;
+				border-right: 5px solid $pte-black;
+				border-bottom: 5px solid $pte-black;
+		  }
+		  &:hover {
+		  	&:after {
+		  		border: 8px solid transparent;
+					border-right: 8px solid $pte-red;
+					border-bottom: 8px solid $pte-red;
 		  	}
 		  }
 		}

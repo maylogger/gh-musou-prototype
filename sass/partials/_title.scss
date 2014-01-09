@@ -71,9 +71,9 @@
 	display: block;
 	@include adjust-font-size-to($font-size-L);
 	a {
-		color: $pte-gray-light;
+		color: $title-label-color;
 		&:hover {
-			color: lighten($global-content-color, 20%);
+			color: $link-color-hover;
 		}
 	}
 }

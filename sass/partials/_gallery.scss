@@ -92,9 +92,9 @@
 		height: $gallery-play-icon-size;
 		margin-top: -$gallery-play-icon-offset;
 		margin-left: -$gallery-play-icon-offset;
-		background-color: rgba($gallery-play-icon-background, .75);
+		background-color: rgba($gallery-play-icon-background, .6);
 		@include border-radius($gallery-play-icon-offset);
-		@include transition( background-color, ease-in, .2s );
+		@include transition( background-color, ease-in, .5s );
 		.play-triangle {
 			position: absolute;
 			top: 50%;
@@ -133,6 +133,9 @@
 		.gallery-item-title {
 			margin-bottom: rhythm(1);
 			@include ellipsis;
+			&:hover {
+				color: $link-color-hover;
+			}
 			@include at-breakpoint($wide-mobile) {
 			  margin-bottom: rhythm(0);
 			}

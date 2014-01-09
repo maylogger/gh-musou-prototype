@@ -4,15 +4,16 @@
 .container
 	- 3.times do
 		.block.divider
-			.half-block
-				.topic-intro
-					h2.title
-						a href="/topic/single-topic.html" = zh_lorem_sentence
-					p = zh_lorem_paragraphs 5
-					.button-box
-						form action="/topic/single-topic.html"
-							input.button.direction type="submit" value="觀看議題內容"
-			.half-block
-				.post-group.topic-news
-					- 4.times do
-						= render "/partials/post-item"
+			h2.title
+				a href="/topic/single-topic.html" = zh_lorem_sentence
+			.topic-content
+				.half-block
+					.topic-intro
+						p = zh_lorem_paragraphs 5
+						.button-box
+							form action="/topic/single-topic.html"
+								input.button.direction type="submit" value="觀看議題內容"
+				.half-block
+					.post-group.topic-news
+						- ( rand(3) + 4 ).times do
+							= render "/partials/post-item"
