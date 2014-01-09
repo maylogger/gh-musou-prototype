@@ -146,7 +146,7 @@ p { margin: 0; padding: 0; border: 0; margin-bottom: 24px; }
 
 html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 
-.wrap { max-width: 1580px; height: 100%; margin: 0 auto; }
+.wrap { max-width: 1500px; height: 100%; margin: 0 auto; }
 .open-menu .wrap { overflow: hidden; }
 
 .menu { position: absolute; top: 0; bottom: 0; z-index: 1; width: 260px; }
@@ -163,10 +163,12 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
   .open-menu .wrap { overflow: visible; }
   .menu { position: static; width: auto; margin: 0 auto; max-width: 70em; }
   .main { position: static; } }
+@media (min-width: 1200px) { .header, .content { margin: 0 -100px; -webkit-transition: margin 1s; -moz-transition: margin 1s; -o-transition: margin 1s; transition: margin 1s; } }
+@media (min-width: 1680px) { .header, .content { margin: 0; } }
 .header { background-color: #880013; }
 
 .logo { padding: 11px 0 13px; text-align: center; }
-.logo a { display: inline-block; width: 146px; height: 36px; vertical-align: top; text-indent: -119988px; overflow: hidden; text-align: left; background: url('/images/logo.png?1389184469') center no-repeat; }
+.logo a { display: inline-block; width: 146px; height: 36px; vertical-align: top; text-indent: -119988px; overflow: hidden; text-align: left; background: url('/images/logo.png?1389186007') center no-repeat; }
 @media (min-width: 900px) { .logo { text-align: left; } }
 
 .menu-btn { position: absolute; left: 0; width: 60px; height: 60px; background-color: transparent; border: none; }
@@ -179,11 +181,12 @@ html, body { height: 100%; color: #333333; background-color: #e7e7e5; }
 .open-menu .menu-btn-bar:last-child { position: absolute; top: 50%; left: 50%; margin: -1px 0 0 -12px; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
 .open-menu .menu-btn-bar:nth-child(2n) { opacity: 0; }
 
-.menu { background-color: #880013; }
+.menu { background-color: #333333; }
 .menu .nav { list-style: none; margin: 0; padding: 0; border: 0; }
 @media (min-width: 900px) { .menu .nav { float: right; } }
 @media (min-width: 900px) { .menu .nav li { float: left; } }
-.menu .nav li + li { border-top: 1px solid #64000e; }
+.menu .nav li.active { background-color: #bb001a; }
+.menu .nav li + li { border-top: 1px solid #4d4d4d; }
 @media (min-width: 900px) { .menu .nav li + li { border-top: none; } }
 .menu .nav a { display: block; padding: 18px 12px; color: white; }
 .menu .nav a:hover { text-decoration: none; }
