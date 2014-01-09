@@ -14,6 +14,9 @@
 .title-block + .container {
 	@include leader(1);
 }
+.title-block .title {
+	@include text-shadow(0 0 10px #EFEDEB); // multiple: comma-delimited
+}
 .title-mask {
 	position: absolute;
 	top: 0;

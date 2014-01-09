@@ -156,6 +156,7 @@ $list-broadcast-background 			 : $pte-green-light;
 // - pagination
 $pagination-switch-background 	 : $pte-black;
 $pagination-switch-color 	 			 : white;
+$pagination-active-background 	 : lighten($pte-red, 10%);
 
 // - gallery
 $gallery-play-icon-size 				 : 42px;

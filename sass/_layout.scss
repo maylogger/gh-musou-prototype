@@ -2,19 +2,30 @@
   $container-style: fluid;
   @include container($total-columns, $pad);
 }
-html, body {
+html {
 	height: 100%;
+}
+body {
 	color: $global-font-color;
 	background-color: $body-background;
 }
 
-.wrap {
-	max-width: 1500px;
+body.open-menu {
 	height: 100%;
+}
+
+.wrap {
+	position: relative;
+	max-width: 100%;
 	margin: 0 auto;
+	@include transition(1s);
 	.open-menu & {
 		overflow: hidden;
 	}
+}
+
+.open-menu .wrap {
+	height: 100%;
 }
 
 .menu {
@@ -67,14 +78,8 @@ html, body {
 		position: static;
 	}
 }
-@include at-breakpoint(1200px 12) {
-  .header, .content {
-		margin: 0 -100px;
-		@include transition(margin 1s);
-	}
-}
 @include at-breakpoint(1680px 12) {
-  .header, .content {
-  	margin: 0;
-  }
+	.wrap {
+		max-width: 1500px;
+	}
 }
