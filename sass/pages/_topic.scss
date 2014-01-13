@@ -27,3 +27,6 @@
 .topic-intro {
 	@include trailer(1);
 }
+.topic-content {
+	@include pie-clearfix;
+}
