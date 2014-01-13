@@ -1,11 +1,26 @@
 .table-row.broadcast
-	span.field.col-10 = lorem_date.to_date
-	span.field.col-40
-		a href="/schedule/game.html" = zh_lorem_sentence
-	span.field.col-15 12:00 - 18:00
-	span.field.col-10
-		a href="#" = zh_lorem_name
-	span.field.col-15
-		a herf="#" = zh_lorem_words 3 + rand(5)
-	span.field.col-10.center
-		.tag-broadcast 轉播
+	span.field.col-25
+		.broadcast-presenter
+			.anchor
+				img src="http://hhhhold.com/80x80/#{rand(100)}"
+				.name
+					.label 主播
+					= zh_lorem_name
+			.reviewer
+				img src="http://hhhhold.com/80x80/#{rand(100)}"
+				.name
+					.label 賽評
+					= zh_lorem_name
+	span.field.col-50
+		.broadcast-content
+			.time
+				span.date 2014年1月5日
+				| 12:00 - 18:00
+			.title = zh_lorem_sentence
+			.chair
+				.label 主席
+				= zh_lorem_name
+	span.field.col-25
+		.broadcast-issue
+			.label 議題
+			= zh_lorem_sentence
