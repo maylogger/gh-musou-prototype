@@ -1,0 +1,23 @@
+.title-block
+	.container
+		h1.title
+			a href="/topic/list-topic.html" 重大議題列表
+.container#test
+	// 一頁為 10 筆重大議題
+	- 10.times do |i|
+		.block.divider.panel
+			h2.sub-title data-parent="#test" data-toggle="collapse" href="#topic#{i}"
+				a href="#" = zh_lorem_sentence
+			.topic-content.collapse id="topic#{i}"
+				.half-block
+					.topic-intro
+						p = zh_lorem_paragraphs 5
+						.button-box
+							form action="/topic/single-topic.html"
+								input.button.direction type="submit" value="觀看議題內容"
+				.half-block
+					.post-group.topic-news
+						- ( rand(3) + 4 ).times do
+							= render "/partials/post-item"
+	.block
+		= render "/partials/pagination"

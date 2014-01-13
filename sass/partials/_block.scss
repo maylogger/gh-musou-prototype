@@ -1,6 +1,6 @@
 .block {
 	position: relative;
-	@include trailer(2);
+	@include trailer(1);
 	@include pie-clearfix;
 	&.divider {
 		@include padding-trailer(.5);
