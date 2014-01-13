@@ -1,0 +1,36 @@
+.presenter {
+	@include trailer(.5);
+	@include padding-trailer(.5);
+	text-align: center;
+	border-bottom: 1px solid $global-divider;
+	@include pie-clearfix;
+	img {
+		width: 100%;
+		height: auto;
+		@include at-breakpoint($wide-mobile) {
+		  width: auto;
+		}
+	}
+	.anchor {
+		@include span-columns(2);
+		@include at-breakpoint($pad) {
+		  @include span-columns(6);
+		}
+	}
+	.reviewer {
+		@include span-columns(2 omega);
+		@include at-breakpoint($pad) {
+		  @include span-columns(6 omega);
+		}
+	}
+	.name {
+		@include adjust-font-size-to($font-size-M, 1.5);
+		@include at-breakpoint($pad) {
+			@include adjust-font-size-to($font-size-L, 1.5);
+		}
+	}
+	.label {
+		display: inline-block;
+		color: $list-label-color;
+	}
+}

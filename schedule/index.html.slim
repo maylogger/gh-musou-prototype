@@ -4,17 +4,24 @@
 			a href="/schedule" 賽程
 .container
 	.block
-		.table-head
-			span.field.col-10 日期
-			span.field.col-40 會議名稱
-			span.field.col-15 時間
-			span.field.col-10 主席
-			span.field.col-15 議題
-			span.field.col-10
-		= render "/partials/schedule-row/schedule-now"
-		- 6.times do
+		h2.sub-title 轉播賽程
+		- 3.times do
+			.committee
+				a href="#" = zh_lorem_words 5 + rand(7)
+			- 3.times do
+				= render "/partials/schedule-row/schedule-broadcast"
+	.block
+		h2.sub-title 其他賽程
+		- 3.times do
+			.committee
+				a href="#" = zh_lorem_words 5 + rand(7)
+			.table-head
+				span.field.col-15 日期
+				span.field.col-15 時間
+				span.field.col-40 會議名稱
+				span.field.col-10 主席
+				span.field.col-20 議題
 			- 3.times do
 				= render "/partials/schedule-row/schedule"
-			= render "/partials/schedule-row/schedule-broadcast"
 	.block
 		= render "/partials/pagination"

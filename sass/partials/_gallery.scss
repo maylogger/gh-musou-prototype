@@ -132,7 +132,6 @@
 		}
 		.gallery-item-title {
 			margin-bottom: rhythm(1);
-			@include ellipsis;
 			&:hover {
 				color: $link-color-hover;
 			}
