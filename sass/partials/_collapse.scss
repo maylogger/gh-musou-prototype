@@ -2,12 +2,13 @@
   height: 175px;
   overflow-y: hidden;
 }
-
-.collapsing {
-  overflow-y: hidden;
-  @include transition(height .3s ease-in-out);
+.topic-content.collapse {
+	height: 0;
 }
-
+.collapsing {
+	overflow-y: hidden;
+	@include transition(height .5s ease-in-out);
+}
 .collapse-toggle {
 	position: absolute;
 	bottom: -#{rhythm(.5)};
