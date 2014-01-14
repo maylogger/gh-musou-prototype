@@ -4,6 +4,19 @@
 			a href="/news" 最新戰報
 .container
 	.block
+		.filter
+			.word 過往戰報：
+			.filter-select
+				select
+					option 2014年
+					option 2013年
+			.filter-select
+				select
+					option 1月
+					option 2月
+					option 3月
+			button.search 找戰報
+	.block
 		.post-group
 			// 一頁為 15 篇戰報
 			- 15.times do
