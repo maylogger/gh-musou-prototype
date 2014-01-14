@@ -2,20 +2,19 @@
 	.container
 		h1.title
 			a href="/topic" 重大議題
-			a.title-extra-link href="/topic/list-topic.html" 查看重大議題列表
+			a.title-extra-link href="/topic/topic-list.html" 查看重大議題列表
 .container
 	// 一頁為 5 筆重大議題
 	- 5.times do
 		.block.divider
 			h2.title
-				a href="/topic/single-topic.html" = zh_lorem_sentence
+				a href="/topic/topic-single.html" = zh_lorem_sentence
 			.topic-content
 				.half-block
 					.topic-intro
 						p = zh_lorem_paragraphs 5
 						.button-box
-							form action="/topic/single-topic.html"
-								input.button.direction type="submit" value="觀看議題內容"
+							a.button.direction href="/topic/topic-single.html" 觀看議題內容
 				.half-block
 					.post-group.topic-news
 						- ( rand(3) + 4 ).times do
