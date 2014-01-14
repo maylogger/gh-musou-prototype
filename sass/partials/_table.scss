@@ -7,6 +7,10 @@ $i: 100;
   $i: $i - 5;
 }
 
+.table {
+	border-bottom: 1px solid $global-divider;
+}
+
 .table-head, .table-row {
 	display: table;
 	width: 100%;
@@ -14,10 +18,12 @@ $i: 100;
 	@include padding-trailer(.5);
 	border-top: 1px solid $global-divider;
 }
+.table-row:nth-child(odd) {
+	background: $pte-yellow-light;
+}
 
 .field {
 	display: table-cell;
-	letter-spacing: -1px;
 	vertical-align: middle;
 	@include adjust-font-size-to($list-font-size-mobile);
 	&.center {
