@@ -41,7 +41,6 @@
 	opacity: 1;
 	background-color: $menu-btn-bar-color;
 	@include transition(transform .5s, opacity .5s);
-	@include box-shadow(0 1px 0 $menu-btn-bar-shadow-color);
 	& + & {
 		margin-top: $menu-btn-bar-spacing;
 	}

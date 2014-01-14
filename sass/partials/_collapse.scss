@@ -15,12 +15,12 @@
 	width: 100%;
 	height: rhythm(4);
 	margin-top: rhythm(1);
-	text-align: center;
 	border-bottom: 1px solid $collapse-toggle-divider;
 	background-image: $collapse-content-hider;
 	pointer-events: none;
 	.collapse-toggle-button {
 		position: absolute;
+		left: 50%;
 		bottom: 0;
 		margin-left: -#{rhythm(1.25)};
 		padding: rhythm(.15) rhythm(.5);

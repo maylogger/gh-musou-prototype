@@ -18,7 +18,7 @@ body.open-menu {
 	position: relative;
 	max-width: 100%;
 	margin: 0 auto;
-	@include transition(1s);
+	@include transition(max-width 1s);
 	.open-menu & {
 		overflow: hidden;
 	}
@@ -26,6 +26,11 @@ body.open-menu {
 
 .open-menu .wrap {
 	height: 100%;
+}
+
+.open-menu .menu {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 .menu {
