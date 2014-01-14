@@ -1,0 +1,46 @@
+.filter {
+	@include padding-trailer(.25);
+	text-align: right;
+	border-bottom: 1px solid $global-divider;
+	.filter-select {
+		position: relative;
+		display: inline-block;
+		padding-right: rhythm(.5);
+		select {
+			padding-right: rhythm(.5);
+			color: $pte-red;
+			border: none;
+			background: $content-background;
+			-webkit-appearance: none;
+			-moz-appearance: window;
+			text-indent: 0.01px;
+    	text-overflow: '';
+		}
+		&:after {
+			position: absolute;
+			top: 40%;
+			right: 12px;
+			content: "";
+			border: 5px solid transparent;
+			border-top: 5px solid $pte-red;
+			pointer-events: none;
+		}
+	}
+	.search {
+		padding: rhythm(0) rhythm(.35);
+		color: $pte-red;
+		@include adjust-font-size-to($font-size-S);
+		background: transparent;
+		border: 1px solid $pte-red;
+		@include border-radius(3px);
+		@include transition(.3s);
+		&:hover {
+			color: white;
+			background: $pte-red;
+		}
+	}
+	.word {
+		display: inline-block;
+		margin: 0 rhythm(.15);
+	}
+}

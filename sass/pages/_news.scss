@@ -103,7 +103,7 @@
 	background: $news-post-note-background;
 	@include box-shadow(0px 2px 5px rgba(black, .25));
 	.post-note-content {
-		padding: rhythm(1);
+		padding: rhythm(1) rhythm(.75);
 		& ul.list {
 			padding-top: rhythm(.5);
 			@include adjust-font-size-to($font-size-S, .5);
