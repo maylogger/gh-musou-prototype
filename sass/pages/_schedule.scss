@@ -1,28 +1,49 @@
+a.broadcast:hover {
+	color: $pte-black;
+}
 .broadcast {
+	&:hover {
+		background: darken($pte-yellow-light, 3%);
+	}
 	.broadcast-presenter {
 		text-align: center;
 		border-right: 1px solid $global-divider;
 		@include pie-clearfix;
 		.anchor, .reviewer {
-			float: left;
-			margin: rhythm(.75);
+			display: inline-block;
+			margin: rhythm(.5);
+			img {
+				display: none;
+				@include at-breakpoint($pad) {
+				  display: block;
+				}
+			}
 		}
 	}
 	.broadcast-content {
 		.date {
-			display: inline-block;
-			margin-right: rhythm(.5);
-			padding-right: rhythm(.5);
-			border-right: 1px solid $global-divider;
+			display: block;
+			@include at-breakpoint($pad) {
+			  display: inline-block;
+				margin-right: rhythm(.5);
+				padding-right: rhythm(.5);
+				border-right: 1px solid $global-divider;
+			}
 		}
 		.title {
 			@include trailer(0);
-			@include adjust-font-size-to($font-size-L, 1.5);
+			@include adjust-font-size-to($font-size-M, 1);
+			@include at-breakpoint($pad) {
+				@include adjust-font-size-to($font-size-L, 1.5);
+			}
 		}
+	}
+	.name {
+		@extend %anti-break;
 	}
 	.label {
 		display: inline-block;
-		color: $list-label-color;
+		color: $pte-red;
 	}
 	.broadcast-issue {
 		.label {
@@ -30,7 +51,7 @@
 		}
 	}
 }
-.committee {
+.broadcast-committee {
 	@include leader(1.5);
 	@include trailer(1);
 	@include adjust-font-size-to($font-size-L);

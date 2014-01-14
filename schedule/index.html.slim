@@ -6,22 +6,25 @@
 	.block
 		h2.sub-title 轉播賽程
 		- 3.times do
-			.committee
-				a href="#" = zh_lorem_words 5 + rand(7)
-			- 3.times do
-				= render "/partials/schedule-row/schedule-broadcast"
+			.broadcast-committee
+				a href="#" 委員會
+			.table
+				= render "/partials/schedule-row/schedule-now"
+				- 2.times do
+					= render "/partials/schedule-row/schedule-broadcast"
 	.block
 		h2.sub-title 其他賽程
 		- 3.times do
-			.committee
-				a href="#" = zh_lorem_words 5 + rand(7)
+			.broadcast-committee
+				a href="#" 委員會
 			.table-head
 				span.field.col-15 日期
 				span.field.col-15 時間
 				span.field.col-40 會議名稱
 				span.field.col-10 主席
 				span.field.col-20 議題
-			- 3.times do
-				= render "/partials/schedule-row/schedule"
+			.table
+				- 3.times do
+					= render "/partials/schedule-row/schedule"
 	.block
 		= render "/partials/pagination"
