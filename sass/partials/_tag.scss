@@ -3,6 +3,7 @@
 	padding: 0 rhythm(.35);
 	-webkit-font-smoothing: subpixel-antialiased;
 	@include adjust-font-size-to($font-size-S);
+	vertical-align: text-top;
 	@include box-shadow(0 1px 1px rgba(black, .25));
 	@include border-radius(5px);
 }
