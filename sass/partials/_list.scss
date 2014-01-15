@@ -48,8 +48,11 @@
 		@include at-breakpoint($pad) {
 			@include leader(0);
 			padding-left: 7em;
-		  	.list-label ,.list-content {
-		  		margin-top: $list-no-border-offset-fix;
+			.list-label {
+				width: 5em;
+			}
+	  	.list-label ,.list-content {
+	  		margin-top: $list-no-border-offset-fix;
 				@include adjust-font-size-to($list-sub-font-size + 2px, 1);
 			}
 		}
