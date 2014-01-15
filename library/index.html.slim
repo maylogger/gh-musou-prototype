@@ -3,5 +3,40 @@
 		h1.title
 			a href="/library" 歷史數據
 .container
-	.half-block-center-only
-		p = zh_lorem_paragraphs 30
+	.block
+		h2.sub-title 委員會列表
+
+.container
+	.block
+		h2.sub-title 立法委員列表
+		h2.sub-title 民進黨
+		.avatar-group
+			- ( 10 + rand(5) ).times do
+				- @party = capture do
+					= "DPP"
+				= render "/partials/avatar"
+		h2.sub-title 國民黨
+		.avatar-group
+			- ( 10 + rand(5) ).times do
+				- @party = capture do
+					= "KMT"
+				= render "/partials/avatar"
+		h2.sub-title 親民黨
+		.avatar-group
+			- ( 10 + rand(5) ).times do
+				- @party = capture do
+					= "PFP"
+				= render "/partials/avatar"
+		h2.sub-title 台灣團結聯盟
+		.avatar-group
+			- ( 10 + rand(5) ).times do
+				- @party = capture do
+					= "TW"
+				= render "/partials/avatar"
+		h2.sub-title 無黨籍
+		.avatar-group
+			- ( 10 + rand(5) ).times do
+				- @party = capture do
+					= "NOP"
+				= render "/partials/avatar"
+
