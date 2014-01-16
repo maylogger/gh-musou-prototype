@@ -37,6 +37,8 @@
 			a.title-extra-link href="/highlight/mvp" 查看更多 MVP
 		.avatar-info-group
 			.avatar-single
+				- @party = capture do
+					= "DPP"
 				= render "/partials/avatar"
 			.avatar-intro
 				h2.sub-title 精彩事蹟
@@ -52,6 +54,8 @@
 			a.title-extra-link href="/highlight/mup" 查看更多 MUP
 		.avatar-info-group
 			.avatar-single
+				- @party = capture do
+					= "DPP"
 				= render "/partials/avatar"
 			.avatar-intro
 				h2.sub-title 黑暗事蹟

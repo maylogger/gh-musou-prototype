@@ -74,7 +74,7 @@
 	.header {
 		position: relative;
 		z-index: 1;
-		background: rgba(55,55,55,.7);
+		background: rgba($header-background, .85);
 	}
 	.nav {
 		position: relative;

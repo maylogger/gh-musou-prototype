@@ -11,7 +11,8 @@
 		height: 36px;
 		vertical-align: top;
 		@include hide-text;
-		background: image-url("logo.png") center no-repeat;
+		@include replace-text-with-dimensions("logo.png");
+		background-image: none, image-url("logo.svg");
 	}
 	@include at-breakpoint($desktop) {
 		text-align: left;

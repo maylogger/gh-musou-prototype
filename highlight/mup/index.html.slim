@@ -10,6 +10,8 @@
 			h1.title 14/12/2#{9-i} MUP
 			.avatar-info-group
 				.avatar-single
+					- @party = capture do
+						= "DPP"
 					= render "/partials/avatar"
 				.avatar-intro
 					h2.sub-title 黑暗事蹟
@@ -17,7 +19,7 @@
 				.avatar-highlight
 					h2.sub-title 黑暗鏡頭
 					.gallery.double-col
-					- 4.times do
-						= render "/partials/gallery"
+						- 4.times do
+							= render "/partials/gallery"
 	.block
 		= render "/partials/pagination"
