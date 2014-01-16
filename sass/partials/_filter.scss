@@ -30,6 +30,7 @@
 		padding: rhythm(0) rhythm(.35);
 		color: $pte-red;
 		@include adjust-font-size-to($font-size-S);
+		vertical-align: bottom;
 		background: transparent;
 		border: 1px solid $pte-red;
 		@include border-radius(3px);
