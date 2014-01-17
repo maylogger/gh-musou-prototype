@@ -70,13 +70,24 @@
 	}
 }
 
-.title-extra-link {
+.title-extra {
 	display: inline-block;
-	margin-left: rhythm(.25);
 	@include adjust-font-size-to($font-size-M);
-	&:before {
-		content: "/";
-		margin-right: rhythm(.25);
+}
+
+.title-extra-link {
+	float: right;
+	margin-top: rhythm(.35);
+	padding: rhythm(.15) rhythm(.5);
+	color: white;
+	@include adjust-font-size-to($font-size-M);
+	background: $pte-red;
+	@include border-radius(24px);
+	@include text-shadow(0 0 10px #EFEDEB);
+	@include box-shadow(0px 2px 3px rgba(black, .25));
+	&:hover {
+		color: white;
+		background: lighten($pte-red, 10%);
 	}
 }
 
