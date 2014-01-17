@@ -51,8 +51,8 @@
 					@include trailer(.25);
 					.icon-fb {
 						@extend %link-icon;
-						@include replace-text-with-dimensions("icon-facebook.png");
-				    background-image: none, image-url("icon-facebook.svg");
+						@include replace-text-with-dimensions("icon_facebook.png");
+				    background-image: none, image-url("icon_facebook.svg");
 					}
 					@include at-breakpoint($wide-mobile) {
 					  display: inline-block;
@@ -64,8 +64,8 @@
 					@include trailer(.25);
 					.icon-wiki {
 						@extend %link-icon;
-						@include replace-text-with-dimensions("icon-wiki.png");
-				    background-image: none, image-url("icon-wiki.svg");
+						@include replace-text-with-dimensions("icon_wiki.png");
+				    background-image: none, image-url("icon_wiki.svg");
 					}
 					@include at-breakpoint($wide-mobile) {
 					  display: inline-block;

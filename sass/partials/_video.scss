@@ -2,7 +2,7 @@
 	@include trailer(.5);
 	@include padding-leader(.5);
 	@include at-breakpoint($wide-mobile) {
-	  background: black image-url("live-background.jpg") top center no-repeat;
+	  background: black image-url("live_background.jpg") top center no-repeat;
 	  padding-bottom: rhythm(2);
 	}
 }

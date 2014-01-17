@@ -3,7 +3,7 @@
 	color: $hero-content-color;
 	margin-top: -#{rhythm(2.5)};
 	padding-top: rhythm(2.5);
-	background: black image-url("index-hero.jpg") top center no-repeat;
+	background: black image-url("index_hero.jpg") top center no-repeat;
 	@include background-size(cover);
 	.hero-title {
 		position: relative;

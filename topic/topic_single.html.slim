@@ -3,7 +3,7 @@
 	.container
 		h1.title
 			span.title-label: a href="/topic" 重大議題
-			a href="/topic/topic-single.html" 兩岸服貿協議
+			a href="/topic/topic_single.html" 兩岸服貿協議
 .container
 	.half-block
 		h2.title 主題
@@ -16,4 +16,4 @@
 		h2.title 相關戰報
 		.post-group.topic-news
 			- ( rand(5) + 8 ).times do
-				= render "/partials/post-item"
+				= render "/partials/post_item"
