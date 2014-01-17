@@ -1,0 +1,23 @@
+.layout-guide {
+	@include leader(1);
+}
+.layout-guide .article {
+	@include at-breakpoint($desktop) {
+		@include span-columns(8 omega);
+		@include post(1);
+	}
+}
+
+.layout-guide .aside {
+	@include at-breakpoint($desktop) {
+		@include span-columns(3);
+	}
+}
+.rule-list {
+	&.affix {
+		@include at-breakpoint($desktop) {
+			max-width: 256px;
+		  width: 21.5%;
+		}
+	}
+}

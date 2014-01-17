@@ -107,6 +107,10 @@
 	.character-name {
 		color: white;
 		@include adjust-font-size-to($font-size-XL);
+		@include ellipsis;
+		@include at-breakpoint($wide-mobile) {
+		  white-space: normal;
+		}
 	}
 	.vs-word {
 		position: absolute;

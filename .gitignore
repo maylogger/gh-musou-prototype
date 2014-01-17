@@ -36,3 +36,5 @@ psd/**/*
 stylesheets/pages/index.css
 
 live/temp.html.slim
+
+news/post-with-content.html.slim

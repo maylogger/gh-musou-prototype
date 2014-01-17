@@ -5,6 +5,9 @@
 .topic-content.collapse {
 	height: 0;
 }
+.in {
+	margin-bottom: rhythm(1);
+}
 .collapsing {
 	overflow-y: hidden;
 	@include transition(height .5s ease-in-out);
