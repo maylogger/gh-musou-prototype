@@ -21,6 +21,8 @@
 			#attend-legislators.collapse
 				.avatar-group.collapse-content
 					- ( rand(5) + 8 ).times do
+						- @party = capture do
+							= "DPP"
 						= render "/partials/avatar"
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#attend-legislators" 看更多
@@ -32,17 +34,9 @@
 						li: a = zh_lorem_sentence
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#issue" 看更多
-		.block
-			h2.sub-title 相關資料
-			#other-info.collapse
-				ul.list.collapse-content
-					- ( rand(5) + 8 ).times do
-						li: a = zh_lorem_sentence
-			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#other-info" 看更多
 	.aside
 		.block
-			h2.sub-title 今日其他 LIVE
+			h2.sub-title 相關連結
 			ul.list
 				- ( rand(5) + 8 ).times do
 					li: a = zh_lorem_sentence
