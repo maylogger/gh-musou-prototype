@@ -5,21 +5,22 @@
 	.filter-select {
 		position: relative;
 		display: inline-block;
-		padding-right: rhythm(.5);
 		vertical-align: top;
+		@include at-breakpoint($pad) {
+		  padding-right: rhythm(.5);
+		}
 	}
 	.search {
 		padding: rhythm(0) rhythm(.35);
-		color: $pte-red;
-		@include adjust-font-size-to($font-size-S);
+		color: $filter-button-style-color;
+		@include adjust-font-size-to($filter-button-font-size);
 		vertical-align: bottom;
 		background: transparent;
-		border: 1px solid $pte-red;
-		@include border-radius(3px);
+		border: 1px solid $filter-button-style-color;
 		@include transition(.3s);
 		&:hover {
 			color: white;
-			background: $pte-red;
+			background: $filter-button-style-color;
 		}
 	}
 	.word {

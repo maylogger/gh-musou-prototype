@@ -60,9 +60,6 @@
 		.avatar-name {
 			padding-left: rhythm(.25);
 			@include adjust-font-size-to($font-size-M - 1px);
-			&:hover {
-				text-decoration: underline;
-			}
 		}
 	}
 }

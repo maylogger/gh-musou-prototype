@@ -82,13 +82,13 @@ $global-image-holder-color 			 : $pte-lightgray;
 // - news
 $news-post-note-background 			 : $pte-yellow-light;
 
-// Partials ===============================================
+// Page & Partials ========================================
 // - body
 $body-background 								 : $pte-lightgray;
 
 // - link
 $link-color 										 : $global-content-color;
-$link-color-hover 							 : $pte-red;
+$link-color-hover 							 : $pte-blue-light;
 // $link-color-active
 
 // - header
@@ -120,20 +120,13 @@ $title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
 $title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .9) 25%, rgba(#EFEDEB, 0) 65% );
 $title-label-color 							 : $pte-gray-light;
+$title-extra-link-color 				 : $pte-red;
 
 // - article
 $article-font-size 							 : $font-size-M;
 
 // - hero
 $hero-content-color 						 : white;
-
-// - page-header
-$page-header-font-size 					 : $font-size-UL;
-$page-header-font-size-large 		 : $font-size-EL;
-$page-header-content-color 			 : white;
-$page-header-text-shadow 				 : $pte-black-light;
-$page-header-top-divider 				 : $global-divider;
-$page-header-mask-background 		 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
 
 // - video-header
 $video-header-font-size 				 : $font-size-XL;
@@ -154,6 +147,7 @@ $list-no-border-offset-fix 			 : 1px;
 $list-broadcast-background 			 : $pte-green-light;
 
 // - pagination
+$pagination-font-size 					 : $font-size-S;
 $pagination-switch-background 	 : $pte-black;
 $pagination-switch-color 	 			 : white;
 $pagination-active-background 	 : lighten($pte-red, 10%);
@@ -179,21 +173,32 @@ $avatar-photo-width-large				 : 250px;
 // - collapse
 $collapse-toggle-divider 				 : $global-divider;
 $collapse-content-hider 				 : linear-gradient(to top, rgba($content-background, 1) 15%, rgba($content-background, .5) 50%, rgba($content-background, 0) 100% );
+$collapse-btn-size 							 : $font-size-S;
 $collapse-btn-color 						 : $pte-black;
 $collapse-btn-color-hover 			 : $pte-lightgray;
 $collapse-btn-background 			 	 : $pte-lightgray;
 $collapse-btn-background-hover 	 : rgba($pte-black, .85);
 
 // - button
+$button-font-size 							 : $font-size-L;
 $button-background 							 : $content-background;
 $button-background-hover 				 : $pte-black;
 $button-color 									 : $pte-black;
 $button-color-hover 						 : $content-background;
 
+// -filter
+$filter-button-font-size 				 : $font-size-S;
+$filter-button-style-color 			 : $pte-red;
+
 // - tag
 $tag-broadcast-background 			 : $pte-green;
 $tag-now-background 						 : $pte-red;
 $tag-now-color 									 : white;
+$tag-font-size 									 : $font-size-S;
+
+// - pills
+$pills-normal-font-color 				 : $pte-black;
+$pills-active-font-color 				 : $pte-red;
 
 // - post-item
 $post-item-background 					 : #F2F2EE;
@@ -202,5 +207,3 @@ $post-item-background 					 : #F2F2EE;
 $footer-background-color 				 : $pte-lightgray;
 $footer-color 									 : $pte-gray;
 
-// - other
-$no-content-msg-color 					 : $pte-gray;
