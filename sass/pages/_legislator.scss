@@ -5,72 +5,100 @@
 	}
 	.legislator-info {
 		float: left;
-			.name {
-				@include leader(.5);
-				@include trailer(.5);
-				@include adjust-font-size-to($font-size-XL);
-				.party {
-					display: inline-block;
-					width: 30px;
-					height: 24px;
-					margin-top: -4px;
-					vertical-align: middle;
-					&.DPP {
-						@include replace-text-with-dimensions("DPP.png");
-				    background-image: none, image-url("DPP.svg");
-					}
-					&.KMT {
-						@include replace-text-with-dimensions("KMT.png");
-				    background-image: none, image-url("KMT.svg");
-					}
-					&.PFP {
-						@include replace-text-with-dimensions("PFP.png");
-				    background-image: none, image-url("PFP.svg");
-					}
-					&.TW {
-						@include replace-text-with-dimensions("TW.png");
-				    background-image: none, image-url("TW.svg");
-					}
-					&.NOP {
-						@include replace-text-with-dimensions("NOP.png");
-				    background-image: none, image-url("NOP.svg");
-					}
+		.name {
+			@include leader(.5);
+			@include trailer(.5);
+			@include adjust-font-size-to($font-size-XL);
+			.party {
+				display: inline-block;
+				width: 30px;
+				height: 24px;
+				margin-top: -4px;
+				vertical-align: middle;
+				&.DPP {
+					@include replace-text-with-dimensions("DPP.png");
+			    background-image: none, image-url("DPP.svg");
+				}
+				&.KMT {
+					@include replace-text-with-dimensions("KMT.png");
+			    background-image: none, image-url("KMT.svg");
+				}
+				&.PFP {
+					@include replace-text-with-dimensions("PFP.png");
+			    background-image: none, image-url("PFP.svg");
+				}
+				&.TW {
+					@include replace-text-with-dimensions("TW.png");
+			    background-image: none, image-url("TW.svg");
+				}
+				&.NOP {
+					@include replace-text-with-dimensions("NOP.png");
+			    background-image: none, image-url("NOP.svg");
 				}
 			}
-			.link {
-				%link-icon {
-					display: inline-block;
-					width: 24px;
-					height: 24px;
-					margin-top: -4px;
-					vertical-align: middle;
+		}
+
+		.link {
+			%link-icon {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				margin-top: -4px;
+				vertical-align: middle;
+			}
+			.facebook {
+				display: block;
+				margin-right: rhythm(1);
+				@include trailer(.25);
+				.icon-fb {
+					@extend %link-icon;
+					@include replace-text-with-dimensions("icon_facebook.png");
+			    background-image: none, image-url("icon_facebook.svg");
 				}
-				.facebook {
-					display: block;
-					margin-right: rhythm(1);
-					@include trailer(.25);
-					.icon-fb {
-						@extend %link-icon;
-						@include replace-text-with-dimensions("icon_facebook.png");
-				    background-image: none, image-url("icon_facebook.svg");
-					}
-					@include at-breakpoint($wide-mobile) {
-					  display: inline-block;
-					}
-				}
-				.wiki {
-					display: block;
-					margin-right: rhythm(1);
-					@include trailer(.25);
-					.icon-wiki {
-						@extend %link-icon;
-						@include replace-text-with-dimensions("icon_wiki.png");
-				    background-image: none, image-url("icon_wiki.svg");
-					}
-					@include at-breakpoint($wide-mobile) {
-					  display: inline-block;
-					}
+				@include at-breakpoint($wide-mobile) {
+				  display: inline-block;
 				}
 			}
+			.wiki {
+				display: block;
+				margin-right: rhythm(1);
+				@include trailer(.25);
+				.icon-wiki {
+					@extend %link-icon;
+					@include replace-text-with-dimensions("icon_wiki.png");
+			    background-image: none, image-url("icon_wiki.svg");
+				}
+				@include at-breakpoint($wide-mobile) {
+				  display: inline-block;
+				}
+			}
+		}
+	}
+}
+.record {
+	min-height: rhythm(3);
+	height: rhythm(3);
+	overflow: hidden;
+	&.open {
+		height: auto;
+		overflow: auto;
+	}
+}
+.more-record {
+	cursor: pointer;
+	&:before {
+		content: "＋";
+		width: 26px;
+		height: 25px;
+		margin-right: rhythm(.125);
+		padding: 0 1px 1px 1px;
+		color: white;
+		background-color: $pte-black;
+		@include border-radius(3px);
+	}
+	&:hover {
+		&:before {
+			background-color: $pte-red;
+		}
 	}
 }
