@@ -1,7 +1,6 @@
 .post-group {
 	@include pie-clearfix;
 }
-
 .post-item {
 	position: relative;
 	float: left;
@@ -86,6 +85,36 @@
 		img {
 			padding: 2.5%;
 			width: 95%;
+		}
+	}
+}
+
+.post-content {
+	h1 {
+		@include leader(1);
+		@include trailer(1);
+		@include adjust-font-size-to($font-size-XXL);
+	}
+	h2 {
+		@include leader(.75);
+		@include trailer(.75);
+		@include adjust-font-size-to($font-size-XL);
+	}
+	h3 {
+		@include leader(.5);
+		@include trailer(.5);
+		@include adjust-font-size-to($font-size-L);
+	}
+	h4 {
+		@include leader(.5);
+		@include trailer(.5);
+		@include adjust-font-size-to($font-size-M);
+		font-weight: bold;
+	}
+	a {
+		color: $pte-blue;
+		&:hover {
+			color: $pte-blue-light;
 		}
 	}
 }

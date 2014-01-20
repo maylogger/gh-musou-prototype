@@ -15,8 +15,8 @@
 				img src="http://hhhhold.com/400x150/#{rand(100)}"
 			.character-name = zh_lorem_words 5 + rand(5)
 .container.layout-post
-	.article
-		h2.sub-title = zh_lorem_sentence
+	.article.post-content
+		h1 = zh_lorem_sentence
 		p = zh_lorem_paragraphs 3
 	.aside
 		.post-note
@@ -40,7 +40,7 @@
 					li
 						.list-label 議題
 						.list-content = zh_lorem_words 5 + rand(2)
-	.article
+	.article.post-content
 		.video-single
 			.video-wrapper
 				iframe src="//www.youtube.com/embed/XGK42oYK2h0" frameborder="0" allowfullscreen=""
