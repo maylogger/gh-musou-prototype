@@ -13,7 +13,14 @@
 			- ( rand(5) + 5 ).times do
 				li: a href="#" = zh_lorem_sentence
 	.half-block
-		h2.title 相關戰報
-		.post-group.topic-news
-			- ( rand(5) + 8 ).times do
-				= render "/partials/post_item"
+		.post-timeline
+			h3.timeline-title 2014年 1月
+			.post-group.topic-news
+				- ( rand(5) + 8 ).times do
+					= render "/partials/post_item"
+			h3.timeline-title 2013年 12月
+			.post-group.topic-news
+				- ( rand(5) + 8 ).times do
+					= render "/partials/post_item"
+			h3.timeline-title.start 議題發起
+			.timeline-bar
