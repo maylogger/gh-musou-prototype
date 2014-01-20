@@ -71,8 +71,11 @@
 }
 
 .title-extra {
-	display: inline-block;
-	@include adjust-font-size-to($font-size-M);
+	display: none;
+	@include at-breakpoint($pad) {
+	  display: inline-block;
+		@include adjust-font-size-to($title-small-font-size);
+	}
 }
 
 .title-extra-link {
@@ -80,20 +83,21 @@
 	margin-top: rhythm(.35);
 	padding: rhythm(.15) rhythm(.5);
 	color: white;
-	@include adjust-font-size-to($font-size-M);
-	background: $pte-red;
-	@include border-radius(24px);
+	@include adjust-font-size-to($title-small-font-size);
+	background: $title-extra-link-color;
+	@include border-radius(5px);
 	@include text-shadow(0 0 10px #EFEDEB);
 	@include box-shadow(0px 2px 3px rgba(black, .25));
+	@include transition(.3s);
 	&:hover {
 		color: white;
-		background: lighten($pte-red, 10%);
+		background: lighten($title-extra-link-color, 10%);
 	}
 }
 
 .title-label {
 	display: block;
-	@include adjust-font-size-to($font-size-L);
+	@include adjust-font-size-to($title-sub-font-size);
 	a {
 		color: $title-label-color;
 		&:hover {

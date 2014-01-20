@@ -9,13 +9,13 @@
 	a {
 		margin: 0 rhythm(.05);
 		padding: rhythm(.3) rhythm(.5);
-		@include adjust-font-size-to($font-size-S);
+		@include adjust-font-size-to($pagination-font-size);
 		color: $pagination-switch-color;
 		text-decoration: none;
 		background: $pagination-switch-background;
 		@include box-shadow(0 3px 0px lighten($pagination-switch-background, 50%));
 		@include border-radius(3px);
-		@include transition(all, ease-in-out, .2s);
+		@include transition(background ease-in-out .2s);
 		&.more {
 			padding: rhythm(.3) rhythm(.45);
 		}
@@ -62,7 +62,7 @@
 		@include at-breakpoint($pad) {
 			margin: 0 rhythm(.15);
 			padding: rhythm(.35) rhythm(.55);
-			@include adjust-font-size-to($font-size-M);
+			@include adjust-font-size-to($pagination-font-size + 4px);
 			&.more {
 			padding: rhythm(.35) rhythm(.5);
 		}

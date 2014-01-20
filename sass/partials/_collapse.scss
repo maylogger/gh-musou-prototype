@@ -27,7 +27,7 @@
 		bottom: 0;
 		margin-left: -#{rhythm(1.25)};
 		padding: rhythm(.15) rhythm(.5);
-		@include adjust-font-size-to($font-size-S);
+		@include adjust-font-size-to($collapse-btn-size);
 		text-decoration: none;
 		pointer-events: auto;
 		color: $collapse-btn-color;

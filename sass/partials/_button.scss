@@ -8,7 +8,7 @@
 .button {
 	position: relative;
 	padding: rhythm(.5) rhythm(1.5);
-	@include adjust-font-size-to($font-size-L);
+	@include adjust-font-size-to($button-font-size);
 	color: $button-color;
 	background-color: $button-background;
 	border: 1px solid $button-color;

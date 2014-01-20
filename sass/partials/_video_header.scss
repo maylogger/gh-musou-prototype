@@ -15,9 +15,9 @@
 		@include leader(1);
 		@include trailer(.5);
 		@include adjust-font-size-to($video-header-font-size, 2);
-		color: $page-header-content-color;
+		color: $video-header-content-color;
 		font-weight: bold;
-		@include text-shadow(0px 3px 7px $page-header-text-shadow);
+		@include text-shadow(0px 3px 7px $video-header-text-shadow);
 		@include at-breakpoint($pad) {
 		  @include adjust-font-size-to($video-header-font-size-large, 2.5);
 		}
@@ -29,7 +29,7 @@
 			width: 100%;
 			height: 2px;
 			content: "";
-			background: $page-header-content-color;
+			background: $video-header-content-color;
 			opacity: .35;
 		}
 	}
@@ -53,5 +53,5 @@
 	top: 0;
 	bottom: 0;
 	width: 100%;
-	background: $page-header-mask-background;
+	background: $video-header-mask-background;
 }
