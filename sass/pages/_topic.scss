@@ -27,8 +27,18 @@
 .topic-intro {
 	@include trailer(1);
 }
-.topic-content {
+.topic-content, .topic-content-wrap {
 	@include pie-clearfix;
+}
+
+.topic-title {
+	@extend .title;
+	@include leader(1);
+	@include trailer(1);
+}
+
+.topic-title-collapse {
+	@extend .sub-title;
 }
 
 .post-timeline {
