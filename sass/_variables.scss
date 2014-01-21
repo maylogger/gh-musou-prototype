@@ -88,7 +88,7 @@ $body-background 								 : $pte-lightgray;
 
 // - link
 $link-color 										 : $global-content-color;
-$link-color-hover 							 : $pte-blue-light;
+$link-color-hover 							 : $pte-red;
 // $link-color-active
 
 // - header
@@ -118,6 +118,7 @@ $title-font-size 								 : $font-size-XXL - 4px;
 $title-sub-font-size 						 : $font-size-L;
 $title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
+$title-mask-mobile-background 	 : linear-gradient(to top, rgba(#EFEDEB, .65) 0%, rgba(#EFEDEB, .85) 100% );
 $title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .9) 25%, rgba(#EFEDEB, 0) 65% );
 $title-label-color 							 : $pte-gray-light;
 $title-extra-link-color 				 : $pte-red;
