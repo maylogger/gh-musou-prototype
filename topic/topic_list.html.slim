@@ -1,4 +1,4 @@
-.title-block
+.title-header
 	.container
 		h1.title
 			a href="/topic/topic-list.html" 重大議題列表
@@ -6,17 +6,19 @@
 	// 一頁為 10 筆重大議題
 	- 10.times do |i|
 		.block.divider.panel
-			h2.sub-title data-parent="#test" data-toggle="collapse" href="#topic#{i}"
+			h2.topic-title-collapse data-parent="#test" data-toggle="collapse" href="#topic#{i}"
 				a href="#" = zh_lorem_sentence
 			.topic-content.collapse id="topic#{i}"
-				.half-block
-					.topic-intro
-						p = zh_lorem_paragraphs 5
-						.button-box
-							a.button.direction href="/topic/topic_single.html" 觀看議題內容
-				.half-block
-					.post-group.topic-news
-						- ( rand(3) + 4 ).times do
-							= render "/partials/post_item"
+				.topic-content-wrap
+					.half-block
+						.topic-intro
+							p = zh_lorem_paragraphs 5
+					.half-block
+						.post-group.topic-news
+							- ( rand(3) + 4 ).times do
+								= render "/partials/post_item"
+				.block
+					.button-box
+						a.button.direction href="/topic/topic_single.html" 觀看議題內容
 	.block
 		= render "/partials/pagination"

@@ -21,6 +21,7 @@ a.broadcast:hover {
 		}
 	}
 	.broadcast-content {
+		@include pie-clearfix;
 		.date {
 			display: block;
 			@include at-breakpoint($pad) {

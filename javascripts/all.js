@@ -27,7 +27,7 @@ $(function(){
 		}
 	});
 
-	// affix
+	// affix function
 	function affixActive(classname, topoffset) {
 		var affixTarget = $(classname);
 		if ( affixTarget.length !== 0 ) {
@@ -40,6 +40,7 @@ $(function(){
 	}
 	affixActive('.post-note, .rule-list', 24);
 
+	// legislator award record unfold button
 	$('.more-record').on("click", function(){
 		$('.record').addClass('open');
 		$(this).remove();
