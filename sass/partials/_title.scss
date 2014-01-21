@@ -26,6 +26,7 @@
 	@include text-shadow(0 0 10px #EFEDEB);
 	@include at-breakpoint($wide-mobile) {
 		float: left;
+		text-align: left;
 	}
 }
 
