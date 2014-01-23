@@ -1,18 +1,16 @@
 .title-header
 	.container
 		h1.title
-			a href="/highlight" 精彩排名
+			a href="/highlight" 精彩事蹟
 .container
-	.block.divider
+	.block
 		.title-block
 			h2.title
-				| MVP
+				| 14/01/23 MVP
 				.title-extra Most Valuable Player
 			a.title-extra-link href="/highlight/mvp" 查看更多 MVP
 		.avatar-info-group
 			.avatar-single
-				- @party = capture do
-					= "DPP"
 				= render "/partials/avatar"
 			.avatar-intro
 				h2.sub-title 精彩事蹟
@@ -22,16 +20,14 @@
 				.gallery.double-col
 					- 4.times do
 						= render "/partials/gallery"
-	.block.divider
+	.block
 		.title-block
 			h2.title
-				| MUP
+				| 14/01/23 MUP
 				.title-extra Most Useless Player
 			a.title-extra-link href="/highlight/mup" 查看更多 MUP
 		.avatar-info-group
 			.avatar-single
-				- @party = capture do
-					= "DPP"
 				= render "/partials/avatar"
 			.avatar-intro
 				h2.sub-title 黑暗事蹟
@@ -41,33 +37,19 @@
 				.gallery.double-col
 					- 4.times do
 						= render "/partials/gallery"
-	.block.divider
+	.block
 		.title-block
 			h2.title
 				| 本日好球
 			a.title-extra-link href="/highlight/top_play" 查看更多好球
-		.gallery
-			- 3.times do |i|
-				a.gallery-item href="#"
-					.gallery-photo
-						img src="http://hhhhold.com/800x450/#{rand(50)}"
-						.play-icon
-							.play-triangle Play
-					.gallery-item-info
-						span.gallery-item-sub.position 第#{i+1}名
-						p.gallery-item-title = zh_lorem_sentence
-	.block.divider
+		.gallery.triple-col
+			- 3.times do
+				= render "/partials/gallery"
+	.block
 		.title-block
 			h2.title
 				| 本日烏龍球
 			a.title-extra-link href="/highlight/top_fail" 查看更多烏龍球
-		.gallery
-			- 3.times do |i|
-				a.gallery-item href="#"
-					.gallery-photo
-						img src="http://hhhhold.com/800x450/#{rand(50)}"
-						.play-icon
-							.play-triangle Play
-					.gallery-item-info
-						span.gallery-item-sub.position 第#{i+1}名
-						p.gallery-item-title = zh_lorem_sentence
+		.gallery.triple-col
+			- 3.times do
+				= render "/partials/gallery"

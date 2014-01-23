@@ -1,4 +1,6 @@
 .avatar-group {
+	@include trailer(1);
+	text-align: center;
 	@include pie-clearfix;
 	.avatar-photo {
 		position: relative;
@@ -22,9 +24,13 @@
 }
 
 .avatar {
-	float: left;
-	margin: 0 rhythm(.9) rhythm(.9) 0;
+	display: inline-block;
+	margin: rhythm(.45);
 	text-align: center;
+	@include at-breakpoint($wide-mobile) {
+	  float: left;
+	  margin: 0 rhythm(.9) rhythm(.9) 0;
+	}
 	&:hover {
 		text-decoration: none;
 	}

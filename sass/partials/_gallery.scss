@@ -13,6 +13,17 @@
 		}
 	}
 	&.double-col .gallery-item {
+		@include at-breakpoint($wide-mobile) {
+			width: columns(3, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
 		@include at-breakpoint($pad) {
 			width: columns(6, $total-columns);
 			margin: 0 gutter($total-columns) gutter($total-columns) 0;
@@ -35,10 +46,59 @@
 			}
 		}
 	}
-	&.quad-col .gallery-item {
+	&.triple-col .gallery-item {
+		@include at-breakpoint($wide-mobile) {
+			width: columns(3, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+		@include at-breakpoint($pad) {
+			width: columns(4, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(2n) {
+				margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			}
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+		@include at-breakpoint($desktop) {
+			width: columns(4, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
+	}
+	&.quad-col .gallery-item, .gallery-item-wrap-quad {
+		@include at-breakpoint($wide-mobile) {
+			width: columns(3, $total-columns);
+			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:last-child {
+				@include trailer(1);
+				margin-right: 0;
+			}
+		}
 		@include at-breakpoint($pad) {
 			width: columns(3, $total-columns);
 			margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			&:nth-child(2n) {
+				margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			}
 			&:nth-child(4n) {
 				margin-right: 0;
 			}
@@ -59,12 +119,27 @@
 		}
 	}
 }
+.gallery-item-wrap-quad {
+	@include at-breakpoint($wide-mobile) {
+	  float: left;
+	  .gallery-item {
+			float: none;
+			margin: 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 
 .gallery-item {
 	position: relative;
 	display: block;
-	margin: 0 -#{$grid-padding};
+	// margin: 0 -#{$grid-padding};
 	vertical-align: top;
+	@include at-breakpoint($wide-mobile) {
+	  float: left;
+	}
 	&:hover {
 		text-decoration: none;
 	}
@@ -114,12 +189,13 @@
 	}
 	.gallery-item-info {
 		float: none;
-		padding: 0 rhythm(1.5);
-		@include padding-leader(.5);
+		padding: 0;
+		// padding: 0 rhythm(1.5);
+		@include padding-leader(.15);
 		color: $gallery-item-info-color;
-		@include at-breakpoint($wide-mobile) {
-		  padding: 0;
-		};
+		// @include at-breakpoint($wide-mobile) {
+		//   padding: 0;
+		// }
 		.gallery-item-sub {
 			color: $gallery-item-date-color;
 			@include adjust-font-size-to($font-size-S);
@@ -131,47 +207,15 @@
 			}
 		}
 		.gallery-item-title {
+			height: rhythm(2);
 			margin-bottom: rhythm(1);
+			overflow: hidden;
 			&:hover {
 				color: $link-color-hover;
 			}
 			@include at-breakpoint($wide-mobile) {
 			  margin-bottom: rhythm(0);
 			}
-		}
-	}
-	@include at-breakpoint($wide-mobile) {
-		float: left;
-		width: columns(3, $total-columns);
-		margin: 0 gutter($total-columns) gutter($total-columns) 0;
-		&:nth-child(2n) {
-			margin-right: 0;
-		}
-		&:last-child {
-			@include trailer(1);
-			margin-right: 0;
-		}
-	}
-	@include at-breakpoint($pad) {
-		width: columns(4, $total-columns);
-		margin: 0 gutter($total-columns) gutter($total-columns) 0;
-		&:nth-child(2n) {
-			margin: 0 gutter($total-columns) gutter($total-columns) 0;
-		}
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
-		&:last-child {
-			@include trailer(1);
-			margin-right: 0;
-		}
-	}
-	@include at-breakpoint($desktop) {
-		width: columns(4, $total-columns);
-		margin: 0 gutter($total-columns) gutter($total-columns) 0;
-		&:last-child {
-			@include trailer(1);
-			margin-right: 0;
 		}
 	}
 }

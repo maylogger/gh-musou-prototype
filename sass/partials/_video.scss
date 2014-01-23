@@ -1,9 +1,28 @@
 .video {
-	@include trailer(.5);
+	@include trailer(1.5);
 	@include padding-leader(.5);
 	@include at-breakpoint($wide-mobile) {
-	  background: black image-url("live_background.jpg") top center no-repeat;
+	  background: black image-url("live_background.jpg") top center repeat-x;
 	  padding-bottom: rhythm(2);
+	}
+	.container {
+		position: relative;
+		.word-left {
+			position: absolute;
+			top: 70px;
+			left: -140px;
+			width: 135px;
+			height: 600px;
+			background: image-url("live-word-left.png") no-repeat;
+		}
+		.word-right {
+			position: absolute;
+			top: 70px;
+			right: -140px;
+			width: 135px;
+			height: 600px;
+			background: image-url("live-word-right.png") no-repeat;
+		}
 	}
 }
 .video-title {
@@ -44,10 +63,10 @@
 		max-width: 640px;
 		width: 100%;
 		min-height: 335px;
-		max-height: 550px;
+		max-height: 540px;
 		height: auto;
 		@include at-breakpoint($pad) {
-		  min-height: 555px;
+		  min-height: 540px;
 		}
 	}
 }

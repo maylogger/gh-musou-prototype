@@ -2,9 +2,11 @@
   $container-style: fluid;
   @include container($total-columns, $pad);
 }
+
 html {
 	height: 100%;
 }
+
 body {
 	color: $global-font-color;
 	background-color: $body-background;
@@ -31,6 +33,9 @@ body.open-menu {
 .open-menu .menu {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
+	@include at-breakpoint($desktop) {
+	  overflow-y: visible;
+	}
 }
 
 .menu {
@@ -57,8 +62,16 @@ body.open-menu {
 	position: relative;
 	background-color: $content-background;
 	@include box-shadow( 0px 3px 7px rgba(black, .1) );
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
-
+@include at-breakpoint($pad) {
+  #{$page-container} {
+		width: 90%;
+	}
+}
 @include at-breakpoint($desktop) {
 	#{$page-container} {
 		$container-style: magic;
@@ -75,7 +88,7 @@ body.open-menu {
   }
 	.menu {
 		position: static;
-		width: auto;
+		width: 90%;
 		margin: 0 auto;
 		@include set-container-width;
 	}

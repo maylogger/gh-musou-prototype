@@ -15,14 +15,9 @@ $(function(){
 		}
 	});
 
-	// collapse remove after click
-	// $(".collapse-toggle-button").on("click", function(){
-	//	$(this).remove();
-	// });
-
 	// collapse switch accord dom height
 	$('.collapse-content').each(function(){
-		if ( $(this).height() < 190 ) {
+		if ( $(this).height() < 210 ) {
 			$(this).parent().next('.collapse-toggle').remove();
 		}
 	});
@@ -45,4 +40,5 @@ $(function(){
 		$('.record').addClass('open');
 		$(this).remove();
 	});
+
 });

@@ -3,7 +3,7 @@ a.broadcast:hover {
 }
 .broadcast {
 	&:hover {
-		background: darken($pte-yellow-light, 3%);
+		background: lighten($pte-lightgray, 3%);
 	}
 	.broadcast-presenter {
 		text-align: center;
@@ -33,10 +33,7 @@ a.broadcast:hover {
 		}
 		.title {
 			@include trailer(0);
-			@include adjust-font-size-to($font-size-M, 1);
-			@include at-breakpoint($pad) {
-				@include adjust-font-size-to($font-size-L, 1.5);
-			}
+			@include adjust-font-size-to($font-size-L, 1.5);
 		}
 	}
 	.name {
@@ -53,7 +50,10 @@ a.broadcast:hover {
 	}
 }
 .broadcast-committee {
-	@include leader(1.5);
+	@include leader(2);
+	@extend .sub-title;
+}
+.g0vlink {
 	@include trailer(1);
-	@include adjust-font-size-to($font-size-L);
+	text-align: center;
 }

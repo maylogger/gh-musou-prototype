@@ -16,11 +16,15 @@
 		.post-timeline
 			h3.timeline-title 2014年 1月
 			.post-group.topic-news
-				- ( rand(5) + 8 ).times do
-					= render "/partials/post_item"
+				- ( rand(3) + 2 ).times do
+					= render "/partials/post_item_nc"
+				- ( rand(3) + 2 ).times do
+					= render "/partials/focus_item_nc"
 			h3.timeline-title 2013年 12月
 			.post-group.topic-news
-				- ( rand(5) + 8 ).times do
-					= render "/partials/post_item"
+				- ( rand(3) + 2 ).times do
+					= render "/partials/post_item_nc"
+				- ( rand(3) + 2 ).times do
+					= render "/partials/focus_item_nc"
 			h3.timeline-title.start 議題發起
 			.timeline-bar

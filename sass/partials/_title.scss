@@ -59,10 +59,9 @@
 
 .sub-title {
 	@extend %title-style;
-	@include adjust-font-size-to($title-sub-font-size);
-	@include at-breakpoint($pad) {
-		@include adjust-font-size-to($title-sub-font-size + 4px);
-	}
+	@include leader(.5);
+	color: $pte-red;
+	@include adjust-font-size-to($title-sub-font-size, .75);
 }
 
 .small-title {
@@ -104,30 +103,44 @@
 }
 
 .title-extra-link {
+	position: relative;
 	display: inline-block;
-	margin-bottom: rhythm(.5);
-	padding: rhythm(.15) rhythm(.5);
-	color: white;
-	@include adjust-font-size-to($title-small-font-size);
-	background: $title-extra-link-color;
-	@include border-radius(5px);
-	@include text-shadow(0 0 10px #EFEDEB);
-	@include box-shadow(0px 2px 3px rgba(black, .25));
+	margin-left: rhythm(.5);
+	padding-left: rhythm(.5);
+	@include adjust-font-size-to($title-small-font-size, 2);
 	@include transition(.3s);
 	@include at-breakpoint($wide-mobile) {
 	  float: right;
-		margin-top: rhythm(.9);
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 40%;
+		left: 0;
+		border: 5px solid transparent;
+		border-left: 5px solid $pte-black;
 	}
 	&:hover {
-		color: white;
-		background: lighten($title-extra-link-color, 10%);
+		color: $title-extra-link-color;
+		&:before {
+			border-left: 5px solid $pte-red;
+		}
 	}
-	.title-block & {
-		float: right;
-		margin-top: rhythm(.45);
+	.title-header & {
+		margin-left: rhythm(0);
+		@include at-breakpoint($wide-mobile) {
+		  @include leader(.5);
+			@include trailer(.5);
+		}
 	}
 }
-
+.title-block {
+	@include trailer(.5);
+	border-bottom: 1px solid $global-divider;
+	.title {
+		@include trailer(0);
+	}
+}
 .title-label {
 	display: block;
 	@include adjust-font-size-to($title-sub-font-size);

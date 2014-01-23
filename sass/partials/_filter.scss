@@ -6,8 +6,10 @@
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
+		@include adjust-font-size-to($font-size-XS);
 		@include at-breakpoint($pad) {
 		  padding-right: rhythm(.5);
+		  @include adjust-font-size-to($font-size-M);
 		}
 	}
 	.search {

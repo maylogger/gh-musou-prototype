@@ -8,6 +8,7 @@ $i: 100;
 }
 
 .table {
+	@include trailer(1);
 	border-bottom: 1px solid $global-divider;
 }
 
@@ -19,7 +20,7 @@ $i: 100;
 	border-top: 1px solid $global-divider;
 }
 .table-row:nth-child(odd) {
-	background: $pte-yellow-light;
+	background: $table-odd-background;
 }
 
 .field {

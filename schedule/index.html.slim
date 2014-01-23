@@ -6,9 +6,11 @@
 .container
 	.block
 		- 3.times do
-			.broadcast-committee
-				a href="#" 委員會
+			.broadcast-committee 委員會
 			.table
 				= render "/partials/schedule/schedule_now"
 				- 2.times do
 					= render "/partials/schedule/schedule_broadcast"
+	.block
+		.button-box.g0vlink
+			a.button href="http://ly.g0v.tw/" 前往 g0v 國會大代誌看完整賽程

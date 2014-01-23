@@ -1,5 +1,5 @@
 .collapse {
-  height: 175px;
+  height: 200px;
   overflow-y: hidden;
 }
 .topic-content.collapse {
@@ -45,7 +45,5 @@
 }
 
 .collapse-content {
-	padding-top: 1px;
-	margin-top: -1px;
 	@include pie-clearfix;
 }

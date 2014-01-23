@@ -2,7 +2,7 @@
 	.title-mask
 	.container
 		h1.title
-			span.title-label: a href="/highlight" 精彩排名
+			span.title-label: a href="/highlight" 精彩事蹟
 			a href="/highlight/mup" 本日 MUP
 .container
 	- 3.times do |i|
@@ -10,8 +10,6 @@
 			h1.title 14/12/2#{9-i} MUP
 			.avatar-info-group
 				.avatar-single
-					- @party = capture do
-						= "DPP"
 					= render "/partials/avatar"
 				.avatar-intro
 					h2.sub-title 黑暗事蹟

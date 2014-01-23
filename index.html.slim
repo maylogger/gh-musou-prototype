@@ -1,27 +1,53 @@
-.hero
-	.container
-		h1.hero-title 國會無雙
-		p.hero-content 一天一分鐘，笑看國會大小事
+/ .hero
+/ 	.container
+/ 		h1.hero-title 國會無雙
+/ 		p.hero-content 一天一分鐘，笑看國會大小事
 .block-live
 	.container
 		.live-group
-			a.live-item href="/live"
-				.live-photo
-					img src="http://hhhhold.com/450x225/#{rand(100)}"
-					.live-tag LIVE
-				.live-item-title 王金平表示：不要偷按別人的表決器
-			a.live-item href="/live"
-				.live-photo
-					img src="http://hhhhold.com/450x225/#{rand(100)}"
-					.live-tag LIVE
-				.live-item-title 吳育昇鄭重表達：張懸是中華民國的寶貝
-			a.live-item href="/live"
-				.live-photo
-					img src="http://hhhhold.com/450x225/#{rand(100)}"
-					.live-tag LIVE
-				.live-item-title 劉櫂豪炮火猛烈，黃世銘啞口無言
+			- 3.times do
+				a.live-item href="/live"
+					.live-photo
+						img src="http://hhhhold.com/450x225/#{rand(100)}"
+						.live-tag LIVE
+					.live-item-title = zh_lorem_sentence
 .container
+	.title-block
+		h2.title
+			| 最新戰報
+		a.title-extra-link href="/news" 查看所有戰報
 	.block
-		.post-group
-			- 6.times do
-				= render "/partials/post_item"
+		.half-block
+			.post-group.single
+					= render "/partials/post_item"
+		.half-block
+			.post-group.quad
+				- 4.times do
+					= render "/partials/post_item_nc"
+	.title-block
+		h2.title
+			| 精彩事蹟
+		a.title-extra-link href="/highlight" 查看所有精彩事蹟
+	.block
+		.gallery
+			.gallery-item-wrap-quad
+				.sub-title MVP
+				= render "/partials/gallery"
+			.gallery-item-wrap-quad
+				.sub-title MUP
+				= render "/partials/gallery"
+			.gallery-item-wrap-quad
+				.sub-title 今日好球
+				= render "/partials/gallery"
+			.gallery-item-wrap-quad
+				.sub-title 今日烏龍球
+				= render "/partials/gallery"
+	.title-block
+		h2.title
+			| 近日預報
+		a.title-extra-link href="/schedule" 查看所有賽程
+	.block
+		.broadcast-committee 委員會
+		.table
+			= render "/partials/schedule/schedule_now"
+			= render "/partials/schedule/schedule_broadcast"

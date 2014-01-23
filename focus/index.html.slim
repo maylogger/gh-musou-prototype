@@ -1,8 +1,25 @@
 .title-header
 	.container
 		h1.title
-			a href="/vote" 投票
+			a href="/news" 最新焦點
 .container
-	.half-block-center-only
-		- 3.times do
-			p = zh_lorem_paragraphs 10
+	.block
+		.filter
+			.word 過往焦點：
+			.filter-select
+				select
+					option 2014年
+					option 2013年
+			.filter-select
+				select
+					option 1月
+					option 2月
+					option 3月
+			button.search 找焦點
+	.block
+		.post-group
+			// 一頁為 15 篇焦點
+			- 15.times do
+				= render "/partials/focus_item"
+	.block
+		= render "/partials/pagination"

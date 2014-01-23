@@ -3,11 +3,12 @@
 		h1.title
 			a href="/library" 猛將錄
 .container
-	.block
+	.block.pills-wrap
 		ul.tabs.nav-pills
 			li.active: a href="#party" data-toggle="tab" 依黨籍區分
 			li: a href="#constituency" data-toggle="tab" 依選區區分
 			li: a href="#committee" data-toggle="tab" 依委員會區分
+	.block
 		.pill-content
 			#party.pill-panel.active.fade.in
 				h2.sub-title 民進黨
@@ -56,4 +57,8 @@
 				.avatar-group
 					- ( 10 + rand(5) ).times do
 						= render "/partials/avatar"
-
+.container
+	.block
+		.comment
+			ul
+				li 立委資料按照首字筆畫自動排列

@@ -1,5 +1,7 @@
 .video
 	.container
+		.word-left
+		.word-right
 		h1.title.video-title
 			a href="#" 劉櫂豪炮火超猛烈，精彩質詢中！
 		.article
@@ -13,7 +15,7 @@
 		.block
 			h2.sub-title 關於本直播
 			#theme.collapse
-				.collapse-content = zh_lorem_paragraphs 5
+				p.collapse-content = zh_lorem_paragraphs 5
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#theme" 看更多
 		.block
@@ -21,8 +23,6 @@
 			#attend-legislators.collapse
 				.avatar-group.collapse-content
 					- ( rand(5) + 8 ).times do
-						- @party = capture do
-							= "DPP"
 						= render "/partials/avatar"
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#attend-legislators" 看更多
@@ -31,12 +31,23 @@
 			#issue.collapse
 				ul.list.collapse-content
 					- ( rand(5) + 8 ).times do
-						li: a = zh_lorem_sentence
+						li: a href="#" = zh_lorem_sentence
 			.collapse-toggle
 				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#issue" 看更多
 	.aside
+		.presenter
+			.anchor
+				img src="http://hhhhold.com/150x200/#{rand(100)}"
+				.name
+					.label 主播
+					= zh_lorem_name
+			.reviewer
+				img src="http://hhhhold.com/150x200/#{rand(100)}"
+				.name
+					.label 賽評
+					= zh_lorem_name
 		.block
 			h2.sub-title 相關連結
 			ul.list
 				- ( rand(5) + 8 ).times do
-					li: a = zh_lorem_sentence
+					li: a href="#" = zh_lorem_sentence

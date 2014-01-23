@@ -5,6 +5,7 @@
 		@include reset-box-model;
 		@include at-breakpoint($desktop) {
 			float: right;
+			margin-right: -12px;
 		}
 		li {
 			@include at-breakpoint($desktop) {
@@ -24,8 +25,13 @@
 			display: block;
 			padding: 18px 12px;
 			color: $menu-link-color;
+			@include transition(background, .2s);
 			&:hover {
 				text-decoration: none;
+				background-color: lighten($menu-background, 7.5%);
+			}
+			&:active {
+				background-color: lighten($menu-background, 5%);
 			}
 		}
 	}

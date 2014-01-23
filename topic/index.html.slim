@@ -6,7 +6,7 @@
 .container
 	// 一頁為 5 筆重大議題
 	- 5.times do
-		.block.divider
+		.block
 			.title-block
 				h2.topic-title
 					a href="/topic/topic_single.html" = zh_lorem_sentence
@@ -17,8 +17,10 @@
 							p = zh_lorem_paragraphs 5
 					.half-block
 						.post-group.topic-news
-							- ( rand(3) + 4 ).times do
-								= render "/partials/post_item"
+							- 3.times do
+								= render "/partials/post_item_nc"
+							- 3.times do
+								= render "/partials/focus_item_nc"
 				.block
 					.button-box
 						a.button.direction href="/topic/topic_single.html" 觀看議題內容

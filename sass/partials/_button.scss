@@ -1,8 +1,8 @@
 .button-box {
 	text-align: center;
-	// @include at-breakpoint($desktop) {
-	//   text-align: left;
-	// }
+	@include at-breakpoint($desktop) {
+	  text-align: left;
+	}
 }
 
 .button {

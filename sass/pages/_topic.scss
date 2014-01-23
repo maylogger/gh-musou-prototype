@@ -20,6 +20,15 @@
 					border-bottom: 8px solid $pte-red;
 		  	}
 		  }
+		  &.focus {
+		  	&:hover {
+		  	&:after {
+		  		border: 8px solid transparent;
+					border-right: 8px solid $pte-orange;
+					border-bottom: 8px solid $pte-orange;
+		  	}
+		  }
+		  }
 		}
 	}
 }
@@ -33,12 +42,13 @@
 
 .topic-title {
 	@extend .title;
-	@include leader(1);
+	@include leader(.5);
 	@include trailer(1);
 }
 
 .topic-title-collapse {
-	@extend .sub-title;
+	@include trailer(.5);
+	@include adjust-font-size-to($title-sub-font-size);
 }
 
 .post-timeline {
@@ -50,19 +60,16 @@
 		position: relative;
 		z-index: 2;
 		padding-left: rhythm(.5);
-		@extend .sub-title;
+		@include adjust-font-size-to($timeline-title-size);
 		&:before {
 			content: "";
 			position: absolute;
-			top: 30%;
+			top: 42%;
 			left: -6px;
 			width: 10px;
 			height: 10px;
 			background-color: $pte-red;
 			@include border-radius(100%);
-			@include at-breakpoint($pad) {
-			  top: 42%;
-			}
 		}
 		&.start {
 			color: $pte-lightgray-dark;
@@ -73,14 +80,10 @@
 	}
 	.timeline-bar {
 		position: absolute;
-		top: 12px;
+		top: 24px;
 		left: -2px;
-		bottom: 12px;
+		bottom: 24px;
 		width: 2px;
 		background: $pte-lightgray-dark;
-		@include at-breakpoint($pad) {
-		  top: 24px;
-		  bottom: 24px;
-		}
 	}
 }
