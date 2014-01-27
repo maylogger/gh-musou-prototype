@@ -221,9 +221,8 @@ body.open-menu { height: 100%; }
 .footer:after { content: ""; display: table; clear: both; }
 .footer .link-item { float: none; text-align: center; margin-bottom: 24px; text-shadow: 1px 1px 1px white; }
 @media (min-width: 900px) { .footer .link-item { float: left; margin-bottom: 0; text-align: left; } }
-.footer .link-item a { display: inline-block; padding: 0 12px; color: #757570; border-right: 1px solid #cfcfca; }
+.footer .link-item a { display: inline-block; padding: 0 12px; color: #757570; }
 .footer .link-item a:first-child { padding-left: 0; }
-.footer .link-item a:last-child { border-right: none; }
 .footer .credit { float: none; text-align: center; color: #757570; text-shadow: 1px 1px 1px white; }
 @media (min-width: 900px) { .footer .credit { float: right; text-align: right; } }
 
@@ -651,11 +650,13 @@ body.open-menu { height: 100%; }
 .slogan { margin-bottom: 48px; background: #efedeb; }
 .slogan .slogan-content { padding: 12px 0 24px; color: #92928a; font-size: 20px; line-height: 48px; text-align: center; }
 @media (min-width: 650px) { .slogan .slogan-content { font-size: 24px; line-height: 48px; } }
-.slogan .slogan-mark { position: relative; top: 15px; display: inline-block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_mark.png?1390572078'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_mark.svg?1390572066'); }
+.slogan .slogan-mark { position: relative; top: 15px; display: inline-block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_mark.png?1390813914'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_mark.svg?1390813914'); }
 
-.musouinfo { padding-top: 48px; background: #f4f4f4; }
+.musouinfo { position: relative; padding-top: 48px; background: #efedeb; }
+.musouinfo .container { border-bottom: 1px solid #dbdbd8; }
+.musouinfo .title-block { border-bottom-color: #dbdbd8; }
 
-.skew-block { height: 50px; margin-top: 24px; margin-bottom: -25px; -webkit-transform: skew(0deg, -2deg); -moz-transform: skew(0deg, -2deg); -ms-transform: skew(0deg, -2deg); -o-transform: skew(0deg, -2deg); transform: skew(0deg, -2deg); background: #f4f4f4; }
+.skew-block { height: 58px; margin-top: 24px; margin-bottom: -28px; -webkit-transform: skew(0deg, -2deg); -moz-transform: skew(0deg, -2deg); -ms-transform: skew(0deg, -2deg); -o-transform: skew(0deg, -2deg); transform: skew(0deg, -2deg); background: #efedeb; }
 
 .versus { display: block; position: relative; padding: 24px 0; background: #900; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #880000), color-stop(100%, #220000)); background: -webkit-radial-gradient(#880000, #220000); background: -moz-radial-gradient(#880000, #220000); background: -o-radial-gradient(#880000, #220000); background: radial-gradient(#880000, #220000); -webkit-box-shadow: inset 0px 3px 50px rgba(51, 51, 51, 0.75); -moz-box-shadow: inset 0px 3px 50px rgba(51, 51, 51, 0.75); box-shadow: inset 0px 3px 50px rgba(51, 51, 51, 0.75); }
 .versus .character-left { position: relative; float: left; width: 100%; margin-bottom: 45px; text-align: center; }
@@ -708,12 +709,12 @@ body.open-menu { height: 100%; }
 .topic-content:after, .topic-content-wrap:after { content: ""; display: table; clear: both; }
 
 .topic-title { position: relative; margin-top: 12px; margin-bottom: 24px; padding-left: 48px; }
-.topic-title:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_topic.png?1390550340'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_topic.svg?1390550327'); }
+.topic-title:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_topic.png?1390813914'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_topic.svg?1390813914'); }
 
 .topic-title-collapse { position: relative; margin-bottom: 12px; font-size: 18px; line-height: 48px; padding-left: 48px; padding-right: 24px; }
 @media (min-width: 650px) { .topic-title-collapse { font-size: 22px; line-height: 48px; }
   .topic-title-collapse:after { content: ""; position: absolute; top: 45%; right: 5px; border: 8px solid transparent; border-top: 8px solid #b7b5b0; } }
-.topic-title-collapse:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_topic.png?1390550340'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_topic.svg?1390550327'); }
+.topic-title-collapse:before { content: ""; position: absolute; top: 0; left: 0; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_topic.png?1390813914'); background-repeat: no-repeat; background-position: 50% 50%; width: 48px; height: 48px; background-image: none, url('/images/icon_topic.svg?1390813914'); }
 
 .post-timeline { position: relative; }
 .post-timeline .topic-news { margin-left: 24px; }
@@ -725,7 +726,7 @@ body.open-menu { height: 100%; }
 
 a.broadcast:hover { color: #333333; }
 
-.broadcast:hover { background: #eeeeed; }
+.broadcast:hover { background: #eeeee8; }
 .broadcast .broadcast-presenter { text-align: center; border-right: 1px solid #e7e7e5; }
 .broadcast .broadcast-presenter:after { content: ""; display: table; clear: both; }
 .broadcast .broadcast-presenter .anchor, .broadcast .broadcast-presenter .reviewer { display: inline-block; margin: 12px; }

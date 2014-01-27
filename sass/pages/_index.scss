@@ -163,13 +163,20 @@
 }
 
 .musouinfo {
+	position: relative;
 	@include padding-leader(2);
-	background: lighten($pte-lightgray, 5.5%);
+	background: $footer-background-color;
+	.container {
+		border-bottom: 1px solid darken($global-divider, 5%);
+	}
+	.title-block {
+		border-bottom-color: darken($global-divider, 5%);
+	}
 }
 .skew-block {
-	height: 50px;
+	height: 58px;
 	@include leader(1);
-	margin-bottom: -25px;
+	margin-bottom: -28px;
 	@include skew(0deg, -2deg);
-	background: lighten($pte-lightgray, 5.5%);
+	background: $footer-background-color;
 }

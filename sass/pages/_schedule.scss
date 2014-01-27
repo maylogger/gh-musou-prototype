@@ -3,7 +3,7 @@ a.broadcast:hover {
 }
 .broadcast {
 	&:hover {
-		background: lighten($pte-lightgray, 3%);
+		background: darken($table-odd-background, 2%);
 	}
 	.broadcast-presenter {
 		text-align: center;
