@@ -117,21 +117,24 @@
 		top: 50%;
 		left: 50%;
 		z-index: 3;
-		margin-left: -33px;
-		margin-top: -38px;
-		@include adjust-font-size-to(64px);
-		color: white;
-		@extend %helvetica-CondensedBlack;
-		@include text-shadow(0 3px 7px rgba(black, 1));
+		margin-top: -40px;
+		margin-left: -40px;
+		@include replace-text-with-dimensions("vs_word.png");
+		background-image: none, image-url("vs_word.svg");
+		width: 80px;
+		height: 80px;
+		@include background-size(cover);
 		@include at-breakpoint($pad) {
-		  margin-left: -50px;
+		  margin-left: -60px;
 			margin-top: -60px;
-			@include adjust-font-size-to(96px);
+			width: 120px;
+			height: 120px;
 		}
 		@include at-breakpoint($desktop) {
-		  margin-left: -78px;
-			margin-top: -84px;
-			@include adjust-font-size-to(150px);
+		  margin-left: -80px;
+			margin-top: -80px;
+			width: 160px;
+			height: 160px;
 		}
 	}
 }
