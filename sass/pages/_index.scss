@@ -35,19 +35,23 @@
 	}
 }
 .live-group {
+	text-align: center;
 	@include pie-clearfix;
 	@include at-breakpoint($desktop) {
 	  width: columns(10);
 	  margin: 0 auto;
 	}
 	.live-item {
-		@include at-breakpoint($wide-mobile) {
-		  @include span-columns(4, 12);
-			@include nth-omega(3n);
-		}
 		position: relative;
-		display: block;
-		margin-top: rhythm(.5);
+		display: inline-block;
+		margin: rhythm(.5) rhythm(.2);
+		vertical-align: top;
+		@include at-breakpoint($wide-mobile) {
+		  width: columns(2);
+		}
+		@include at-breakpoint($pad) {
+		  width: columns(4);
+		}
 		.live-photo {
 			background: white;
 			border: 1px solid white;
@@ -164,7 +168,7 @@
 
 .musouinfo {
 	position: relative;
-	@include padding-leader(2);
+	@include padding-leader(1);
 	background: $footer-background-color;
 	.container {
 		border-bottom: 1px solid darken($global-divider, 5%);
