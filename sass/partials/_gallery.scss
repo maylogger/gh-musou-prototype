@@ -168,7 +168,8 @@
 		margin-top: -$gallery-play-icon-offset;
 		margin-left: -$gallery-play-icon-offset;
 		background-color: rgba($gallery-play-icon-background, .6);
-		@include border-radius($gallery-play-icon-offset);
+		@include border-radius(2px);
+		@include skew(-10deg, 0deg);
 		@include transition( background-color, ease-in, .5s );
 		.play-triangle {
 			position: absolute;
