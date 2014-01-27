@@ -11,6 +11,10 @@
 		  padding-right: rhythm(.5);
 		  @include adjust-font-size-to($font-size-M);
 		}
+		select {
+			height: 26px;
+			border: 1px solid $pte-lightgray-dark;
+		}
 	}
 	.search {
 		padding: rhythm(0) rhythm(.35);

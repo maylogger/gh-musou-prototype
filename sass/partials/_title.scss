@@ -61,7 +61,7 @@
 	@extend %title-style;
 	@include leader(.5);
 	color: $pte-red;
-	@include adjust-font-size-to($title-sub-font-size, .75);
+	@include adjust-font-size-to($title-sub-font-size);
 }
 
 .small-title {
