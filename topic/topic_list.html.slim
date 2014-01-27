@@ -12,15 +12,14 @@
 				.half-block
 					.topic-intro
 						p = zh_lorem_paragraphs 5
+					.button-box
+						a.button.direction href="/topic/topic_single.html" 了解本議題
 				.half-block
 					.post-group.topic-news
 						- 3.times do
 							= render "/partials/post_item_nc"
 						- 3.times do
 							= render "/partials/focus_item_nc"
-			.block
-				.button-box
-					a.button.direction href="/topic/topic_single.html" 觀看議題內容
 	- 9.times do |i|
 		.block.divider.panel
 			h2.topic-title-collapse data-parent="#test" data-toggle="collapse" href="#topic#{i+1}"
@@ -30,14 +29,13 @@
 					.half-block
 						.topic-intro
 							p = zh_lorem_paragraphs 5
+						.button-box
+							a.button.direction href="/topic/topic_single.html" 了解本議題
 					.half-block
 						.post-group.topic-news
 							- 3.times do
 								= render "/partials/post_item_nc"
 							- 3.times do
 								= render "/partials/focus_item_nc"
-				.block
-					.button-box
-						a.button.direction href="/topic/topic_single.html" 觀看議題內容
 	.block
 		= render "/partials/pagination"

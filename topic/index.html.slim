@@ -15,12 +15,11 @@
 					.half-block
 						.topic-intro
 							p = zh_lorem_paragraphs 5
+						.button-box
+							a.button.direction href="/topic/topic_single.html" 了解本議題
 					.half-block
 						.post-group.topic-news
 							- 3.times do
 								= render "/partials/post_item_nc"
 							- 3.times do
 								= render "/partials/focus_item_nc"
-				.block
-					.button-box
-						a.button.direction href="/topic/topic_single.html" 觀看議題內容
