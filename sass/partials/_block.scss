@@ -1,7 +1,10 @@
 .block {
 	position: relative;
-	@include trailer(1);
+	@include trailer(2.5);
 	@include pie-clearfix;
+	@include at-breakpoint($pad) {
+		@include trailer(1);
+	}
 	&.divider {
 		@include padding-trailer(.5);
 		border-bottom: 1px solid $global-divider;

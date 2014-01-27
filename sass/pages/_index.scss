@@ -1,59 +1,64 @@
 @keyframes fade {
-0%   {opacity:0;}
-50%   {opacity:1;}
-100% {opacity:0;}
+0%   { opacity: 1; }
+50%  { opacity: 0; }
+100% { opacity: 1; }
 }
 
 @-webkit-keyframes fade {
-0%   {opacity:0;}
-50%   {opacity:1;}
-100% {opacity:0;}
+0%   { opacity: 1; }
+50%  { opacity: 0; }
+100% { opacity: 1; }
 }
 
 @-moz-keyframes fade {
-0%   {opacity:0;}
-50%   {opacity:1;}
-100% {opacity:0;}
+0%   { opacity: 1; }
+50%  { opacity: 0; }
+100% { opacity: 1; }
 }
 
 @-o-keyframes fade {
-0%   {opacity:0;}
-50%   {opacity:1;}
-100% {opacity:0;}
+0%   { opacity: 1; }
+50%  { opacity: 0; }
+100% { opacity: 1; }
 }
 
 .block-live {
-	@include trailer(2);
-	background: $title-block-background;
+	position: relative;
+	padding: rhythm(1) 0;
+	background: #282828;
+	@include background( radial-gradient(#555555, #000000) );
+	.title-block {
+		border-bottom-color: #FFCF02;
+	}
+	.title {
+		color: #FFCF02;
+	}
 }
-
 .live-group {
-	padding: 36px 0;
 	@include pie-clearfix;
-	@include at-breakpoint($pad) {
-	  width: columns(9);
+	@include at-breakpoint($desktop) {
+	  width: columns(10);
 	  margin: 0 auto;
 	}
 	.live-item {
+		@include at-breakpoint($wide-mobile) {
+		  @include span-columns(4, 12);
+			@include nth-omega(3n);
+		}
 		position: relative;
 		display: block;
-		@include at-breakpoint($pad) {
-		  @include span-columns(3,9);
-		  @include nth-omega(3n);
-		}
+		margin-top: rhythm(.5);
 		.live-photo {
-			border: 2px solid white;
 			background: white;
-			@include box-shadow(0px 5px 5px rgba(black,.3));
+			border: 1px solid white;
 			@include transition(.5s);
-			@include transform(scale(.9));
+			&:hover {
+				border-color: #FFCF02;
+			}
 			img {
 				display: block;
 				width: 100%;
 			}
-		}
-		&:hover .live-photo {
-			@include transform(scale(1));
 		}
 		.live-tag {
 			position: absolute;
@@ -88,9 +93,9 @@
 		}
 	}
 	.live-item-title {
-		@include leader(.25);
-		@include trailer(.25);
-		@include link-colors($pte-black);
+		@include padding-leader(.5);
+		@include padding-trailer(.5);
+		@include link-colors(white);
 		text-align: center;
 	}
 }
@@ -108,8 +113,18 @@
 .post-group {
 	&.single {
 		.post-item {
+			@include at-breakpoint($wide-mobile) {
+			  width: columns(6);
+			}
 			@include at-breakpoint($pad) {
 			  width: columns(12);
+			}
+			.post-title {
+				padding: 0% 2.5% 1% 2.5%;
+			}
+			.post-preview {
+				height: 56px;
+				padding: 1% 2.5%;
 			}
 		}
 	}
@@ -126,14 +141,35 @@
 	}
 }
 
-// .home {
-// 	.header {
-// 		position: relative;
-// 		z-index: 1;
-// 		background: rgba($header-background, .85);
-// 	}
-// 	.nav {
-// 		position: relative;
-// 		z-index: 2;
-// 	}
-// }
+.slogan {
+	margin-bottom: rhythm(2);
+	background: $title-block-background;
+	.slogan-content {
+		padding: rhythm(.5) 0 rhythm(1);
+		color: $pte-gray-light;
+		@include adjust-font-size-to($font-size-L, 2);
+		text-align: center;
+		@include at-breakpoint($pad) {
+		  @include adjust-font-size-to($font-size-XL);
+		}
+	}
+	.slogan-mark {
+		position: relative;
+		top: 15px;
+		display: inline-block;
+		@include replace-text-with-dimensions("icon_mark.png");
+		background-image: none, image-url("icon_mark.svg");
+	}
+}
+
+.musouinfo {
+	@include padding-leader(2);
+	background: lighten($pte-lightgray, 5.5%);
+}
+.skew-block {
+	height: 50px;
+	@include leader(1);
+	margin-bottom: -25px;
+	@include skew(0deg, -2deg);
+	background: lighten($pte-lightgray, 5.5%);
+}

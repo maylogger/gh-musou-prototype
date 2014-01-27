@@ -9,6 +9,20 @@
 	text-align: left;
 	background: $post-item-background;
 	@include transition(border, .2s);
+	&:hover {
+		color: $pte-black;
+		.post-title {
+			color: $pte-red;
+		}
+		.post-tag {
+			background: lighten($pte-red, 10%);
+		}
+		&:after {
+			border: 12px solid transparent;
+			border-right: 12px solid $pte-red;
+			border-bottom: 12px solid $pte-red;
+		}
+	}
 	&:after {
 		position: absolute;
 		bottom: 0;
@@ -18,17 +32,6 @@
 		border-right: 8px solid $pte-black;
 		border-bottom: 8px solid $pte-black;
 		@include transition(border, .25s);
-	}
-	&:hover {
-		color: $pte-red;
-		.post-tag {
-			background: lighten($pte-red, 10%);
-		}
-		&:after {
-			border: 12px solid transparent;
-			border-right: 12px solid $pte-red;
-			border-bottom: 12px solid $pte-red;
-		}
 	}
 	@include at-breakpoint($wide-mobile) {
 	  width: columns(3, $total-columns);
@@ -59,7 +62,7 @@
 	}
 	.post-tag {
 		position: absolute;
-		top: 6px;
+		top: 5%;
 		left: -6px;
 		padding: rhythm(0) rhythm(.25);
 		color: white;
@@ -145,8 +148,9 @@
 		background-color: $pte-orange;
 	}
 	&:hover {
-		color: $pte-orange;
-		border-bottom-color: $pte-orange;
+		.post-title {
+			color: $pte-orange;
+		}
 		.post-tag {
 			background: lighten($pte-orange, 10%);
 		}

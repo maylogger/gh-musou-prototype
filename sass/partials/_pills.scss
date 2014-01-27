@@ -1,7 +1,12 @@
 .pills-wrap {
 	text-align: center;
-	@include at-breakpoint($wide-mobile) {
+	@include at-breakpoint($pad) {
 		text-align: left;
+	}
+	.title {
+		@include at-breakpoint($pad) {
+		  float: left;
+		}
 	}
 }
 .nav-pills {
@@ -28,10 +33,13 @@
 }
 .tabs {
 	display: inline-block;
-	overflow: hidden;
+	margin: 0;
 	padding: 2px;
 	border: 1px solid $global-divider;
 	@include border-radius(5px);
+	@include at-breakpoint($pad) {
+	  float: right;
+	}
 	li {
 		float: left;
 		@include adjust-font-size-to($font-size-XS);

@@ -1,9 +1,14 @@
 $(function(){
-	//$(".versus").addClass("animate");
+	$(".word-left, .word-right").addClass("action");
 
 	// off canvas menu switch
 	$('.menu-btn').on("click", function(){
 		$('body').toggleClass('open-menu');
+	});
+
+	// magnific popup for video
+	$('.popup-video-trigger').magnificPopup({
+		type: 'ajax'
 	});
 
 	//collapse button switch content

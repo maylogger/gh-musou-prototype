@@ -8,20 +8,36 @@
 	.container {
 		position: relative;
 		.word-left {
+			display: none;
 			position: absolute;
-			top: 70px;
+			top: -700px;
 			left: -140px;
 			width: 135px;
 			height: 600px;
-			background: image-url("live-word-left.png") no-repeat;
+			background: image-url("live_word_left.png") no-repeat;
+			@include transition(2s 2s);
+			@include at-breakpoint(1450px 12) {
+				display: block;
+			}
+			&.action {
+				top: 70px;
+			}
 		}
 		.word-right {
+			display: none;
 			position: absolute;
-			top: 70px;
+			top: -700px;
 			right: -140px;
 			width: 135px;
 			height: 600px;
-			background: image-url("live-word-right.png") no-repeat;
+			background: image-url("live_word_right.png") no-repeat;
+			@include transition(2s 2s);
+			@include at-breakpoint(1450px 12) {
+				display: block;
+			}
+			&.action {
+				top: 70px;
+			}
 		}
 	}
 }
