@@ -13,4 +13,8 @@
 				li: a href="#" 第五條
 				li: a href="#" 第六條
 	.article
-		= render "/partials/article"
+		.sub-title = zh_lorem_words 5 + rand(5)
+		- ( rand(3) + 3 ).times do
+			.rule-faq
+				p.que = zh_lorem_paragraph
+				p.ans = zh_lorem_paragraph

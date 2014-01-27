@@ -24,3 +24,40 @@
 		border-top: none;
 	}
 }
+.rule-faq {
+	@include trailer(1);
+	border-bottom: 1px solid $global-divider;
+	&.at-index {
+		border-bottom: none;
+	}
+	.que {
+		position: relative;
+		min-height: rhythm(2);
+		padding-left: rhythm(2);
+		&:before {
+			content: "Q";
+			position: absolute;
+			top: -#{rhythm(.5)};
+			left: 0;
+			color: $pte-gray-light;
+			@include adjust-font-size-to($font-size-UL);
+			font-weight: bold;
+			opacity: .5;
+		}
+	}
+	.ans {
+		position: relative;
+		min-height: rhythm(2);
+		padding-left: rhythm(2);
+		&:before {
+			content: "A";
+			position: absolute;
+			top: -#{rhythm(.5)};
+			left: 2px;
+			color: $pte-red;
+			@include adjust-font-size-to($font-size-UL);
+			font-weight: bold;
+			opacity: .5;
+		}
+	}
+}
