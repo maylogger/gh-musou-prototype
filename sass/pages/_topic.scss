@@ -33,9 +33,20 @@
 	}
 }
 
+.topic-theme {
+  padding: rhythm(1.5) 0;
+	background-size: cover;
+	& > .container {
+		background: rgba($content-background, .9);
+		@include border-radius(5px);
+		@include box-shadow(0px 0px 5px rgba(black, .15));
+	}
+}
+
 .topic-intro {
 	@include trailer(1);
 }
+
 .topic-content, .topic-content-wrap {
 	@include pie-clearfix;
 }
@@ -58,7 +69,7 @@
 
 .topic-title-collapse {
 	position: relative;
-	@include trailer(.5);
+	@include trailer(1);
 	@include adjust-font-size-to($title-sub-font-size - 4px, 2);
 	padding-left: rhythm(2);
 	padding-right: rhythm(1);
@@ -80,6 +91,10 @@
 		left: 0;
 		@include replace-text-with-dimensions("icon_topic.png");
 		background-image: none, image-url("icon_topic.svg");
+	}
+	.title-extra {
+		display: block;
+		color: $pte-gray-light;
 	}
 }
 
