@@ -33,6 +33,7 @@
 	.que {
 		position: relative;
 		min-height: rhythm(2);
+		@include trailer(1);
 		padding-left: rhythm(2);
 		&:before {
 			content: "Q";
@@ -47,8 +48,15 @@
 	}
 	.ans {
 		position: relative;
-		min-height: rhythm(2);
 		padding-left: rhythm(2);
+		&.in {
+			@include trailer(0);
+		}
+		& p {
+			min-height: rhythm(2);
+			@include trailer(0);
+			@include padding-trailer(1);
+		}
 		&:before {
 			content: "A";
 			position: absolute;

@@ -1,9 +1,10 @@
-.collapse {
+.sp-collapse.collapse {
   height: 200px;
   overflow-y: hidden;
 }
-.topic-content.collapse {
+.collapse {
 	height: 0;
+	overflow-y: hidden;
 }
 .in {
 	margin-bottom: rhythm(1);

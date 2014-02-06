@@ -1,0 +1,27 @@
+.title-header
+	.container
+		h1.title
+			a href="/guide" 立院小知識
+.container.layout-guide
+	.aside
+		.rule-list
+			ul.list
+				li: a href="/guide/rule.html" 第一條
+				li: a href="/guide/rule.html" 第二條
+				li: a href="/guide/rule.html" 第三條
+				li: a href="/guide/rule.html" 第四條
+				li: a href="/guide/rule.html" 第五條
+				li: a href="/guide/rule.html" 第六條
+	.article#guide-list
+		.sub-title = zh_lorem_words 5 + rand(5)
+		.rule-faq.panel
+			.que data-parent="#guide-list" data-toggle="collapse" href="#guide0"
+				a href="#" = zh_lorem_paragraph
+			.ans.in id="guide0"
+				p = zh_lorem_paragraph
+		- ( rand(3) + 5 ).times do |i|
+			.rule-faq.panel
+				.que data-parent="#guide-list" data-toggle="collapse" href="#guide#{i+1}"
+					a href="#" = zh_lorem_paragraph
+				.ans.collapse id="guide#{i+1}"
+					p = zh_lorem_paragraph
