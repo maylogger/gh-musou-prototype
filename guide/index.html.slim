@@ -1,20 +1,18 @@
 .title-header
 	.container
 		h1.title
-			a href="/guide" 立院規則
+			a href="/guide" 立院小知識
 .container.layout-guide
 	.aside
 		.rule-list
 			ul.list
-				li: a href="#" 第一條
-				li: a href="#" 第二條
-				li: a href="#" 第三條
-				li: a href="#" 第四條
-				li: a href="#" 第五條
-				li: a href="#" 第六條
+				li: a href="/guide/rule.html" 第一條
+				li: a href="/guide/rule.html" 第二條
+				li: a href="/guide/rule.html" 第三條
+				li: a href="/guide/rule.html" 第四條
+				li: a href="/guide/rule.html" 第五條
+				li: a href="/guide/rule.html" 第六條
 	.article
-		.sub-title = zh_lorem_words 5 + rand(5)
-		- ( rand(3) + 3 ).times do
-			.rule-faq
-				p.que = zh_lorem_paragraph
-				p.ans = zh_lorem_paragraph
+		.title 關於立院小知識
+		- 3.times do
+			p = zh_lorem_paragraphs 3
