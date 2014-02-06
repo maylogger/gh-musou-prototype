@@ -14,7 +14,9 @@
 					.live-photo
 						img src="http://hhhhold.com/450x225/#{rand(100)}"
 						.live-tag LIVE
-					.live-item-title #{zh_lorem_words(rand(5)+5)}，#{zh_lorem_words(rand(5)+5)}！
+					.live-item-title
+						.live-committee #{zh_lorem_words(rand(5)+3)}委員會
+						| #{zh_lorem_words(rand(5)+5)}，#{zh_lorem_words(rand(5)+5)}！
 .slogan
 	.container
 		.slogan-content
@@ -39,10 +41,14 @@
 	.block
 		.gallery
 			.gallery-item-wrap-quad
-				.sub-title MVP
+				.sub-title
+					| MVP
+					.title-extra Most Valuable Player
 				= render "/partials/gallery"
 			.gallery-item-wrap-quad
-				.sub-title MUP
+				.sub-title
+					| MUP
+					.title-extra Most Useless Player
 				= render "/partials/gallery"
 			.gallery-item-wrap-quad
 				.sub-title 今日好球
@@ -52,7 +58,7 @@
 				= render "/partials/gallery"
 	.title-block
 		h2.title 近日預報
-		a.title-extra-link href="/schedule" 查看所有賽程
+		a.title-extra-link href="/schedule" 查看所有賽事
 	.block
 		.broadcast-committee 委員會
 		.table
@@ -64,7 +70,7 @@
 		.half-block-center-only
 			.title-block
 				h2.title 立院小知識
-				a.title-extra-link href="/guide" 查看所有立院規則
+				a.title-extra-link href="/guide" 查看所有立院小知識
 			.block
 				.sub-title 你知道嗎？
 				.rule-faq.at-index
