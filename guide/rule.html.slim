@@ -12,16 +12,16 @@
 				li: a href="/guide/rule.html" 第四條
 				li: a href="/guide/rule.html" 第五條
 				li: a href="/guide/rule.html" 第六條
-	.article#guide-list
+	.article
 		.sub-title = zh_lorem_words 5 + rand(5)
-		.rule-faq.panel
-			.que data-parent="#guide-list" data-toggle="collapse" href="#guide0"
+		.rule-faq
+			.que
 				a href="#" = zh_lorem_paragraph
-			.ans.in id="guide0"
+			.ans
 				p = zh_lorem_paragraph
 		- ( rand(3) + 5 ).times do |i|
-			.rule-faq.panel
-				.que data-parent="#guide-list" data-toggle="collapse" href="#guide#{i+1}"
+			.rule-faq
+				.que
 					a href="#" = zh_lorem_paragraph
-				.ans.collapse id="guide#{i+1}"
+				.ans
 					p = zh_lorem_paragraph
