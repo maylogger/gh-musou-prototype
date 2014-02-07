@@ -101,6 +101,9 @@
 		@include padding-trailer(.5);
 		@include link-colors(white);
 		text-align: center;
+		.live-committee {
+			color: $pte-gray-light;
+		}
 	}
 }
 

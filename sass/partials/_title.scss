@@ -23,7 +23,7 @@
 
 .title-header .title {
 	text-align: center;
-	@include text-shadow(0 0 10px #EFEDEB);
+	@include text-shadow(0 0 10px #EFEDEB, 0 0 10px #EFEDEB);
 	@include at-breakpoint($wide-mobile) {
 		float: left;
 		text-align: left;

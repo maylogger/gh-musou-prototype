@@ -14,9 +14,13 @@
 			text-align: left;
 		}
 		a {
-			display: inline-block;
-			padding: 0 rhythm(.5);
+			display: block;
 			color: $footer-color;
+			padding: rhythm(.25) 0;
+			@include at-breakpoint($pad) {
+				display: inline-block;
+				padding: 0 rhythm(.5);
+			}
 			&:first-child {
 				padding-left: 0;
 			}

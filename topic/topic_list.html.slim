@@ -2,11 +2,12 @@
 	.container
 		h1.title
 			a href="/topic/topic-list.html" 重大議題列表
-.container#test
+.container#topic-list
 	// 一頁為 10 筆重大議題
 	.block.divider.panel
-		h2.topic-title-collapse data-parent="#test" data-toggle="collapse" href="#topic0"
+		h2.topic-title-collapse data-parent="#topic-list" data-toggle="collapse" href="#topic0"
 			a href="#" = zh_lorem_sentence
+			.title-extra 前次交戰於：1月31日
 		.topic-content.in id="topic0"
 			.topic-content-wrap
 				.half-block
@@ -22,8 +23,9 @@
 							= render "/partials/focus_item_nc"
 	- 9.times do |i|
 		.block.divider.panel
-			h2.topic-title-collapse data-parent="#test" data-toggle="collapse" href="#topic#{i+1}"
+			h2.topic-title-collapse data-parent="#topic-list" data-toggle="collapse" href="#topic#{i+1}"
 				a href="#" = zh_lorem_sentence
+				.title-extra 前次交戰於：1月31日
 			.topic-content.collapse id="topic#{i+1}"
 				.topic-content-wrap
 					.half-block

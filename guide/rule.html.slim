@@ -13,6 +13,11 @@
 				li: a href="/guide/rule.html" 第五條
 				li: a href="/guide/rule.html" 第六條
 	.article
-		.title 關於立院小知識
-		- 3.times do
-			p = zh_lorem_paragraphs 3
+		.sub-title = zh_lorem_words 5 + rand(5)
+		.rule-faq
+			p.que = zh_lorem_paragraph
+			p.ans = zh_lorem_paragraph
+		- ( rand(3) + 5 ).times do |i|
+			.rule-faq
+				p.que = zh_lorem_paragraph
+				p.ans = zh_lorem_paragraph
