@@ -15,13 +15,9 @@
 	.article
 		.sub-title = zh_lorem_words 5 + rand(5)
 		.rule-faq
-			.que
-				a href="#" = zh_lorem_paragraph
-			.ans
-				p = zh_lorem_paragraph
+			p.que = zh_lorem_paragraph
+			p.ans = zh_lorem_paragraph
 		- ( rand(3) + 5 ).times do |i|
 			.rule-faq
-				.que
-					a href="#" = zh_lorem_paragraph
-				.ans
-					p = zh_lorem_paragraph
+				p.que = zh_lorem_paragraph
+				p.ans = zh_lorem_paragraph
