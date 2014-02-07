@@ -36,6 +36,11 @@
 .topic-theme {
   padding: rhythm(1.5) 0;
 	background-size: cover;
+	@include at-breakpoint($pad) {
+	  width: 90%;
+		margin: rhythm(1.5) auto;
+		@include border-radius(5px);
+	}
 	& > .container {
 		background: rgba($content-background, .9);
 		@include border-radius(5px);
