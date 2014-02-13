@@ -36,6 +36,7 @@
 .topic-theme {
   padding: rhythm(1.5) 0;
 	background-size: cover;
+	background-position: center center;
 	@include at-breakpoint($pad) {
 	  width: 90%;
 		margin: rhythm(1.5) auto;

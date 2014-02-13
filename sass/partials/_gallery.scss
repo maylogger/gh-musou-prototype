@@ -215,7 +215,7 @@
 				color: $link-color-hover;
 			}
 			@include at-breakpoint($wide-mobile) {
-			  margin-bottom: rhythm(0);
+			  margin-bottom: rhythm(.5);
 			}
 		}
 	}

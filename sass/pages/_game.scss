@@ -13,12 +13,20 @@
 	}
 	.anchor {
 		@include span-columns(2);
+		img {
+			max-width: 150px;
+			max-height: 200px;
+		}
 		@include at-breakpoint($pad) {
 		  @include span-columns(6);
 		}
 	}
 	.reviewer {
 		@include span-columns(2 omega);
+		img {
+			max-width: 150px;
+			max-height: 200px;
+		}
 		@include at-breakpoint($pad) {
 		  @include span-columns(6 omega);
 		}

@@ -1,5 +1,6 @@
 %tag-style {
 	display: inline-block;
+	margin: 0 rhythm(.25);
 	padding: 0 rhythm(.35);
 	-webkit-font-smoothing: subpixel-antialiased;
 	@include adjust-font-size-to($tag-font-size);

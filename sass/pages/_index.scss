@@ -169,6 +169,10 @@
 	}
 }
 
+.index-avatar {
+	text-align: center;
+}
+
 .musouinfo {
 	position: relative;
 	@include padding-leader(1);
@@ -180,6 +184,7 @@
 		border-bottom-color: darken($global-divider, 5%);
 	}
 }
+
 .skew-block {
 	height: 58px;
 	@include leader(1);

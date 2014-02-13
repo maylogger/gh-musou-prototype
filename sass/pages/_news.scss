@@ -19,6 +19,7 @@
 	    width: columns(5);
 	  }
 		.character-image {
+			overflow: hidden;
 			position: relative;
 			top: 50px;
 			z-index: 1;
