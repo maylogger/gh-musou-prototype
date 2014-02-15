@@ -74,6 +74,7 @@
 	    width: columns(5);
 	  }
 		.character-image {
+			overflow: hidden;
 			position: relative;
 			z-index: 1;
 			display: inline-block;
