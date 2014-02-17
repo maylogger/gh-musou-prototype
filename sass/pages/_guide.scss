@@ -14,6 +14,9 @@
 	}
 }
 .rule-list {
+	.list {
+		@include adjust-font-size-to($font-size-M);
+	}
 	&.affix {
 		@include at-breakpoint($desktop) {
 			max-width: 256px;

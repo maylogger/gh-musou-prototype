@@ -4,11 +4,14 @@
 .post-item {
 	position: relative;
 	float: left;
-	width: columns(4, $total-columns);
+	width: columns(2, $total-columns);
 	margin: 0 gutter($total-columns) gutter($total-columns) 0;
 	text-align: left;
 	background: $post-item-background;
 	@include transition(border, .2s);
+	&:nth-child(2n) {
+  	margin-right: 0;
+  }
 	&:hover {
 		color: $pte-black;
 		.post-title {
@@ -84,13 +87,17 @@
 	}
 	.post-title {
 		padding: 0 2.5% 2.5%;
-		@include adjust-font-size-to($font-size-M);
+		@include adjust-font-size-to($font-size-S);
 		@include ellipsis;
+		@include at-breakpoint($pad) {
+		  @include adjust-font-size-to($font-size-M);
+		}
 	}
 	.post-photo {
 		text-align: center;
 		img {
 			padding: 2.5%;
+			padding-bottom: 0;
 			width: 95%;
 		}
 	}
