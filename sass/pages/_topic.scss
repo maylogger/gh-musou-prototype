@@ -33,19 +33,55 @@
 	}
 }
 
+.main-topic {
+	position: relative;
+	margin: rhythm(1.5) 1em;
+	background: lighten($post-item-background, 2.5%);
+	border: 1px solid #eee;
+	@include border-radius(5px);
+	@include at-breakpoint($pad) {
+	  margin: rhythm(1.5) auto;
+	  width: 87%;
+	}
+	@include at-breakpoint($desktop) {
+	  .block {
+	  	float: right;
+	  	width: 70%;
+	  }
+	}
+	.post-group.topic-news {
+		.post-item {
+	  	@include at-breakpoint($desktop) {
+	  	  width: columns(6, $total-columns);
+				margin: 0 gutter($total-columns) gutter($total-columns) 0;
+			  &:nth-child(3n) {
+			  	margin: 0 gutter($total-columns) gutter($total-columns) 0;
+		  	}
+			  &:nth-child(2n) {
+			  	margin-right: 0;
+		  	}
+		  }
+		}
+	}
+}
+
 .topic-theme {
-  padding: rhythm(1.5) 0;
+	min-height: 150px;
+	margin-left: -#{$grid-padding};
+	margin-right: -#{$grid-padding};
 	background-size: cover;
 	background-position: center center;
-	@include at-breakpoint($pad) {
-	  width: 90%;
-		margin: rhythm(1.5) auto;
-		@include border-radius(5px);
-	}
-	& > .container {
-		background: rgba($content-background, .9);
-		@include border-radius(5px);
-		@include box-shadow(0px 0px 5px rgba(black, .15));
+	@include box-shadow(inset 0 -5px 10px rgba(black, .25));
+	@include border-radius(4px 4px 0 0);
+	@include at-breakpoint($desktop) {
+		float: left;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 28%;
+		margin-right: 0;
+	  @include box-shadow(inset -5px 0 10px rgba(black, .25));
+	  @include border-radius(4px 0 0 4px);
 	}
 }
 
@@ -62,25 +98,31 @@
 	@extend .title;
 	@include leader(.5);
 	@include trailer(1);
+	@include padding-trailer(.25);
 	padding-left: rhythm(2);
 	&:before {
 		content: "";
 		position: absolute;
-		top: 0;
+		top: -4px;
 		left: 0;
 		@include replace-text-with-dimensions("icon_topic.png");
 		background-image: none, image-url("icon_topic.svg");
+		@include at-breakpoint($pad) {
+		  top: 0;
+		   @include padding-trailer(0);
+		}
 	}
 }
 
 .topic-title-collapse {
 	position: relative;
+	@include adjust-font-size-to($title-sub-font-size - 4px, 1);
 	@include trailer(1);
-	@include adjust-font-size-to($title-sub-font-size - 4px, 2);
 	padding-left: rhythm(2);
 	padding-right: rhythm(1);
 	@include at-breakpoint($pad) {
-	  @include adjust-font-size-to($title-sub-font-size);
+	  @include adjust-font-size-to($title-sub-font-size, 1);
+	  @include trailer(.5);
 	  &:after {
 			content: "";
 			position: absolute;
@@ -101,6 +143,7 @@
 	.title-extra {
 		display: block;
 		color: $pte-gray-light;
+		@include leader(1/3);
 	}
 }
 
