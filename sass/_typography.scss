@@ -53,10 +53,4 @@ a {
 p {
   @include reset-box-model;
   @include trailer(1);
-  a {
-    color: $pte-blue;
-    &:hover {
-      color: $pte-blue-light;
-    }
-  }
 }
