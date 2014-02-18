@@ -22,7 +22,8 @@ $(function(){
 
 	// collapse switch accord dom height
 	$('.collapse-content').each(function(){
-		if ( $(this).height() < 280 ) {
+		if ( $(this).height() < 300 ) {
+			$(this).parent().css("height","auto");
 			$(this).parent().next('.collapse-toggle').remove();
 		}
 	});

@@ -119,7 +119,7 @@
     this.$element
       .removeClass('collapse')
       .addClass('collapsing')
-      [dimension](230) // control collapse pre-hide content height
+      [dimension](250) // control collapse pre-hide content height
 
     this.transitioning = 1
 
@@ -173,7 +173,7 @@
     if (!$.support.transition) return complete.call(this)
 
     this.$element
-      [dimension](230) // control collapse pre-hide content height
+      [dimension](250) // control collapse pre-hide content height
       .one($.support.transition.end, $.proxy(complete, this))
       .emulateTransitionEnd(350)
   }
