@@ -1,0 +1,26 @@
+.alpaca-message {
+  margin: rhythm(2) auto;
+  text-align: center;
+  @include adjust-font-size-to($font-size-XL);
+  @include at-breakpoint($pad) {
+    @include adjust-font-size-to($font-size-XXL);
+  }
+  small {
+    font-size: 14px;
+  }
+}
+.alpaca {
+  position: relative;
+  max-width: 372px;
+  width: 100%;
+  height: auto;
+  margin: rhythm(6) auto rhythm(2);
+  .alpaca-say {
+    position: absolute;
+    top: -120px;
+    left: 40px;
+    width: 120px;
+    height: 104px;
+    background: url(/images/alpaca-say.png) no-repeat;
+  }
+}
