@@ -26,6 +26,12 @@
 			padding: 18px 12px;
 			color: $menu-link-color;
 			@include transition(background, .2s);
+			@include at-breakpoint($desktop) {
+			  padding: 18px 10px;
+			}
+			@include at-breakpoint(1000px $total_columns) {
+			  padding: 18px 12px;
+			}
 			&:hover {
 				text-decoration: none;
 				background-color: lighten($menu-background, 7.5%);
