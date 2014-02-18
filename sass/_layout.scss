@@ -63,7 +63,7 @@ body.open-menu {
 	background-color: $content-background;
 	@include box-shadow( 0px 3px 7px rgba(black, .1) );
 	img {
-		width: 100%;
+		max-width: 100%;
 		height: auto;
 	}
 }
