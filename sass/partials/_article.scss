@@ -4,4 +4,17 @@
 	@include at-breakpoint($desktop) {
 		@include span-columns(8);
 	}
+  a {
+    color: $pte-blue;
+    &:hover {
+      color: $pte-blue-light;
+    }
+  }
+  &.center {
+    position: relative;
+    @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include squish(2,2);
+    }
+  }
 }

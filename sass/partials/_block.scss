@@ -26,12 +26,3 @@
 	}
 }
 
-.half-block-center-only {
-	position: relative;
-	@include trailer(1);
-	@include pie-clearfix;
-	@include at-breakpoint($desktop) {
-	  @include span-columns(8);
-	  @include squish(2,2);
-	}
-}
