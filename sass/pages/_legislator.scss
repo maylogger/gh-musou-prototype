@@ -4,6 +4,8 @@
 		margin-right: rhythm(1);
 		img {
 			@include border-radius(5px);
+			max-width: 133px;
+			height: auto;
 		}
 	}
 	.legislator-info {

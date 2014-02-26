@@ -308,7 +308,7 @@ body.open-menu { height: 100%; }
 
 .title, .topic-title, .sub-title, .broadcast-committee, .small-title, .list-title, .mega-title { margin-bottom: 12px; color: #333333; }
 
-.title-header { position: relative; padding: 12px 0; text-align: center; background: #efedeb; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.title-header { position: relative; padding: 12px 0; text-align: center; background-color: #efedeb; background-position: center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 @media (min-width: 500px) { .title-header { text-align: left; } }
 .title-header .title, .title-header .topic-title { margin-top: 12px; }
 
@@ -503,7 +503,7 @@ body.open-menu { height: 100%; }
 @media (min-width: 650px) { .avatar-highlight { width: 100%; float: right; margin-right: 0; } }
 @media (min-width: 900px) { .avatar-highlight { width: 31.42857%; float: right; margin-right: 0; } }
 
-.sp-collapse.collapse { height: 240px; overflow-y: hidden; }
+.sp-collapse.collapse { height: 250px; overflow-y: hidden; }
 
 .collapse { height: 0; overflow-y: hidden; }
 
@@ -662,6 +662,7 @@ body.open-menu { height: 100%; }
 
 .musouinfo { position: relative; padding-top: 24px; background: #efedeb; }
 .musouinfo .container { border-bottom: 1px solid #dbdbd8; }
+.musouinfo .container .half-block-center-only { max-width: 48em; margin: 0 auto; }
 .musouinfo .title-block { border-bottom-color: #dbdbd8; }
 
 .skew-block { height: 58px; margin-top: 24px; margin-bottom: -28px; -webkit-transform: skew(0deg, -2deg); -moz-transform: skew(0deg, -2deg); -ms-transform: skew(0deg, -2deg); -o-transform: skew(0deg, -2deg); transform: skew(0deg, -2deg); background: #efedeb; }
@@ -719,11 +720,11 @@ body.open-menu { height: 100%; }
   .main-topic .post-group.topic-news .post-item:nth-child(3n) { margin: 0 2.85714% 2.85714% 0; }
   .main-topic .post-group.topic-news .post-item:nth-child(2n) { margin-right: 0; } }
 
-.topic-theme { min-height: 280px; margin-left: -1em; margin-right: -1em; background-size: cover; background-position: center center; -webkit-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25); -moz-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25); box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25); -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; -ms-border-radius: 4px 4px 0 0; -o-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
+.topic-theme { overflow: hidden; min-height: 300px; margin-left: -1em; margin-right: -1em; background-size: cover; background-position: center center; -webkit-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25); -moz-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25); box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25); -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; -ms-border-radius: 4px 4px 0 0; -o-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
 @media (min-width: 900px) { .topic-theme { float: left; position: absolute; top: 0; bottom: 0; width: 28%; margin-right: 0; -webkit-box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.25); -moz-box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.25); box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.25); -webkit-border-radius: 4px 0 0 4px; -moz-border-radius: 4px 0 0 4px; -ms-border-radius: 4px 0 0 4px; -o-border-radius: 4px 0 0 4px; border-radius: 4px 0 0 4px; } }
 
-.topic-intro { margin-bottom: 24px; }
-@media (min-width: 650px) { .topic-intro.summary { max-height: 550px; overflow: hidden; } }
+.topic-intro { margin-bottom: 24px; font-size: 13px; line-height: 24px; }
+@media (min-width: 650px) { .topic-intro.summary { max-height: 550px; overflow: hidden; font-size: 16px; line-height: 24px; } }
 
 .topic-content:after, .topic-content-wrap:after { content: ""; display: table; clear: both; }
 
@@ -779,7 +780,7 @@ a.broadcast:hover { color: #333333; }
 .presenter .label { display: inline-block; color: #880013; }
 
 .legislator-header .legislator-avatar { float: left; margin-right: 24px; }
-.legislator-header .legislator-avatar img { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.legislator-header .legislator-avatar img { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; max-width: 133px; height: auto; }
 .legislator-header .legislator-info { float: left; }
 .legislator-header .legislator-info .name { font-size: 24px; line-height: 48px; }
 @media (min-width: 500px) { .legislator-header .legislator-info .name { margin-top: 12px; margin-bottom: 12px; } }

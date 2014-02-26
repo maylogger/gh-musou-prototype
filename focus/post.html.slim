@@ -3,30 +3,30 @@
 		h1.title
 			span.title-label: a href="/news" 場邊焦點
 			a href="#" = zh_lorem_sentence
-.container.layout-post
-	.article.post-content
+.container
+	.article.center
 		h1 = zh_lorem_sentence
 		p = zh_lorem_paragraphs 3
-	.aside
-		.post-note
-			.post-note-content
-				ul.list
-					li
-						.list-label 作者
-						.list-content = zh_lorem_name
-					li
-						.list-label 發表時間
-						.list-content = lorem_date.to_date
-					li
-						.list-label 議題
-						.list-content = zh_lorem_words 5 + rand(2)
-	.article.post-content
+	/ .aside
+	/ 	.post-note
+	/ 		.post-note-content
+	/ 			ul.list
+	/ 				li
+	/ 					.list-label 作者
+	/ 					.list-content = zh_lorem_name
+	/ 				li
+	/ 					.list-label 發表時間
+	/ 					.list-content = lorem_date.to_date
+	/ 				li
+	/ 					.list-label 議題
+	/ 					.list-content = zh_lorem_words 5 + rand(2)
+	.article.center
 		.video-single
 			.video-wrapper
 				iframe src="//www.youtube.com/embed/XGK42oYK2h0" frameborder="0" allowfullscreen=""
 		- 3.times do
 			p = zh_lorem_paragraphs 10
-	.article
+	.article.center
 		.block
 			h2.sub-title 相關連結
 			ul.list

@@ -66,7 +66,8 @@
 }
 
 .topic-theme {
-	min-height: 280px;
+	overflow: hidden;
+	min-height: 300px;
 	margin-left: -#{$grid-padding};
 	margin-right: -#{$grid-padding};
 	background-size: cover;
@@ -87,10 +88,12 @@
 
 .topic-intro {
 	@include trailer(1);
+	@include adjust-font-size-to($font-size-S);
 	&.summary {
 		@include at-breakpoint($pad) {
 		  max-height: 550px;
 		  overflow: hidden;
+		  @include adjust-font-size-to($font-size-M);
 		}
 	}
 }

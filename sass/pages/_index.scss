@@ -179,6 +179,10 @@
 	background: $footer-background-color;
 	.container {
 		border-bottom: 1px solid darken($global-divider, 5%);
+		.half-block-center-only {
+			max-width: 48em;
+			margin: 0 auto;
+		}
 	}
 	.title-block {
 		border-bottom-color: darken($global-divider, 5%);
