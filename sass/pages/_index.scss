@@ -120,6 +120,7 @@
 .post-group {
 	&.single {
 		.post-item {
+			width: columns(4);
 			@include at-breakpoint($wide-mobile) {
 			  width: columns(6);
 			}

@@ -646,6 +646,7 @@ body.open-menu { height: 100%; }
 
 .live-title { text-align: center; font-size: 13px; line-height: 24px; background-color: black; color: #ffe229; font-weight: bold; font-style: italic; letter-spacing: 1px; }
 
+.post-group.single .post-item { width: 100%; }
 @media (min-width: 500px) { .post-group.single .post-item { width: 100%; } }
 @media (min-width: 650px) { .post-group.single .post-item { width: 100%; } }
 .post-group.single .post-item .post-title { padding: 0% 2.5% 1% 2.5%; }
