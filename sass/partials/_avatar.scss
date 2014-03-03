@@ -1,6 +1,5 @@
 .avatar-group {
 	@include trailer(1);
-	text-align: center;
 	@include pie-clearfix;
 	.avatar-photo {
 		overflow: hidden;

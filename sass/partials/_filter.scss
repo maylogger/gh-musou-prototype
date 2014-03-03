@@ -5,6 +5,7 @@
 	.filter-select {
 		position: relative;
 		display: inline-block;
+		margin-right: 5px;
 		vertical-align: top;
 		@include adjust-font-size-to($font-size-XS);
 		@include at-breakpoint($pad) {
