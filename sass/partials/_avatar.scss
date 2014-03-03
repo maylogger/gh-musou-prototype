@@ -1,6 +1,9 @@
 .avatar-group {
 	@include trailer(1);
 	@include pie-clearfix;
+	.avatar {
+		max-width: 100px;
+	}
 	.avatar-photo {
 		overflow: hidden;
 		position: relative;
