@@ -108,7 +108,8 @@
 	}
 	.character-name {
 		color: white;
-		@include adjust-font-size-to($font-size-XL);
+		@include leader(.25);
+		@include adjust-font-size-to($font-size-XL, 1.25);
 		@include ellipsis;
 		@include at-breakpoint($wide-mobile) {
 		  white-space: normal;

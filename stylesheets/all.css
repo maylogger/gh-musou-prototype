@@ -266,7 +266,7 @@ body.open-menu { height: 100%; }
 @media (min-width: 500px) { .gallery-item { float: left; } }
 .gallery-item:hover { text-decoration: none; }
 .gallery-item:last-child { margin-bottom: 24px; }
-.gallery-item .gallery-photo { position: relative; padding-top: 56.2%; height: 0; background-color: black; }
+.gallery-item .gallery-photo { position: relative; overflow: hidden; padding-top: 56.2%; height: 0; background-color: black; }
 .gallery-item img { position: absolute; top: 0; left: 0; width: 100%; }
 .gallery-item .play-icon { position: absolute; top: 50%; left: 50%; width: 42px; height: 42px; margin-top: -21px; margin-left: -21px; background-color: rgba(136, 0, 19, 0.6); -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-transform: skew(-10deg, 0deg); -moz-transform: skew(-10deg, 0deg); -ms-transform: skew(-10deg, 0deg); -o-transform: skew(-10deg, 0deg); transform: skew(-10deg, 0deg); -webkit-transition: background-color, ease-in, 0.5s; -moz-transition: background-color, ease-in, 0.5s; -o-transition: background-color, ease-in, 0.5s; transition: background-color, ease-in, 0.5s; }
 .gallery-item .play-icon .play-triangle { position: absolute; top: 50%; left: 50%; width: 0px; height: 0px; margin-top: -8px; margin-left: -5px; text-indent: -119988px; overflow: hidden; text-align: left; border: 8px solid transparent; border-right: 0px solid transparent; border-left: 14px solid white; }
@@ -292,6 +292,10 @@ body.open-menu { height: 100%; }
 .article.center { position: relative; }
 .article.center:after { content: ""; display: table; clear: both; }
 @media (min-width: 900px) { .article.center { margin-left: 17.14286%; margin-right: 17.14286%; } }
+.article table tr:nth-child(even) { background-color: #F3F1EA; }
+.article table td { padding: 2px 3px; }
+.article img { margin-top: 12px; margin-bottom: 12px; }
+@media (min-width: 650px) { .article table td { padding: 4px 6px; } }
 
 .aside { margin-bottom: 24px; }
 @media (min-width: 900px) { .aside { width: 31.42857%; float: right; margin-right: 0; } }
@@ -475,8 +479,9 @@ body.open-menu { height: 100%; }
 .video-chat iframe { min-width: 300px; max-width: 640px; width: 100%; min-height: 335px; max-height: 540px; height: auto; }
 @media (min-width: 650px) { .video-chat iframe { min-height: 540px; } }
 
-.avatar-group { margin-bottom: 24px; text-align: center; }
+.avatar-group { margin-bottom: 24px; }
 .avatar-group:after { content: ""; display: table; clear: both; }
+.avatar-group .avatar { max-width: 100px; }
 .avatar-group .avatar-photo { overflow: hidden; position: relative; width: 100px; height: 0; padding-top: 133%; background-color: #e7e7e5; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 .avatar-group .avatar-photo img { position: absolute; bottom: 0; left: 0; width: 100%; height: auto; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 
@@ -530,7 +535,7 @@ body.open-menu { height: 100%; }
 .button:hover { color: #fcfaf9; background-color: #333333; border: 1px solid #fcfaf9; }
 
 .filter { padding-bottom: 6px; text-align: right; border-bottom: 1px solid #e7e7e5; }
-.filter .filter-select { position: relative; display: inline-block; vertical-align: top; font-size: 12px; line-height: 24px; }
+.filter .filter-select { position: relative; display: inline-block; margin-right: 5px; vertical-align: top; font-size: 12px; line-height: 24px; }
 @media (min-width: 650px) { .filter .filter-select { padding-right: 12px; font-size: 16px; line-height: 24px; } }
 .filter .filter-select select { height: 26px; border: 1px solid #b7b5b0; }
 .filter .search { padding: 0px 8px; color: #880013; font-size: 13px; line-height: 24px; vertical-align: bottom; background: transparent; border: 1px solid #880013; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
@@ -604,7 +609,7 @@ body.open-menu { height: 100%; }
 
 .alpaca-message { margin: 48px auto; text-align: center; font-size: 24px; line-height: 48px; }
 @media (min-width: 650px) { .alpaca-message { font-size: 32px; line-height: 48px; } }
-.alpaca-message small { font-size: 14px; }
+.alpaca-message small { font-size: 12px; }
 
 .alpaca { position: relative; max-width: 372px; width: 100%; height: auto; margin: 144px auto 48px; }
 .alpaca .alpaca-say { position: absolute; top: -120px; left: 40px; width: 120px; height: 104px; background: url(/images/alpaca-say.png) no-repeat; }
@@ -686,7 +691,7 @@ body.open-menu { height: 100%; }
 .versus .character-right .character-image:after { content: ""; position: absolute; top: 20px; left: 0px; bottom: 0px; right: 20px; z-index: 0; background: transparent; -webkit-box-shadow: -7px 7px 10px rgba(0, 0, 0, 0.5); -moz-box-shadow: -7px 7px 10px rgba(0, 0, 0, 0.5); box-shadow: -7px 7px 10px rgba(0, 0, 0, 0.5); }
 .versus .character-right .character-image img { position: absolute; top: 0; left: 0; width: 100%; -webkit-clip-path: polygon(0% 0%, 5% 0%, 100% 0%, 100% 86.6%, 95% 100%, 0% 100%, 0% 13.3%); clip-path: polygon(0% 0%, 5% 0%, 100% 0%, 100% 86.6%, 95% 100%, 0% 100%, 0% 13.3%); }
 @media (min-width: 500px) { .versus .character-right .character-image img { -webkit-clip-path: polygon(0% 13.3%, 5% 0%, 100% 0%, 100% 86.6%, 95% 100%, 0% 100%, 0% 13.3%); clip-path: polygon(0% 13.3%, 5% 0%, 100% 0%, 100% 86.6%, 95% 100%, 0% 100%, 0% 13.3%); } }
-.versus .character-name { color: white; font-size: 24px; line-height: 48px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+.versus .character-name { color: white; margin-top: 6px; font-size: 24px; line-height: 30px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
 @media (min-width: 500px) { .versus .character-name { white-space: normal; } }
 .versus .vs-word { position: absolute; top: 50%; left: 50%; z-index: 3; margin-top: -40px; margin-left: -40px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/vs_word.png?1390838039'); background-repeat: no-repeat; background-position: 50% 50%; width: 160px; height: 160px; background-image: none, url('/images/vs_word.svg?1390837974'); width: 80px; height: 80px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 @media (min-width: 650px) { .versus .vs-word { margin-left: -60px; margin-top: -60px; width: 120px; height: 120px; } }
@@ -714,7 +719,7 @@ body.open-menu { height: 100%; }
 .post-group.topic-news .post-item:hover:after { border: 8px solid transparent; border-right: 8px solid #880013; border-bottom: 8px solid #880013; }
 .post-group.topic-news .post-item.focus:hover:after { border: 8px solid transparent; border-right: 8px solid #ff5000; border-bottom: 8px solid #ff5000; }
 
-.main-topic { position: relative; margin: 36px 1em; background: #f8f8f5; border: 1px solid #eee; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+.main-topic { position: relative; overflow: hidden; margin: 36px 1em; background: #f8f8f5; border: 1px solid #eee; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
 @media (min-width: 650px) { .main-topic { margin: 36px auto; width: 87%; } }
 @media (min-width: 900px) { .main-topic .block { float: right; width: 70%; } }
 @media (min-width: 900px) { .main-topic .post-group.topic-news .post-item { width: 48.57143%; margin: 0 2.85714% 2.85714% 0; }
@@ -774,7 +779,7 @@ a.broadcast:hover { color: #333333; }
 .presenter .anchor img { max-width: 150px; max-height: 200px; }
 @media (min-width: 650px) { .presenter .anchor { width: 48.57143%; float: left; margin-right: 2.85714%; } }
 .presenter .reviewer { width: 45.45455%; float: right; margin-right: 0; }
-.presenter .reviewer img { max-width: 150px; max-height: 200px; }
+.presenter .reviewer img { max-width: 150px; max-height: 200px; width: 100%; height: auto; }
 @media (min-width: 650px) { .presenter .reviewer { width: 48.57143%; float: right; margin-right: 0; } }
 .presenter .name { font-size: 16px; line-height: 36px; }
 @media (min-width: 650px) { .presenter .name { font-size: 20px; line-height: 36px; } }
@@ -788,7 +793,7 @@ a.broadcast:hover { color: #333333; }
 .legislator-header .legislator-info .name .party { display: inline-block; width: 30px; margin-right: 6px; vertical-align: middle; }
 .legislator-header .legislator-info .link { font-size: 13px; line-height: 24px; }
 @media (min-width: 650px) { .legislator-header .legislator-info .link { font-size: 16px; line-height: 24px; } }
-.legislator-header .legislator-info .link .facebook .icon-fb, .legislator-header .legislator-info .link .wiki .icon-wiki, .legislator-header .legislator-info .link .govly .icon-govly { display: inline-block; width: 24px; height: 24px; margin-top: -4px; vertical-align: middle; }
+.legislator-header .legislator-info .link .facebook .icon-fb, .legislator-header .legislator-info .link .wiki .icon-wiki, .legislator-header .legislator-info .link .govly .icon-govly { display: inline-block; width: 24px; height: 24px; margin-top: -4px; margin-right: 5px; vertical-align: middle; }
 .legislator-header .legislator-info .link .facebook { display: block; margin-right: 24px; margin-bottom: 6px; }
 .legislator-header .legislator-info .link .facebook .icon-fb { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/icon_facebook.png?1389969337'); background-repeat: no-repeat; background-position: 50% 50%; width: 24px; height: 24px; background-image: none, url('/images/icon_facebook.svg?1389969337'); }
 @media (min-width: 500px) { .legislator-header .legislator-info .link .facebook { display: inline-block; } }

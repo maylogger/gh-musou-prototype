@@ -35,6 +35,7 @@
 
 .main-topic {
 	position: relative;
+	overflow: hidden;
 	margin: rhythm(1.5) 1em;
 	background: lighten($post-item-background, 2.5%);
 	border: 1px solid #eee;

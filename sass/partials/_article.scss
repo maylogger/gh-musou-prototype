@@ -4,6 +4,12 @@
 	@include at-breakpoint($desktop) {
 		@include span-columns(8);
 	}
+  h1 {
+    @include trailer(.5);
+  }
+  h2, h3, h4 {
+    @include trailer(.25);
+  }
   a {
     color: $pte-blue;
     &:hover {
@@ -15,6 +21,25 @@
     @include pie-clearfix;
     @include at-breakpoint($desktop) {
       @include squish(2,2);
+    }
+  }
+  table {
+    tr:nth-child(even) {
+      background-color: #F3F1EA;
+    }
+    td {
+      padding: 2px 3px;
+    }
+  }
+  img {
+    @include leader(.5);
+    @include trailer(.5);
+  }
+  @include at-breakpoint($pad) {
+    table {
+      td {
+        padding: 4px 6px;
+      }
     }
   }
 }

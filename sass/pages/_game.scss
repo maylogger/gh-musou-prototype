@@ -26,6 +26,8 @@
 		img {
 			max-width: 150px;
 			max-height: 200px;
+			width: 100%;
+			height: auto;
 		}
 		@include at-breakpoint($pad) {
 		  @include span-columns(6 omega);
