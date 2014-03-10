@@ -12,25 +12,24 @@
 		}
 	}
 	.anchor {
-		@include span-columns(2);
-		img {
-			max-width: 150px;
-			max-height: 200px;
-		}
-		@include at-breakpoint($pad) {
-		  @include span-columns(6);
-		}
-	}
-	.reviewer {
-		@include span-columns(2 omega);
+		display: inline-block;
+		width: 45%;
+		margin-right: 12px;
 		img {
 			max-width: 150px;
 			max-height: 200px;
 			width: 100%;
 			height: auto;
 		}
-		@include at-breakpoint($pad) {
-		  @include span-columns(6 omega);
+	}
+	.reviewer {
+		display: inline-block;
+		width: 45%;
+		img {
+			max-width: 150px;
+			max-height: 200px;
+			width: 100%;
+			height: auto;
 		}
 	}
 	.name {
@@ -42,5 +41,6 @@
 	.label {
 		display: inline-block;
 		color: $pte-red;
+		margin-right: 6px;
 	}
 }

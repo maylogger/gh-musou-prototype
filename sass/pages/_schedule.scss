@@ -44,10 +44,12 @@ a.broadcast:hover {
 	.label {
 		display: inline-block;
 		color: $pte-red;
+		margin-right: 6px;
 	}
 	.broadcast-issue {
 		.label {
 			display: block;
+			margin-right: 6px;
 		}
 	}
 }
