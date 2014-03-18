@@ -1,4 +1,5 @@
 .presenter {
+	@include leader(1);
 	@include trailer(.5);
 	@include padding-trailer(.5);
 	text-align: center;

@@ -287,8 +287,9 @@ body.open-menu { height: 100%; }
 
 .article { margin-bottom: 24px; font-size: 16px; line-height: 24px; }
 @media (min-width: 900px) { .article { width: 65.71429%; float: left; margin-right: 2.85714%; } }
-.article h1 { margin-bottom: 12px; }
-.article h2, .article h3, .article h4 { margin-bottom: 6px; }
+.article h1, .article h2, .article h3, .article h4 { margin-top: 24px; margin-bottom: 24px; }
+.article h1 { font-size: 28px; line-height: 48px; }
+.article h2 { font-size: 24px; line-height: 32px; }
 .article a { color: #2874ff; }
 .article a:hover { color: #3c9aff; }
 .article.center { position: relative; }
@@ -362,7 +363,7 @@ body.open-menu { height: 100%; }
 .title-label a { color: #92928a; }
 .title-label a:hover { color: #880013; }
 
-.block { position: relative; margin-bottom: 48px; }
+.block { position: relative; margin-bottom: 48px; padding-top: 1px; }
 .block:after { content: ""; display: table; clear: both; }
 @media (min-width: 650px) { .block { margin-bottom: 24px; } }
 .block.divider { padding-bottom: 12px; border-bottom: 1px solid #e7e7e5; }
@@ -527,7 +528,7 @@ body.open-menu { height: 100%; }
 .collapse-content:after { content: ""; display: table; clear: both; }
 
 .affix { position: relative; }
-@media (min-width: 900px) { .affix { position: fixed; top: 0; } }
+@media (min-width: 900px) { .affix { position: fixed; top: 24px; } }
 
 .affix-bottom { position: absolute; }
 
@@ -774,7 +775,7 @@ a.broadcast:hover { color: #333333; }
 
 .g0vlink { margin-bottom: 24px; text-align: center; }
 
-.presenter { margin-bottom: 12px; padding-bottom: 12px; text-align: center; border-bottom: 1px solid #e7e7e5; }
+.presenter { margin-top: 24px; margin-bottom: 12px; padding-bottom: 12px; text-align: center; border-bottom: 1px solid #e7e7e5; }
 .presenter:after { content: ""; display: table; clear: both; }
 .presenter img { width: 100%; height: auto; }
 @media (min-width: 500px) { .presenter img { width: auto; } }
@@ -819,6 +820,7 @@ a.broadcast:hover { color: #333333; }
 @media (min-width: 900px) { .layout-guide .aside { width: 22.85714%; float: left; margin-right: 2.85714%; } }
 
 .rule-list .list { font-size: 16px; line-height: 24px; }
+.rule-list .list li + li { padding-top: 0px; margin-top: 16px; }
 @media (min-width: 900px) { .rule-list.affix { max-width: 256px; width: 21.5%; } }
 .rule-list .list li { border-top: none; }
 

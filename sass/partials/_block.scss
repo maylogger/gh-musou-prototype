@@ -1,6 +1,7 @@
 .block {
 	position: relative;
 	@include trailer(2);
+	padding-top: 1px;
 	@include pie-clearfix;
 	@include at-breakpoint($pad) {
 		@include trailer(1);

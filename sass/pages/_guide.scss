@@ -16,6 +16,10 @@
 .rule-list {
 	.list {
 		@include adjust-font-size-to($font-size-M);
+		li + li {
+			padding-top: 0px;
+			margin-top: 16px;
+		}
 	}
 	&.affix {
 		@include at-breakpoint($desktop) {

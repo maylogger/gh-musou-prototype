@@ -39,7 +39,8 @@ $(function(){
 			});
 		}
 	}
-	affixActive('.post-note, .rule-list', 24);
+	affixActive('.post-note', 40);
+	affixActive('.rule-list', 24);
 
 	// legislator award record unfold button
 	$('.more-record').on("click", function(){
