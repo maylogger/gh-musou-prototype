@@ -134,6 +134,7 @@
 		@include leader(1);
 		@include trailer(1);
 		@include adjust-font-size-to($font-size-XXL);
+		color: $pte-red;
 	}
 	h2 {
 		@include leader(.75);
@@ -157,6 +158,24 @@
 			color: $pte-blue-light;
 		}
 	}
+	ul {
+    padding-left: 24px;
+  }
+  quote {
+  	position: relative;
+  	display: inline-block;
+  	@include trailer(1);
+  	padding: 24px;
+  	color: $pte-gray-dark;
+  	&:before {
+  		content: "❝";
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		font-size: 52px;
+  		color: $pte-lightgray;
+  	}
+  }
 }
 
 .post-item.focus {

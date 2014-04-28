@@ -20,6 +20,11 @@
       color: $pte-blue-light;
     }
   }
+  hr {
+    border: none;
+    border-top: 1px solid $global-divider;
+    margin-bottom: 24px;
+  }
   &.center {
     position: relative;
     @include pie-clearfix;
@@ -36,8 +41,8 @@
     }
   }
   img {
-    @include leader(.5);
-    @include trailer(.5);
+    @include leader(1);
+    @include trailer(1);
   }
   @include at-breakpoint($pad) {
     table {

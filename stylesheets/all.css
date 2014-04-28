@@ -292,12 +292,13 @@ body.open-menu { height: 100%; }
 .article h2 { font-size: 24px; line-height: 32px; }
 .article a { color: #2874ff; }
 .article a:hover { color: #3c9aff; }
+.article hr { border: none; border-top: 1px solid #e7e7e5; margin-bottom: 24px; }
 .article.center { position: relative; }
 .article.center:after { content: ""; display: table; clear: both; }
 @media (min-width: 900px) { .article.center { margin-left: 17.14286%; margin-right: 17.14286%; } }
 .article table tr:nth-child(even) { background-color: #F3F1EA; }
 .article table td { padding: 2px 3px; }
-.article img { margin-top: 12px; margin-bottom: 12px; }
+.article img { margin-top: 24px; margin-bottom: 24px; }
 @media (min-width: 650px) { .article table td { padding: 4px 6px; } }
 
 .aside { margin-bottom: 24px; }
@@ -418,12 +419,15 @@ body.open-menu { height: 100%; }
 .post-item .post-preview { position: relative; height: 72px; padding: 2.5%; overflow: hidden; font-size: 13px; line-height: 24px; border-top: 1px solid #e7e7e5; }
 .post-item .post-preview:after { content: ""; position: absolute; height: 48px; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, #f2f2ee 25%, rgba(242, 242, 238, 0) 100%); }
 
-.post-content h1 { margin-top: 24px; margin-bottom: 24px; font-size: 32px; line-height: 48px; }
+.post-content h1 { margin-top: 24px; margin-bottom: 24px; font-size: 32px; line-height: 48px; color: #880013; }
 .post-content h2 { margin-top: 18px; margin-bottom: 18px; font-size: 24px; line-height: 48px; }
 .post-content h3 { margin-top: 12px; margin-bottom: 12px; font-size: 20px; line-height: 24px; }
 .post-content h4 { margin-top: 12px; margin-bottom: 12px; font-size: 16px; line-height: 24px; font-weight: bold; }
 .post-content a { color: #2874ff; }
 .post-content a:hover { color: #3c9aff; }
+.post-content ul { padding-left: 24px; }
+.post-content quote { position: relative; display: inline-block; margin-bottom: 24px; padding: 24px; color: #63635c; }
+.post-content quote:before { content: "❝"; position: absolute; top: 0; left: 0; font-size: 52px; color: #e7e7e5; }
 
 .post-item.focus .post-tag { background-color: #ff5000; }
 .post-item.focus:hover .post-title { color: #ff5000; }
