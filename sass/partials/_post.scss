@@ -130,28 +130,6 @@
 }
 
 .post-content {
-	h1 {
-		@include leader(1);
-		@include trailer(1);
-		@include adjust-font-size-to($font-size-XXL);
-		color: $pte-red;
-	}
-	h2 {
-		@include leader(.75);
-		@include trailer(.75);
-		@include adjust-font-size-to($font-size-XL);
-	}
-	h3 {
-		@include leader(.5);
-		@include trailer(.5);
-		@include adjust-font-size-to($font-size-L);
-	}
-	h4 {
-		@include leader(.5);
-		@include trailer(.5);
-		@include adjust-font-size-to($font-size-M);
-		font-weight: bold;
-	}
 	a {
 		color: $pte-blue;
 		&:hover {
@@ -159,22 +137,9 @@
 		}
 	}
 	ul {
+		@include leader(1);
+		@include trailer(1);
     padding-left: 24px;
-  }
-  quote {
-  	position: relative;
-  	display: inline-block;
-  	@include trailer(1);
-  	padding: 24px;
-  	color: $pte-gray-dark;
-  	&:before {
-  		content: "❝";
-  		position: absolute;
-  		top: 0;
-  		left: 0;
-  		font-size: 52px;
-  		color: $pte-lightgray;
-  	}
   }
 }
 

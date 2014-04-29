@@ -45,8 +45,14 @@
 			.video-wrapper
 				iframe src="//www.youtube.com/embed/XGK42oYK2h0" frameborder="0"
 		- 3.times do
-			p = zh_lorem_paragraphs 10
-			quote = zh_lorem_paragraph
+			h1 = zh_lorem_sentence
+			h2 = zh_lorem_sentence
+			h3 = zh_lorem_sentence
+			h4 = zh_lorem_sentence
+			p = zh_lorem_paragraphs 5
+			= image_tag lorem_image("500x350")
+			p.figure 圖片註解解解解解解～～
+			blockquote = zh_lorem_paragraph
 	.article
 		.block
 			h2.sub-title 相關連結

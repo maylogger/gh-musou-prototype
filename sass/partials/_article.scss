@@ -4,15 +4,27 @@
 	@include at-breakpoint($desktop) {
 		@include span-columns(8);
 	}
-  h1, h2, h3, h4 {
+  h1 {
     @include leader(1);
     @include trailer(1);
-  }
-  h1 {
-    @include adjust-font-size-to(28px);
+    @include adjust-font-size-to($font-size-XXL);
+    color: $pte-red;
   }
   h2 {
-    @include adjust-font-size-to(24px, 1.35);
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-font-size-to($font-size-XL, 1.5);
+  }
+  h3 {
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-font-size-to($font-size-L);
+  }
+  h4 {
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-font-size-to($font-size-M);
+    font-weight: bold;
   }
   a {
     color: $pte-blue;
@@ -41,7 +53,32 @@
     }
   }
   img {
-    @include leader(1);
+    @include trailer(1);
+  }
+  .figure {
+    font-size: 12px;
+    margin-top: -24px;
+    color: $pte-gray;
+    &:before {
+      content: "※";
+    }
+  }
+  blockquote {
+    position: relative;
+    display: inline-block;
+    margin: rhythm(1) rhythm(.5);
+    padding: 24px;
+    color: $pte-gray-dark;
+    &:before {
+      content: "❝";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 52px;
+      color: $pte-lightgray;
+    }
+  }
+  iframe {
     @include trailer(1);
   }
   @include at-breakpoint($pad) {

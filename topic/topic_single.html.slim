@@ -5,9 +5,13 @@
 			span.title-label: a href="/topic" 重大議題
 			a href="/topic/topic_single.html" 兩岸服貿協議
 .container
-	.half-block
+	.half-block.article
 		h2.title 主題
-		p = zh_lorem_paragraphs 10
+		- 3.times do
+			p = zh_lorem_paragraphs 5
+			= image_tag lorem_image("500x350")
+			.figure 圖片註解解解解解解～～
+			blockquote = zh_lorem_paragraph
 		h1.title 深入研究
 		ul.list
 			- ( rand(5) + 5 ).times do

@@ -131,7 +131,7 @@
 				padding: 0% 2.5% 1% 2.5%;
 			}
 			.post-preview {
-				height: 56px;
+				height: 50px;
 				padding: 1% 2.5%;
 			}
 		}
@@ -196,4 +196,17 @@
 	margin-bottom: -28px;
 	@include skew(0deg, -2deg);
 	background: $footer-background-color;
+}
+
+.today-top {
+	.today-top-play {
+		@include at-breakpoint($desktop) {
+		  @include span-columns(6);
+		}
+	}
+	.today-top-fail {
+		@include at-breakpoint($desktop) {
+		  @include span-columns(6 omega);
+		}
+	}
 }
