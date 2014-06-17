@@ -1,0 +1,13 @@
+.title-header style="background-image: url(http://hhhhold.com/1080x300/#{rand(100)})"
+	.title-mask
+	.container
+		h1.title
+			span.title-label: a href="/highlight" 精彩事蹟
+			a href="/highlight/top-play" 本日好球
+.container
+	.block
+		.gallery.triple-col
+			- 12.times do
+				= render "/partials/gallery"
+	.block
+		= render "/partials/pagination"

@@ -1,0 +1,9 @@
+.live-page {
+	.wrap {
+		max-width: 100%;
+	}
+}
+
+.video-info p {
+	@include trailer(0);
+}

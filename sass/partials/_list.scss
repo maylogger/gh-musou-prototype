@@ -3,12 +3,12 @@
 	@include leader(.5);
 	@include trailer(.5);
 	list-style: none;
+	@include adjust-font-size-to($list-font-size-mobile);
+	@include at-breakpoint($pad) {
+	  @include adjust-font-size-to($list-font-size);
+	}
 	li {
 		@include pie-clearfix;
-		@include adjust-font-size-to($list-font-size-mobile);
-		@include at-breakpoint($pad) {
-		  @include adjust-font-size-to($list-font-size);
-		}
 	}
 	li + li {
 		@include leader(.5);
@@ -46,22 +46,15 @@
 			@include adjust-font-size-to($list-sub-font-size-mobile);
 		}
 		@include at-breakpoint($pad) {
+			@include leader(0);
 			padding-left: 7em;
-		  	.list-label ,.list-content {
-		  		margin-top: $list-no-border-offset-fix;
-				@include adjust-font-size-to($list-sub-font-size, 1);
+			.list-label {
+				width: 5em;
+			}
+	  	.list-label ,.list-content {
+	  		margin-top: $list-no-border-offset-fix;
+				@include adjust-font-size-to($list-sub-font-size + 2px, 1);
 			}
 		}
 	}
-	// temp css
-	// @include at-breakpoint($desktop) {
-	// 	.list-two-column {
-	// 		float: left;
-	// 		width: 50%;
-	// 		&:nth-child(2n) {
-	// 			float: right;
-	// 		}
-	// 	}
-	// }
 }
-

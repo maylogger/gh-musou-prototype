@@ -1,9 +1,9 @@
 // Layout and typography ==================================
 // - SUSY basic setting
 $total-columns   								 : 4;
-$column-width    								 : 5em;
-$gutter-width    								 : 1em;
-$grid-padding    								 : $gutter-width;
+$column-width    								 : 4em;
+$gutter-width    								 : 2em;
+$grid-padding    								 : 1em;
 
 // - Media for responsive layout
 $wide-mobile-columns      			 : 6;
@@ -49,15 +49,17 @@ $pte-gray-dark   								 : #63635C;
 $pte-gray              					 : #757570;
 $pte-gray-light  								 : #92928A;
 $pte-lightgray-dark 						 : #B7B5B0;
-$pte-lightgray 									 : #E7E5E2;
+$pte-lightgray 									 : #E7E7E5;
 $pte-red-dark    								 : #A70000;
-$pte-red               					 : #C70000;
+$pte-red               					 : #880013;
 $pte-red-light   								 : #E70000;
 $pte-blue-dark   								 : #1934FF;
 $pte-blue              					 : #2874FF;
 $pte-blue-light  								 : #3C9AFF;
+$pte-orange 										 : #FF5000;
 $pte-green 			 								 : #DFED48;
-$pte-green-light 								 : #FAFFE3;
+$pte-green-light 								 : #FFF9E4;
+$pte-yellow-light 							 : #FFF8EC;
 
 // - Prototyping Transparent color
 $pte-black-15 									 : rgba(black, .15);
@@ -75,21 +77,29 @@ $global-divider 								 : $pte-lightgray;
 $global-title-color 						 : $pte-black-light;
 $global-content-color 					 : $pte-black;
 $global-font-color 							 : $pte-black;
+$global-image-holder-color 			 : $pte-lightgray;
 
-// Partials ===============================================
+// Layouts ================================================
+// - news
+$news-post-note-background 			 : $pte-yellow-light;
+
+// Page & Partials ========================================
+// - body
+$body-background 								 : $pte-lightgray;
+
 // - link
-$link-color 										 : $pte-blue;
-// $link-color-hover
+$link-color 										 : $global-content-color;
+$link-color-hover 							 : $pte-red;
 // $link-color-active
 
 // - header
-$header-background       				 : $pte-black;
+$header-background       				 : $pte-red;
 $header-font-color       				 : white;
 $header-font-color-hover 				 : darken(white, .2);
 
 // - menu
-$menu-background 								 : $pte-black;
-$menu-btn-size        					 : 48px;
+$menu-background 								 : $pte-red;
+$menu-btn-size        					 : 60px;
 $menu-btn-bar-width   					 : 24px;
 $menu-btn-bar-height  					 : 2px;
 $menu-btn-bar-spacing 					 : 6px;
@@ -97,15 +107,22 @@ $menu-btn-bar-color 					 	 : white;
 $menu-btn-bar-shadow-color 			 : $pte-black-50;
 $menu-link-color 								 : white;
 $menu-off-canvas-width 					 : 260px;
+$menu-off-canvas-background 		 : $pte-black;
 
-// -main
-$main-background 								 : white;
+// - content
+$content-background 						 : #FCFAF9;
 
 // - title
-$title-font-size 								 : $font-size-XXL;
-$title-sub-font-size 						 : $font-size-XL - 4px;
+$title-block-background 				 : #EFEDEB;
 $title-mega-font-size 					 : $font-size-UL - 4px;
+$title-font-size 								 : $font-size-XL;
+$title-sub-font-size 						 : $font-size-L + 2px;
+$title-small-font-size 					 : $font-size-M;
 $title-color 										 : $pte-black;
+$title-mask-mobile-background 	 : linear-gradient(to top, rgba(#EFEDEB, .65) 0%, rgba(#EFEDEB, .85) 100% );
+$title-mask-background 					 : linear-gradient(to right, rgba(#EFEDEB, .9) 25%, rgba(#EFEDEB, 0) 65% );
+$title-label-color 							 : $pte-gray-light;
+$title-extra-link-color 				 : $pte-red;
 
 // - article
 $article-font-size 							 : $font-size-M;
@@ -113,13 +130,13 @@ $article-font-size 							 : $font-size-M;
 // - hero
 $hero-content-color 						 : white;
 
-// - page-header
-$page-header-font-size 					 : $font-size-UL;
-$page-header-font-size-large 		 : $font-size-EL;
-$page-header-content-color 			 : white;
-$page-header-text-shadow 				 : $pte-black-light;
-$page-header-top-divider 				 : $global-divider;
-$page-header-mask-background 		 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
+// - video-header
+$video-header-font-size 				 : $font-size-XL;
+$video-header-font-size-large 	 : $font-size-XXL;
+$video-header-content-color 		 : white;
+$video-header-text-shadow 			 : $pte-black-light;
+$video-header-top-divider 			 : $global-divider;
+$video-header-mask-background 	 : linear-gradient(to top, rgba(black, .75) 0, rgba(black, 0) 100% );
 
 // - list
 $list-label-color 							 : $pte-gray-light;
@@ -132,18 +149,19 @@ $list-no-border-offset-fix 			 : 1px;
 $list-broadcast-background 			 : $pte-green-light;
 
 // - pagination
+$pagination-font-size 					 : $font-size-S;
 $pagination-switch-background 	 : $pte-black;
 $pagination-switch-color 	 			 : white;
+$pagination-active-background 	 : lighten($pte-red, 10%);
 
 // - gallery
-$gallery-play-icon-size 				 : 50px;
+$gallery-play-icon-size 				 : 42px;
 $gallery-play-icon-offset 			 : $gallery-play-icon-size / 2;
-$gallery-play-icon-background 	 : $pte-black;
+$gallery-play-icon-background 	 : $pte-red;
 $gallery-play-icon-color 				 : white;
 $gallery-item-background 				 : black;
-// $gallery-item-info-background 	 : linear-gradient(to top, rgba(black, .85) 0, rgba(black, .5) 25%, rgba(black, 0) 100% );
 $gallery-item-info-color 				 : $pte-black;
-$gallery-item-date-color 				 : $pte-lightgray-dark;
+$gallery-item-date-color 				 : $pte-gray-light;
 $gallery-top-number-size 				 : 144px;
 $gallery-top-number-size-small 	 : 72px;
 
@@ -151,32 +169,49 @@ $gallery-top-number-size-small 	 : 72px;
 $video-main-divider 						 : $global-divider;
 
 // - avatar
-$avatar-item-background 				 : black;
 $avatar-photo-width		 					 : 100px;
 $avatar-photo-width-large				 : 250px;
 
 // - collapse
 $collapse-toggle-divider 				 : $global-divider;
-$collapse-content-hider 				 : linear-gradient(to top, rgba(white, 1) 15%, rgba(white, .5) 50%, rgba(white, 0) 100% );
+$collapse-content-hider 				 : linear-gradient(to top, rgba($content-background, 1) 15%, rgba($content-background, .5) 50%, rgba($content-background, 0) 100% );
+$collapse-btn-size 							 : $font-size-S;
 $collapse-btn-color 						 : $pte-black;
 $collapse-btn-color-hover 			 : $pte-lightgray;
 $collapse-btn-background 			 	 : $pte-lightgray;
 $collapse-btn-background-hover 	 : rgba($pte-black, .85);
 
 // - button
-$button-background 							 : $pte-black;
-$button-background-hover 				 : white;
-$button-color 									 : white;
-$button-color-hover 						 : $pte-black;
+$button-font-size 							 : $font-size-L;
+$button-background 							 : $content-background;
+$button-background-hover 				 : $pte-black;
+$button-color 									 : $pte-black;
+$button-color-hover 						 : $content-background;
+
+// -filter
+$filter-button-font-size 				 : $font-size-S;
+$filter-button-style-color 			 : $pte-red;
 
 // - tag
 $tag-broadcast-background 			 : $pte-green;
 $tag-now-background 						 : $pte-red;
 $tag-now-color 									 : white;
+$tag-font-size 									 : $font-size-S;
 
-// - input
+// - pills
+$pills-normal-font-color 				 : $pte-black;
+$pills-active-font-color 				 : $pte-red;
+
+// - post-item
+$post-item-background 					 : #F2F2EE;
+
+// - table
+$table-odd-background 					 : #F2F2EE;
+
+// - timeline
+$timeline-title-size 						 : $font-size-XL;
 
 // - footer
+$footer-background-color 				 : #EFEDEB;
+$footer-color 									 : $pte-gray;
 
-// - other
-$no-content-msg-color 					 : $pte-gray;

@@ -1,39 +1,72 @@
-.hero
-	.container
-		h1.hero-title 國會無雙
-		p.hero-content 一天一分鐘，笑看國會大小事
 .block-live
 	.container
+		.title-block
+			h2.title
+				| LIVE
+				.title-extra 直播中
 		.live-group
-			a.live-item href="#"
-				.live-photo
-					img src="/images/temp/live-photo-1.jpg"
-					.live-tag LIVE
-				.live-item-title 王金平表示：不要偷按別人的表決器
-			a.live-item href="#"
-				.live-photo
-					img src="/images/temp/live-photo-2.jpg"
-					.live-tag LIVE
-				.live-item-title 吳育昇鄭重表達：張懸是中華民國的寶貝
-			a.live-item href="#"
-				.live-photo
-					img src="/images/temp/live-photo-3.jpg"
-					.live-tag LIVE
-				.live-item-title 劉櫂豪炮火猛烈，黃世銘啞口無言
+			- 3.times do
+				a.live-item href="/live"
+					.live-photo
+						img src="http://hhhhold.com/450x225/#{rand(100)}"
+						.live-tag LIVE
+					.live-item-title
+						.live-committee #{zh_lorem_words(rand(5)+3)}委員會
+						| #{zh_lorem_words(rand(5)+5)}，#{zh_lorem_words(rand(5)+5)}！
+.slogan
+	.container
+		.slogan-content
+			| 一天一分鐘
+			span.slogan-mark
+			| 國會大小事
 .container
-	.post-group
-			.post-item
-				.post-photo
-					img src="/images/temp/live-photo-1.jpg"
-				.post-date 2013年12月17日
-				.post-title 王金平表示：不要偷按別人的表決器
-			.post-item
-				.post-photo
-					img src="/images/temp/live-photo-2.jpg"
-				.post-date 2013年11月6日
-				.post-title 吳育昇鄭重表達：張懸是中華民國的寶貝
-			.post-item
-				.post-photo
-					img src="/images/temp/live-photo-3.jpg"
-				.post-date 2013年9月25日
-				.post-title 劉櫂豪炮火猛烈，黃世銘啞口無言
+	.title-block
+		h2.title 最新戰報
+		a.title-extra-link href="/news" 查看所有戰報
+	.block
+		.half-block
+			.post-group.single
+					= render "/partials/post_item"
+		.half-block
+			.post-group.quad
+				- 4.times do
+					= render "/partials/post_item_nc"
+	.title-block
+		h2.title 精彩事蹟
+		a.title-extra-link href="/highlight" 查看所有精彩事蹟
+	.block.today-top
+		.today-top-play
+			.sub-title 今日好球
+			.gallery.double-col
+				= render "/partials/gallery"
+				= render "/partials/gallery"
+		.today-top-fail
+			.sub-title 今日烏龍球
+			.gallery.double-col
+				= render "/partials/gallery"
+				= render "/partials/gallery"
+	.title-block
+		h2.title 近日預報
+		a.title-extra-link href="/schedule" 查看所有賽事
+	.block
+		.broadcast-committee 委員會
+		.table
+			= render "/partials/schedule/schedule_now"
+			= render "/partials/schedule/schedule_broadcast"
+.skew-block
+.musouinfo
+	.container
+		.half-block-center-only
+			.title-block
+				h2.title 立院小知識
+				a.title-extra-link href="/guide" 查看所有立院小知識
+			.block
+				.sub-title 你知道嗎？
+				.rule-faq.at-index
+					p.que = zh_lorem_paragraph
+					p.ans = zh_lorem_paragraph
+		.half-block-center-only
+			.title-block
+				h2.title 關於/展望
+			.block
+				p = zh_lorem_paragraphs 2

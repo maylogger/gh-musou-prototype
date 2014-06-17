@@ -3,6 +3,11 @@
   font-weight: 300;
 }
 
+%helvetica-CondensedBlack {
+  font-family: "HelveticaNeue-CondensedBlack", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+}
+
 %songti {
   font-family: "songti TC", "Hiragino Mincho Pro", serif;
   font-weight: bold;
@@ -20,13 +25,32 @@ body {
   @include adjust-font-size-to($font-size-XXL);
   @extend %helvetica-light;
 }
+h1 {
+  @include adjust-font-size-to($font-size-XXL);
+}
+h2 {
+  @include adjust-font-size-to($font-size-XL);
+}
+h3 {
+  @include adjust-font-size-to($font-size-L);
+}
+h4 {
+  @include adjust-font-size-to($font-size-M);
+}
+h5 {
+  @include adjust-font-size-to($font-size-S);
+}
+h6 {
+  @include adjust-font-size-to($font-size-XS);
+}
 
 a {
-  @include link-colors($link-color);
   @include unstyled-link;
+  cursor: pointer;
+  @include link-colors($link-color, $link-color-hover);
 }
 
 p {
   @include reset-box-model;
-  // @include trailer(1);
+  @include trailer(1);
 }

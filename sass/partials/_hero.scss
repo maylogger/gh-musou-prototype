@@ -1,15 +1,15 @@
 .hero {
 	text-align: center;
 	color: $hero-content-color;
-	margin-top: -#{rhythm(2)};
-	padding-top: rhythm(2);
-	background: black image-url("index-hero.jpg") top center no-repeat;
+	margin-top: -#{rhythm(2.5)};
+	padding-top: rhythm(2.5);
+	background: black image-url("index_hero.jpg") top center no-repeat;
 	@include background-size(cover);
 	.hero-title {
 		position: relative;
 		display: inline-block;
-		@include leader(5);
-		@include padding-trailer(.3);
+		@include leader(2.5);
+		@include padding-trailer(.2);
 		@extend %songti;
 		@include adjust-font-size-to($font-size-EL - 12px, 3);
 		font-weight: bold;
@@ -17,11 +17,11 @@
 		letter-spacing: .2em;
 		left: .1em;
 		@include at-breakpoint($pad) {
-		  @include adjust-font-size-to($font-size-EL, 3);
+		  @include adjust-font-size-to($font-size-EL - 4px, 3);
 		}
 	}
 	.hero-content {
-		max-width: 20em;
+		max-width: 18em;
 		margin: 0 auto;
 		border-top: 2px solid rgba(white,.3);
 		@extend %songti;
@@ -29,8 +29,8 @@
 		display: block;
 		@include leader(.5);
 		@include padding-leader(.3);
-		@include trailer(4);
-		@include adjust-font-size-to($font-size-XL);
+		@include trailer(2.5);
+		@include adjust-font-size-to($font-size-L);
 		@include text-shadow(0px 1px 10px rgba(#98714d,.7));
 	}
 }

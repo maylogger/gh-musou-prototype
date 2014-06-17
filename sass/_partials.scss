@@ -7,20 +7,19 @@
 @import "partials/aside";
 
 // # Paritals
-@import "partials/hero";
-@import "partials/page-header";
+@import "partials/video_header";
 @import "partials/title";
 @import "partials/block";
 @import "partials/list";
 @import "partials/post";
 @import "partials/tag";
+@import "partials/pills";
 @import "partials/video";
 @import "partials/avatar";
 @import "partials/collapse";
+@import "partials/affix";
 @import "partials/button";
-@import "partials/form";
+@import "partials/filter";
 @import "partials/table";
 @import "partials/pagination";
-
-// # pages
-@import "pages/index";
+@import "partials/alpaca-msg";

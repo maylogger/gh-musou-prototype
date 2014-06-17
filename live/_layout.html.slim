@@ -3,13 +3,14 @@ html lang="zh-TW"
   head
     = render "/layout_head"
     = render "/layout_og"
-  body.video-page
+  body.live-page
     .wrap
     	.menu
     		= render "/partials/menu"
     	.main
     		= render "/partials/header"
-    		.content = yield
-    		= render "/partials/footer"
+    		.content
+                = yield
+                = render "/partials/footer"
     = render "/layout_foot"
     = render "/layout_livereload"

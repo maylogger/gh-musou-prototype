@@ -3,13 +3,16 @@
 }
 
 .logo {
+	padding: 11px 0 13px;
 	text-align: center;
 	a {
-		color: $header-font-color;
-		&:hover {
-			color: $header-font-color-hover;
-			text-decoration: none;
-		}
+		display: inline-block;
+		width: 146px;
+		height: 36px;
+		vertical-align: top;
+		@include hide-text;
+		@include replace-text-with-dimensions("logo.png");
+		background-image: none, image-url("logo.svg");
 	}
 	@include at-breakpoint($desktop) {
 		text-align: left;
@@ -39,7 +42,6 @@
 	opacity: 1;
 	background-color: $menu-btn-bar-color;
 	@include transition(transform .5s, opacity .5s);
-	@include box-shadow(0 1px 0 $menu-btn-bar-shadow-color);
 	& + & {
 		margin-top: $menu-btn-bar-spacing;
 	}

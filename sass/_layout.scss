@@ -2,16 +2,39 @@
   $container-style: fluid;
   @include container($total-columns, $pad);
 }
-html, body {
+
+html {
 	height: 100%;
+}
+
+body {
 	color: $global-font-color;
+	background-color: $body-background;
+}
+
+body.open-menu {
+	height: 100%;
 }
 
 .wrap {
-	height: 100%;
+	position: relative;
+	max-width: 100%;
 	margin: 0 auto;
+	@include transition(max-width 1s);
 	.open-menu & {
 		overflow: hidden;
+	}
+}
+
+.open-menu .wrap {
+	height: 100%;
+}
+
+.open-menu .menu {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	@include at-breakpoint($desktop) {
+	  overflow-y: visible;
 	}
 }
 
@@ -28,18 +51,27 @@ html, body {
 	left: 0;
 	z-index: 2;
 	min-height: 100%;
-	background: image-url("light_wool.png") repeat;
+	background: inherit;
 	@include transition(left .3s);
 	.open-menu & {
 		left: $menu-off-canvas-width;
 	}
 }
 
-.content, .container {
-	margin-top: -1px;
-	padding-top: 1px;
+.content {
+	position: relative;
+	background-color: $content-background;
+	@include box-shadow( 0px 3px 7px rgba(black, .1) );
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
-
+@include at-breakpoint($pad) {
+  #{$page-container} {
+		width: 90%;
+	}
+}
 @include at-breakpoint($desktop) {
 	#{$page-container} {
 		$container-style: magic;
@@ -56,11 +88,16 @@ html, body {
   }
 	.menu {
 		position: static;
-		width: auto;
+		width: 90%;
 		margin: 0 auto;
 		@include set-container-width;
 	}
 	.main {
 		position: static;
+	}
+}
+@include at-breakpoint(1680px 12) {
+	.wrap {
+		max-width: 1500px;
 	}
 }

@@ -1,0 +1,63 @@
+a.broadcast:hover {
+	color: $pte-black;
+}
+.broadcast {
+	&:hover {
+		background: darken($table-odd-background, 3%);
+	}
+	.broadcast-presenter {
+		text-align: center;
+		border-right: 1px solid $global-divider;
+		@include pie-clearfix;
+		.anchor, .reviewer {
+			display: inline-block;
+			margin: rhythm(.5);
+			img {
+				display: none;
+				max-width: 80px;
+				max-height: 107px;
+				@include at-breakpoint($pad) {
+				  display: block;
+				}
+			}
+		}
+	}
+	.broadcast-content {
+		@include pie-clearfix;
+		.date {
+			display: block;
+			@include at-breakpoint($pad) {
+			  display: inline-block;
+				margin-right: rhythm(.5);
+				padding-right: rhythm(.5);
+				border-right: 1px solid $global-divider;
+			}
+		}
+		.title {
+			@include trailer(0);
+			@include adjust-font-size-to($font-size-L, 1.5);
+		}
+	}
+	.name {
+		@extend %anti-break;
+	}
+	.label {
+		display: inline-block;
+		color: $pte-red;
+		margin-right: 6px;
+	}
+	.broadcast-issue {
+		.label {
+			display: block;
+			margin-right: 6px;
+		}
+	}
+}
+.broadcast-committee {
+	@include leader(2);
+	@extend .sub-title;
+}
+.g0vlink {
+	@include trailer(1);
+	text-align: center;
+}

@@ -1,8 +1,94 @@
 .article {
-	@include leader(1);
 	@include trailer(1);
 	@include adjust-font-size-to($article-font-size);
 	@include at-breakpoint($desktop) {
 		@include span-columns(8);
 	}
+  h1 {
+    @include leader(1);
+    @include trailer(1);
+    @include adjust-font-size-to($font-size-XXL);
+    color: $pte-red;
+  }
+  h2 {
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-font-size-to($font-size-XL, 1.5);
+  }
+  h3 {
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-font-size-to($font-size-L);
+  }
+  h4 {
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-font-size-to($font-size-M);
+    font-weight: bold;
+  }
+  p {
+    @include adjust-font-size-to($font-size-M, 1.2);
+  }
+  a {
+    color: $pte-blue;
+    &:hover {
+      color: $pte-blue-light;
+    }
+  }
+  hr {
+    border: none;
+    border-top: 1px solid $global-divider;
+    margin-bottom: 24px;
+  }
+  &.center {
+    position: relative;
+    @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include squish(2,2);
+    }
+  }
+  table {
+    tr:nth-child(even) {
+      background-color: #F3F1EA;
+    }
+    td {
+      padding: 2px 3px;
+    }
+  }
+  img {
+    @include trailer(1);
+  }
+  .figure {
+    font-size: 12px;
+    margin-top: -24px;
+    color: $pte-gray;
+    &:before {
+      content: "※";
+    }
+  }
+  blockquote {
+    position: relative;
+    display: inline-block;
+    margin: rhythm(1) rhythm(.5);
+    padding: 24px;
+    color: $pte-gray-dark;
+    &:before {
+      content: "❝";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 52px;
+      color: $pte-lightgray;
+    }
+  }
+  iframe {
+    @include trailer(1);
+  }
+  @include at-breakpoint($pad) {
+    table {
+      td {
+        padding: 4px 6px;
+      }
+    }
+  }
 }

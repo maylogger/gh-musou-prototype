@@ -1,0 +1,37 @@
+.filter {
+	@include padding-trailer(.25);
+	text-align: right;
+	border-bottom: 1px solid $global-divider;
+	.filter-select {
+		position: relative;
+		display: inline-block;
+		margin-right: 5px;
+		vertical-align: top;
+		@include adjust-font-size-to($font-size-XS);
+		@include at-breakpoint($pad) {
+		  padding-right: rhythm(.5);
+		  @include adjust-font-size-to($font-size-M);
+		}
+		select {
+			height: 26px;
+			border: 1px solid $pte-lightgray-dark;
+		}
+	}
+	.search {
+		padding: rhythm(0) rhythm(.35);
+		color: $filter-button-style-color;
+		@include adjust-font-size-to($filter-button-font-size);
+		vertical-align: bottom;
+		background: transparent;
+		border: 1px solid $filter-button-style-color;
+		@include transition(.3s);
+		&:hover {
+			color: white;
+			background: $filter-button-style-color;
+		}
+	}
+	.word {
+		display: inline-block;
+		margin: 0 rhythm(.15);
+	}
+}

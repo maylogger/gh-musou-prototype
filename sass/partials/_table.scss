@@ -7,26 +7,24 @@ $i: 100;
   $i: $i - 5;
 }
 
-.table-head {
-	display: table;
-	width: 100%;
-	@include padding-trailer(.5);
+.table {
+	@include trailer(1);
+	border-bottom: 1px solid $global-divider;
 }
 
-.table-row {
+.table-head, .table-row {
+	display: table;
 	width: 100%;
 	@include padding-leader(.5);
 	@include padding-trailer(.5);
-	display: table;
 	border-top: 1px solid $global-divider;
-	&.broadcast {
-		background: $list-broadcast-background;
-	}
+}
+.table-row:nth-child(odd) {
+	background: $table-odd-background;
 }
 
 .field {
 	display: table-cell;
-	letter-spacing: -1px;
 	vertical-align: middle;
 	@include adjust-font-size-to($list-font-size-mobile);
 	&.center {

@@ -1,48 +1,55 @@
 .video
 	.container
-		h1.title.video-title 劉櫂豪炮火超猛烈，精彩質詢中！
+		.word-left
+		.word-right
+		h1.title.video-title
+			a href="#" 劉櫂豪炮火超猛烈，精彩質詢中！
 		.article
 			.video-single
 				.video-wrapper
-					object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=phantoml0rd" bgcolor="#000000"
-						param name="allowFullScreen" value="true"
-						param name="allowScriptAccess" value="always"
-						param name="allowNetworking" value="all"
-						param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf"
-						param name="flashvars" value="hostname=www.twitch.tv&amp;channel=phantoml0rd&amp;auto_play=true&amp;start_volume=25"
+					// iframe frameborder="0" id="player" type="text/html" src="http://www.twitch.tv/phantoml0rd/hls"
+					iframe src="http://www.ustream.tv/embed/17012502?v=3&amp;wmode=direct" scrolling="no" frameborder="0"
 		.aside.video-chat
-			iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=phantoml0rd&amp;popout_chat=true"
+			//iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=phantoml0rd&amp;popout_chat=true"
+			iframe frameborder="0" scrolling="no" src="http://www.ustream.tv/socialstream/17012502?siteMode=1?activeTab=socialStream&amp;hideVideoTab=1&amp;colorScheme=light&amp;v=6"
 .container.video-info
-	.article#video-info
+	.article
 		.block
-			h2.sub-title 關於本直播
-			p#theme.collapse = zh_lorem_paragraphs 5
+			h2.sub-title 前情提要
+			#theme.sp-collapse.collapse
+				p.collapse-content = zh_lorem_paragraphs 5
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#theme" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#theme" 看更多
 		.block
-			h2.sub-title 參與委員
-			#attend-legislators.avatar-group.collapse
-				- ( rand(5) + 8 ).times do
-					= render "/partials/avatar/avatar"
+			h2.sub-title 參賽委員
+			#attend-legislators.sp-collapse.collapse
+				.avatar-group.collapse-content
+					- ( rand(5) + 8 ).times do
+						= render "/partials/avatar"
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#attend-legislators" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#attend-legislators" 看更多
 		.block
-			h2.sub-title 相關議題
-			ul#issue.list.collapse
-				- ( rand(5) + 8 ).times do
-					li: a = zh_lorem_sentence
+			h2.sub-title 涉及議題
+			#issue.sp-collapse.collapse
+				ul.list.collapse-content
+					- ( rand(5) + 8 ).times do
+						li: a href="/topic/topic_single.html" = zh_lorem_sentence
 			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#issue" 看更多
-		.block
-			h2.sub-title 相關資料
-			ul#other-info.list.collapse
-				- ( rand(5) + 8 ).times do
-					li: a = zh_lorem_sentence
-			.collapse-toggle
-				a.collapse-toggle-button.collapsed data-parent="#video-info" data-toggle="collapse" href="#other-info" 看更多
+				a.collapse-toggle-button.collapsed data-toggle="collapse" href="#issue" 看更多
 	.aside
+		.presenter
+			.anchor
+				img src="http://hhhhold.com/150x200/#{rand(100)}"
+				.name
+					.label 主播
+					= zh_lorem_name
+			.reviewer
+				img src="http://hhhhold.com/150x200/#{rand(100)}"
+				.name
+					.label 賽評
+					= zh_lorem_name
 		.block
-			h2.sub-title 今日其他 LIVE
+			h2.sub-title 相關連結
 			ul.list
 				- ( rand(5) + 8 ).times do
-					li: a = zh_lorem_sentence
+					li: a href="#" = zh_lorem_sentence

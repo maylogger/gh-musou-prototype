@@ -1,0 +1,61 @@
+.title-header
+	.container
+		h1.title
+			span.title-label: a href="/news" 戰報
+			a href="#" 立法院第8屆第4會期經濟委員會第13次全體委員會議
+.versus
+	.container
+		.vs-word VS
+		.character-left
+			.character-image
+				img src="http://hhhhold.com/400x150/#{rand(100)}"
+			.character-name = zh_lorem_words 5 + rand(5)
+		.character-right
+			.character-image
+				img src="http://hhhhold.com/400x150/#{rand(100)}"
+			.character-name = zh_lorem_words 5 + rand(5)
+.container.layout-post
+	.article.post-content
+		h1 = zh_lorem_sentence
+		p = zh_lorem_paragraphs 3
+	.aside
+		.post-note
+			.post-note-content
+				ul.list
+					li
+						.list-label 作者
+						.list-content = zh_lorem_name
+					li
+						.list-label 發表時間
+						.list-content = lorem_date.to_date
+					li
+						.list-label 會議主席
+						.list-content: a href="/library/legislator.html" 尤美女
+					li
+						.list-label 會議日期
+						.list-content = lorem_date.to_date
+					li
+						.list-label 會議時間
+						.list-content 10:00 - 18:00
+					li
+						.list-label 議題
+						.list-content: a href="/topic/topic_single.html" = zh_lorem_words 5 + rand(2)
+	.article.post-content
+		.video-single
+			.video-wrapper
+				iframe src="//www.youtube.com/embed/XGK42oYK2h0" frameborder="0"
+		- 3.times do
+			h1 = zh_lorem_sentence
+			h2 = zh_lorem_sentence
+			h3 = zh_lorem_sentence
+			h4 = zh_lorem_sentence
+			p = zh_lorem_paragraphs 5
+			= image_tag lorem_image("500x350")
+			p.figure 圖片註解解解解解解～～
+			blockquote = zh_lorem_paragraph
+	.article
+		.block
+			h2.sub-title 相關連結
+			ul.list
+				- ( rand(5) + 8 ).times do
+					li: a href="#" = zh_lorem_sentence

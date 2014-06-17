@@ -1,12 +1,25 @@
+.title-header
+	.container
+		h1.title
+			a href="/news" 最新戰報
 .container
-	h1.title 最新戰報
-  	.table-head
-  		span.field.col-60 戰報標題
-  		span.field.col-20 作者
-  		span.field.col-20 發表時間
-  	- 10.times do
-	  	.table-row
-	  		span.field.col-60 = zh_lorem_sentence
-	  		span.field.col-20 = zh_lorem_name
-	  		span.field.col-20 = lorem_date.to_date
-	= render "/partials/pagination"
+	.block
+		.filter
+			.word 過往戰報：
+			.filter-select
+				select
+					option 2014年
+					option 2013年
+			.filter-select
+				select
+					option 1月
+					option 2月
+					option 3月
+			button.search 找戰報
+	.block
+		.post-group
+			// 一頁為 15 篇戰報
+			- 15.times do
+				= render "/partials/post_item"
+	.block
+		= render "/partials/pagination"

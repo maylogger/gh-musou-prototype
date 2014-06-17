@@ -1,0 +1,55 @@
+.title-header
+	.container
+		h1.title
+			a href="/highlight" 無雙精選
+.container
+	.block
+		.title-block
+			h2.title
+				| 01月23日 MVP
+				.title-extra Most Valuable Player
+			a.title-extra-link href="/highlight/mvp" 歷來 MVP 回顧
+		.avatar-info-group
+			.avatar-single
+				= render "/partials/avatar"
+			.avatar-intro
+				h2.sub-title 精彩表現
+				p = zh_lorem_paragraphs 3
+			.avatar-highlight
+				h2.sub-title 好球集錦
+				.gallery.double-col
+					- 4.times do
+						= render "/partials/gallery"
+	.block
+		.title-block
+			h2.title
+				| 01月23日 MUP
+				.title-extra Most Useless Player
+			a.title-extra-link href="/highlight/mup" 歷來 MUP 回顧
+		.avatar-info-group
+			.avatar-single
+				= render "/partials/avatar"
+			.avatar-intro
+				h2.sub-title 驚人表現
+				p = zh_lorem_paragraphs 3
+			.avatar-highlight
+				h2.sub-title 烏龍球集錦
+				.gallery.double-col
+					- 4.times do
+						= render "/partials/gallery"
+	.block
+		.title-block
+			h2.title
+				| 本日好球
+			a.title-extra-link href="/highlight/top_play" 查看更多好球
+		.gallery.triple-col
+			- 3.times do
+				= render "/partials/gallery"
+	.block
+		.title-block
+			h2.title
+				| 本日烏龍球
+			a.title-extra-link href="/highlight/top_fail" 查看更多烏龍球
+		.gallery.triple-col
+			- 3.times do
+				= render "/partials/gallery"

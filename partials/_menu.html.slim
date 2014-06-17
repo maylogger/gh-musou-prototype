@@ -1,8 +1,10 @@
 ul.nav
-	li: a href="/news/" 戰報
-	li: a href="/highlight/" 精華排名
-	li: a href="/library/" 歷史數據
-	li: a href="/schedule/" 賽程
-	li: a href="/guide/" 立院規則
-	li: a href="/about/" 關於國會無雙
-	li: a href="/live/" 直播
+	= nav_link_to("戰報","/news")
+	= nav_link_to("重大議題","/topic")
+	= nav_link_to("無雙精選","/highlight")
+	= nav_link_to("賽事","/schedule")
+	= nav_link_to("場邊焦點","/focus")
+	= nav_link_to("猛將錄","/library")
+	= nav_link_to("立院小知識","/guide")
+	= nav_link_to("關於國會無雙","/about")
+	= nav_link_to("投稿","/submission")

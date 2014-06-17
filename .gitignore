@@ -32,8 +32,9 @@ tmp/restart.txt
 .sass-cache/**/*
 *.scssc
 psd/**/*
-images/temp/*
 
 stylesheets/pages/index.css
 
 live/temp.html.slim
+
+news/post-with-content.html.slim

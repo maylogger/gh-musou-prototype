@@ -4,3 +4,10 @@
 .hide {
   	display: none;
 }
+.comment {
+	color: $pte-gray-light;
+	@include adjust-font-size-to($font-size-S);
+	ul {
+		padding-left: rhythm(1);
+	}
+}

@@ -1,28 +1,43 @@
 .menu {
-	background-color: $menu-background;
+	background-color: $menu-off-canvas-background;
 	.nav {
 		list-style: none;
 		@include reset-box-model;
 		@include at-breakpoint($desktop) {
 			float: right;
+			margin-right: -12px;
 		}
 		li {
 			@include at-breakpoint($desktop) {
 				float: left;
 			}
+			&.active {
+				background-color: lighten($menu-background, 10%);
+			}
 		}
 		li + li {
-			border-top: 1px solid lighten($menu-background, 10%);
+			border-top: 1px solid lighten($menu-off-canvas-background, 10%);
 			@include at-breakpoint($desktop) {
 			  	border-top: none;
 			}
 		}
 		a {
 			display: block;
-			padding: 12px;
+			padding: 18px 12px;
 			color: $menu-link-color;
+			@include transition(background, .2s);
+			@include at-breakpoint($desktop) {
+			  padding: 18px 10px;
+			}
+			@include at-breakpoint(1000px $total_columns) {
+			  padding: 18px 12px;
+			}
 			&:hover {
 				text-decoration: none;
+				background-color: lighten($menu-background, 7.5%);
+			}
+			&:active {
+				background-color: lighten($menu-background, 5%);
 			}
 		}
 	}

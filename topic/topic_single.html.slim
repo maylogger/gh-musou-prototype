@@ -1,0 +1,34 @@
+.title-header style="background-image: url(http://hhhhold.com/1080x300/#{rand(100)})"
+	.title-mask
+	.container
+		h1.title
+			span.title-label: a href="/topic" 重大議題
+			a href="/topic/topic_single.html" 兩岸服貿協議
+.container
+	.half-block.article
+		h2.title 主題
+		- 3.times do
+			p = zh_lorem_paragraphs 5
+			= image_tag lorem_image("500x350")
+			.figure 圖片註解解解解解解～～
+			blockquote = zh_lorem_paragraph
+		h1.title 深入研究
+		ul.list
+			- ( rand(5) + 5 ).times do
+				li: a href="#" = zh_lorem_sentence
+	.half-block
+		.post-timeline
+			h3.timeline-title 2014年 1月
+			.post-group.topic-news
+				- ( rand(3) + 2 ).times do
+					= render "/partials/post_item_nc"
+				- ( rand(3) + 2 ).times do
+					= render "/partials/focus_item_nc"
+			h3.timeline-title 2013年 12月
+			.post-group.topic-news
+				- ( rand(3) + 2 ).times do
+					= render "/partials/post_item_nc"
+				- ( rand(3) + 2 ).times do
+					= render "/partials/focus_item_nc"
+			h3.timeline-title.start 議題發起
+			.timeline-bar
