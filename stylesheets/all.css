@@ -291,6 +291,7 @@ body.open-menu { height: 100%; }
 .article h2 { margin-top: 12px; margin-bottom: 12px; font-size: 24px; line-height: 36px; }
 .article h3 { margin-top: 12px; margin-bottom: 12px; font-size: 20px; line-height: 24px; }
 .article h4 { margin-top: 12px; margin-bottom: 12px; font-size: 16px; line-height: 24px; font-weight: bold; }
+.article p { font-size: 16px; line-height: 28px; }
 .article a { color: #2874ff; }
 .article a:hover { color: #3c9aff; }
 .article hr { border: none; border-top: 1px solid #e7e7e5; margin-bottom: 24px; }

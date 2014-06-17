@@ -26,6 +26,9 @@
     @include adjust-font-size-to($font-size-M);
     font-weight: bold;
   }
+  p {
+    @include adjust-font-size-to($font-size-M, 1.2);
+  }
   a {
     color: $pte-blue;
     &:hover {
